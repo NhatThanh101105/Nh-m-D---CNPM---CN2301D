@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Koi Fish App</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a asp-page="/Index">Home</a></li>
+                <li><a asp-page="/Pond">Koi Pond</a></li>
+                <li><a asp-page="/Breeding">Breeding</a></li>
+                <li><a asp-page="/Store">Store</a></li>
+                <li><a href="#" onclick="openModal('profileModal')">Profile</a></li>
+                <li><a href="#" onclick="openModal('cartModal')">Cart</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button onclick="openModal('loginModal')">Login</button>
+            <button onclick="openModal('registerModal')">Register</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Koi Fish App. All rights reserved.</p>
+    </footer>
+
+    <!-- Modals -->
+    @await Html.PartialAsync("_Modals")
+
+    <script src="~/js/scripts.js"></script>
+</body>
+</html>
+    
