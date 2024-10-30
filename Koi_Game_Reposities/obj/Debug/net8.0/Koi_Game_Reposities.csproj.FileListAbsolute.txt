@@ -1,0 +1,14 @@
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.deps.json
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.runtimeconfig.json
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.dll
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.pdb
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.AssemblyReference.cache
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.GeneratedMSBuildEditorConfig.editorconfig
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfoInputs.cache
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfo.cs
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.CoreCompileInputs.cache
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.dll
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\refint\Koi_Game_Reposities.dll
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.pdb
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.genruntimeconfig.cache
+D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\ref\Koi_Game_Reposities.dll
