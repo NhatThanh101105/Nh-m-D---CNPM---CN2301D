@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Koi_Game_Services")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9cb071e40643798aa0f6f230a2111902e611e1b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Koi_Game_Services")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Koi_Game_Services")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

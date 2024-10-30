@@ -1,7 +1,27 @@
+using Koi_Game_Reposities.Class;
+using Koi_Game_Reposities.Entities;
+using Koi_Game_Reposities.Interfaces;
+using Koi_Game_Services.Class;
+using Koi_Game_Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<KoiDatabaseContext>(
+    options => { options.UseSqlServer(builder.Configuration.GetConnectionString("Sql")); }
+
+
+);
+
+
+builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
+
+builder.Services.AddScoped<ILoginService, LoginService>();
+
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 

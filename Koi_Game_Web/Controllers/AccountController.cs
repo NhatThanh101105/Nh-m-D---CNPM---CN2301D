@@ -11,6 +11,12 @@ namespace Koi_Game_Web.Controllers
         {
             _loginService = loginService;
         }
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View("login");
+        }
+
 
         [HttpPost]
         public ActionResult Login(string username, string password)
