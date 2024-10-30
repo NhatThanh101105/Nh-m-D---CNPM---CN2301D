@@ -1,27 +1,27 @@
-public class AccountController : Controller
+﻿using Koi_Game_Services.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Koi_Game_Web.Controllers
 {
-    private readonly IUserService _userService;
-
-    public AccountController(IUserService userService)
+    public class AccountController : Controller
     {
-        _userService = userService;
-    }
+        private readonly ILoginService _loginService; // Sử dụng ILoginService
 
-    [HttpGet]
-    public ActionResult Login()
-    {
-        return View();
-    }
-
-    [HttpPost]
-    public ActionResult Login(string username, string password)
-    {
-        if (_userService.Login(username, password))
+        public AccountController(ILoginService loginService) // Inject ILoginService
         {
-            return RedirectToAction("Index", "Home");
+            _loginService = loginService;
         }
 
-        ViewBag.ErrorMessage = "Invalid username or password.";
-        return View();
+        [HttpPost]
+        public ActionResult Login(string username, string password)
+        {
+            if (_loginService.Login(username, password)) // Sử dụng Login từ ILoginService
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            ViewBag.ErrorMessage = "Invalid username or password.";
+            return View();
+        }
     }
 }
