@@ -48,7 +48,7 @@ namespace Koi_Game_Reposities.Class
 
         public  Player  GetPlayerByUsername(string username)
         {
-            return  _dbcontext.Players.Find(username);
+            return _dbcontext.Players.FirstOrDefault(p => p.UserName == username);
         }
     }
 }

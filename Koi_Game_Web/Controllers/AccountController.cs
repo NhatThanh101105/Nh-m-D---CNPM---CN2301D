@@ -23,7 +23,8 @@ namespace Koi_Game_Web.Controllers
         {
             if (_loginService.Login(username, password)) // Sử dụng Login từ ILoginService
             {
-                return RedirectToAction("Index", "Home");
+                
+                return RedirectToAction("Index","Home");
             }
 
             ViewBag.ErrorMessage = "Invalid username or password.";

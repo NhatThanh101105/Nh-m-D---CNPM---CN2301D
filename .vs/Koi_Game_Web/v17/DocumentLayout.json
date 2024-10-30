@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}|Koi_Game_Web\\Koi_Game_Web.csproj|d:\\cnpm\\git\\nh-m-d---cnpm---cn2301d\\koi_game_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}|Koi_Game_Web\\Koi_Game_Web.csproj|solutionrelative:koi_game_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}|Koi_Game_Web\\Koi_Game_Web.csproj|d:\\cnpm\\git\\nh-m-d---cnpm---cn2301d\\koi_game_web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}|Koi_Game_Web\\Koi_Game_Web.csproj|solutionrelative:koi_game_web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}|Koi_Game_Web\\Koi_Game_Web.csproj|d:\\cnpm\\git\\nh-m-d---cnpm---cn2301d\\koi_game_web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}|Koi_Game_Web\\Koi_Game_Web.csproj|solutionrelative:koi_game_web\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8DD1D62C-AB07-4321-B5BB-F7B456BFABFB}|Koi_Game_Services\\Koi_Game_Services.csproj|d:\\cnpm\\git\\nh-m-d---cnpm---cn2301d\\koi_game_services\\class\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DD1D62C-AB07-4321-B5BB-F7B456BFABFB}|Koi_Game_Services\\Koi_Game_Services.csproj|solutionrelative:koi_game_services\\class\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97F144E9-1B60-43D9-BF21-9142054F5AAE}|Koi_Game_Reposities\\Koi_Game_Reposities.csproj|d:\\cnpm\\git\\nh-m-d---cnpm---cn2301d\\koi_game_reposities\\class\\playerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97F144E9-1B60-43D9-BF21-9142054F5AAE}|Koi_Game_Reposities\\Koi_Game_Reposities.csproj|solutionrelative:koi_game_reposities\\class\\playerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}|Koi_Game_Web\\Koi_Game_Web.csproj|d:\\cnpm\\git\\nh-m-d---cnpm---cn2301d\\koi_game_web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}|Koi_Game_Web\\Koi_Game_Web.csproj|solutionrelative:koi_game_web\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}|Koi_Game_Web\\Koi_Game_Web.csproj|d:\\cnpm\\git\\nh-m-d---cnpm---cn2301d\\koi_game_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}|Koi_Game_Web\\Koi_Game_Web.csproj|solutionrelative:koi_game_web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +34,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginService.cs",
+              "DocumentMoniker": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\Koi_Game_Services\\Class\\LoginService.cs",
+              "RelativeDocumentMoniker": "Koi_Game_Services\\Class\\LoginService.cs",
+              "ToolTip": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\Koi_Game_Services\\Class\\LoginService.cs",
+              "RelativeToolTip": "Koi_Game_Services\\Class\\LoginService.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T17:04:49.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerRepository.cs",
+              "DocumentMoniker": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\Koi_Game_Reposities\\Class\\PlayerRepository.cs",
+              "RelativeDocumentMoniker": "Koi_Game_Reposities\\Class\\PlayerRepository.cs",
+              "ToolTip": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\Koi_Game_Reposities\\Class\\PlayerRepository.cs",
+              "RelativeToolTip": "Koi_Game_Reposities\\Class\\PlayerRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAADYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T17:00:39.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\Koi_Game_Web\\appsettings.json",
+              "RelativeDocumentMoniker": "Koi_Game_Web\\appsettings.json",
+              "ToolTip": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\Koi_Game_Web\\appsettings.json",
+              "RelativeToolTip": "Koi_Game_Web\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-10-30T16:58:35.306Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -32,14 +83,14 @@
               "RelativeDocumentMoniker": "Koi_Game_Web\\Controllers\\AccountController.cs",
               "ToolTip": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\Koi_Game_Web\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Koi_Game_Web\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAQwBIAAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwB8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-30T15:09:26.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\Koi_Game_Web\\Program.cs",
               "RelativeDocumentMoniker": "Koi_Game_Web\\Program.cs",
@@ -52,13 +103,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "login.cshtml",
               "DocumentMoniker": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\Koi_Game_Web\\Views\\Account\\login.cshtml",
               "RelativeDocumentMoniker": "Koi_Game_Web\\Views\\Account\\login.cshtml",
               "ToolTip": "D:\\CNPM\\Git\\Nh-m-D---CNPM---CN2301D\\Koi_Game_Web\\Views\\Account\\login.cshtml",
               "RelativeToolTip": "Koi_Game_Web\\Views\\Account\\login.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAACsAAAAkAAAA",
+              "ViewState": "AQIAADoAAAAAAAAAAAAAAFgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-10-30T14:51:28.068Z",
               "EditorCaption": ""
