@@ -1,0 +1,96 @@
+/* Đặt nền và kiểu chữ chung cho trang */
+body {
+    background: linear-gradient(135deg, #87CEEB, #1E90FF); /* Hiệu ứng nền màu xanh nước */
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Khung chứa game */
+.game-container {
+    background-color: rgba(0, 0, 0, 0.5); /* Nền tối giúp làm nổi bật nội dung */
+    border-radius: 15px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Tiêu đề chính của game */
+h1 {
+    font-size: 2.5rem;
+    color: #FFD700; /* Màu vàng giống cá koi */
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 20px;
+}
+
+/* Thiết kế nút bấm */
+.button {
+    background-color: #FFA07A; /* Màu cam nhạt gợi cảm giác nhẹ nhàng */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+    background-color: #FF6347; /* Hiệu ứng sáng hơn khi rê chuột */
+    transform: scale(1.05);
+}
+
+/* Khu vực chứa cá koi */
+.koi-container {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Khu vực hiển thị cá koi */
+    overflow: hidden;
+    background: url('https://example.com/water-texture.png') repeat; /* Thêm ảnh nền vân nước */
+    border-radius: 10px;
+}
+
+/* Hiệu ứng chuyển động nước */
+.ripple {
+    background: url('https://example.com/water-ripple.png') repeat;
+    opacity: 0.3;
+    animation: ripple 10s infinite linear;
+}
+
+@keyframes ripple {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 1000px 1000px;
+    }
+}
+
+/* Thiết kế cá koi */
+.koi-fish {
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background-color: #FF6347; /* Màu đỏ giống cá koi */
+    border-radius: 50% 50% 50% 50% / 20% 20% 80% 80%;
+    box-shadow: 0 0 10px rgba(255, 99, 71, 0.8);
+    animation: swim 5s infinite alternate ease-in-out;
+}
+
+@keyframes swim {
+    0% {
+        transform: translateX(0) translateY(0) rotate(10deg);
+    }
+    50% {
+        transform: translateX(200px) translateY(30px) rotate(-10deg);
+    }
+    100% {
+        transform: translateX(0) translateY(0) rotate(10deg);
+    }
+}
