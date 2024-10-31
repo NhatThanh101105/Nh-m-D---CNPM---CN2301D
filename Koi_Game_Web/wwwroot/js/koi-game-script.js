@@ -1,4 +1,4 @@
-// Đợi đến khi trang tải hoàn tất
+﻿// Đợi đến khi trang tải hoàn tất
 document.addEventListener("DOMContentLoaded", () => {
     const breedButton = document.getElementById("breedButton");
     const koiContainer = document.querySelector(".koi-container");

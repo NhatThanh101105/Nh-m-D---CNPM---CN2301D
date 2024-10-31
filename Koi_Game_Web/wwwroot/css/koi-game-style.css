@@ -1,4 +1,4 @@
-/* Đặt nền và kiểu chữ chung cho trang */
+﻿/* Đặt nền và kiểu chữ chung cho trang */
 body {
     background: linear-gradient(135deg, #87CEEB, #1E90FF); /* Hiệu ứng nền màu xanh nước */
     font-family: 'Arial', sans-serif;
@@ -41,10 +41,10 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.button:hover {
-    background-color: #FF6347; /* Hiệu ứng sáng hơn khi rê chuột */
-    transform: scale(1.05);
-}
+    .button:hover {
+        background-color: #FF6347; /* Hiệu ứng sáng hơn khi rê chuột */
+        transform: scale(1.05);
+    }
 
 /* Khu vực chứa cá koi */
 .koi-container {
@@ -67,6 +67,7 @@ h1 {
     from {
         background-position: 0 0;
     }
+
     to {
         background-position: 1000px 1000px;
     }
@@ -87,9 +88,11 @@ h1 {
     0% {
         transform: translateX(0) translateY(0) rotate(10deg);
     }
+
     50% {
         transform: translateX(200px) translateY(30px) rotate(-10deg);
     }
+
     100% {
         transform: translateX(0) translateY(0) rotate(10deg);
     }

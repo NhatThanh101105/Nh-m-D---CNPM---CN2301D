@@ -22,15 +22,12 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            //var result = _loginService.ValidateUser(model.Username, model.Password);
             if (_loginService.Login(model.Username, model.Password))
             {
                 return RedirectToAction("Privacy", "Home"); // Điều hướng đến trang Home/Index khi đăng nhập thành công
             }
-			//ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không đúng.");
-			ViewBag.ErrorMessage = "Tên người dùng hoặc mật khẩu không đúng.";
-		}
-    //    ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không đúng.");
+            ViewBag.ErrorMessage = "Tên người dùng hoặc mật khẩu không đúng.";
+        }
         return View("Login", model); // Trả về trang đăng nhập khi đăng nhập không thành công
     }
 
@@ -45,19 +42,22 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            
-               // var isRegistered = _loginService.Register(model.Username, model.Password, model.Name, model.ConfirmPassword);
-                if (_loginService.Register(model.Username, model.Password, model.Name, model.ConfirmPassword))
-                {
-                    return RedirectToAction("Login", "Account"); // Điều hướng về trang đăng nhập khi đăng ký thành công
-                }
-                else
-                {
-                    ViewBag.ErrorMessage = "Đăng ký không thành công. Tài khoản có thể đã tồn tại.";
-                }
-         
-                //ViewBag.ErrorMessage = "Xác nhận mật khẩu không khớp.";
+            if (_loginService.Register(model.Username, model.Password, model.Name, model.ConfirmPassword))
+            {
+                return RedirectToAction("Login", "Account"); // Điều hướng về trang đăng nhập khi đăng ký thành công
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "Đăng ký không thành công. Tài khoản có thể đã tồn tại.";
+            }
         }
         return View("Register", model); // Trả về trang đăng ký với thông báo lỗi
+    }
+
+    // Thêm action mới để chuyển đến trang Nạp tiền
+    [HttpGet]
+    public IActionResult Donate()
+    {
+        return View("Naptien"); // Trả về view nạp tiền
     }
 }

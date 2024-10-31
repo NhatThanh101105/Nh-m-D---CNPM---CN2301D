@@ -1,34 +1,37 @@
-﻿using Koi_Game_Reposities.Interfaces; // Thêm các không gian tên cần thiết
-using Koi_Game_Services.Interfaces;
-using Koi_Game_Services.Class;
 using Koi_Game_Reposities.Class;
-using Microsoft.EntityFrameworkCore;
 using Koi_Game_Reposities.Entities;
+using Koi_Game_Reposities.Interfaces;
+using Koi_Game_Services.Class;
+using Koi_Game_Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args); // Tạo builder cho ứng dụng
+var builder = WebApplication.CreateBuilder(args);
 
-// Đăng ký DbContext
-builder.Services.AddDbContext<KoiDatabaseContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("sql"))); // Thay "YourConnectionStringName" bằng tên connection string của bạn trong appsettings.json
-
-// Đăng ký các dịch vụ cần thiết cho ứng dụng
+// Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Đăng ký các dịch vụ của bạn
-builder.Services.AddScoped<IPlayerService, PlayerService>(); // Thêm PlayerService
-builder.Services.AddScoped<INapTienService, NapTienService>(); // Thêm NapTienService
-builder.Services.AddScoped<ILoginService, LoginService>(); // Đăng ký ILoginService
 
-// Thêm các repository
-builder.Services.AddScoped<IPlayerRepository, PlayerRepository>(); // Thay thế với tên repository của bạn
-// Thêm các repository khác nếu có
+// cau hinh database
+builder.Services.AddDbContext<KoiGameDatabaseContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("sql")));
 
-var app = builder.Build(); // Tạo ứng dụng
+// dang ki player repo
+builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
 
-// Cấu hình HTTP request pipeline.
+
+// dang ki login, player serivce
+builder.Services.AddScoped<IPlayerService,PlayerService>   ();
+builder.Services.AddScoped<ILoginService, LoginService>();
+
+
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -39,9 +42,8 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-// Đặt route mặc định đến trang đăng nhập
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Login}/{id?}");
 
-app.Run(); // Chạy ứng dụng
+app.Run();

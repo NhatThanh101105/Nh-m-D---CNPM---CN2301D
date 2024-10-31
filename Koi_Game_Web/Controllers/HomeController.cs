@@ -1,6 +1,5 @@
 using Koi_Game_Web.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 
 namespace Koi_Game_Web.Controllers
