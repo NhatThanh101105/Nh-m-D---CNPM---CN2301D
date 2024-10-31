@@ -1,8 +1,36 @@
+<<<<<<< HEAD
+=======
+using Koi_Game_Reposities.Class;
+using Koi_Game_Reposities.Entities;
+using Koi_Game_Reposities.Interfaces;
+using Koi_Game_Services.Class;
+using Koi_Game_Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
+
+>>>>>>> HaiTh
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+<<<<<<< HEAD
+=======
+
+// cau hinh database
+builder.Services.AddDbContext<KoiGameDatabaseContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("sql")));
+
+// dang ki player repo
+builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
+
+
+// dang ki login, player serivce
+builder.Services.AddScoped<IPlayerService,PlayerService>   ();
+builder.Services.AddScoped<ILoginService, LoginService>();
+
+
+
+>>>>>>> HaiTh
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

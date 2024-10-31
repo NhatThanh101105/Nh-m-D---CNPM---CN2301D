@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Koi_Game_Web.props" />
-</Project>
