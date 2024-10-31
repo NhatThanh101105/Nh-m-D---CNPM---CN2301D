@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Vào Game";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/koi-game-style.css" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            background-image: url('@Url.Content("~/images/background-koi.jpg")');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h2>Chào Mừng Đến Với Game Koi Breeding</h2>
+        <!-- Nội dung game sẽ được hiển thị ở đây -->
+    </div>
+</body>
+</html>

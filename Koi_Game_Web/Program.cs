@@ -1,8 +1,9 @@
-using Koi_Game_Reposities.Class;
+﻿using Koi_Game_Reposities.Class;
 using Koi_Game_Reposities.Entities;
 using Koi_Game_Reposities.Interfaces;
 using Koi_Game_Services.Class;
 using Koi_Game_Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,20 +11,17 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-
-// cau hinh database
+// Cấu hình database
 builder.Services.AddDbContext<KoiGameDatabaseContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("sql")));
 
-// dang ki player repo
+// Đăng ký player repository
 builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
 
-
-// dang ki login, player serivce
-builder.Services.AddScoped<IPlayerService,PlayerService>   ();
+// Đăng ký services
+builder.Services.AddScoped<IPlayerService, PlayerService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
-
-
+builder.Services.AddScoped<INapTienService, NapTienService>(); // Đăng ký NapTienService
 
 var app = builder.Build();
 

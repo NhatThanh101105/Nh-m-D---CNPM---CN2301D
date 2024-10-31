@@ -53,11 +53,4 @@ public class AccountController : Controller
         }
         return View("Register", model); // Trả về trang đăng ký với thông báo lỗi
     }
-
-    // Thêm action mới để chuyển đến trang Nạp tiền
-    [HttpGet]
-    public IActionResult Donate()
-    {
-        return View("Naptien"); // Trả về view nạp tiền
-    }
 }
