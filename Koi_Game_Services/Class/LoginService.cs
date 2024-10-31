@@ -2,56 +2,41 @@
 using Koi_Game_Reposities.Interfaces;
 using Koi_Game_Services.DTO;
 using Koi_Game_Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Koi_Game_Services.Class
 {
     public class LoginService : ILoginService
     {
         private readonly IPlayerRepository _playerRepository;
+
         public LoginService(IPlayerRepository playerRepository)
         {
             _playerRepository = playerRepository;
         }
-     
-     
-        // chuc nang dang nhap
-        public  bool Login(string username, string password)
+
+        // Chức năng đăng nhập
+        public bool Login(string username, string password)
         {
-            var player =  _playerRepository.GetPlayerByUsername(username);
-            if (player != null )
-            {
-                password = password.Trim();
-                if (string.Equals(player.Password.Trim(), password, StringComparison.Ordinal))
-                {
-                    return true;
-                }
-            }
-            return false;
+            var player = _playerRepository.GetPlayerByUsername(username);
+            return player != null && player.Password == password;
         }
 
-
-        // chuc nang dang ki
+        // Chức năng đăng ký
         public bool Register(string username, string password, string name, string correctPassword)
         {
-
-            //kiem tra xem co trung ten dang nhap khong
+            // Kiểm tra xem có trùng tên đăng nhập không
             if (_playerRepository.GetPlayerByUsername(username) != null)
             {
                 return false;
             }
 
-            //kiem tra xem pass lan 2 co giong pass lan 1 khong
+            // Kiểm tra xem mật khẩu lần hai có giống mật khẩu lần một không
             if (password != correctPassword)
             {
                 return false;
             }
 
-            // add player
+            // Thêm player
             var player = new Player
             {
                 UserName = username,
@@ -61,7 +46,12 @@ namespace Koi_Game_Services.Class
             };
             _playerRepository.AddPlayer(player);
             return true;
-            
+        }
+
+        // Chức năng xác thực người dùng
+        public bool ValidateUser(string username, string password)
+        {
+            return Login(username, password); // Sử dụng phương thức Login
         }
     }
 }
