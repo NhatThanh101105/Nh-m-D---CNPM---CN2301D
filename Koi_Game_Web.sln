@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koi_Game_Web", "Koi_Game_Web\Koi_Game_Web.csproj", "{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Koi_Game_Web", "Koi_Game_Web\Koi_Game_Web.csproj", "{CDD05B9D-BDE2-4073-99BA-AF0DED5E1EFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koi_Game_Services", "Koi_Game_Services\Koi_Game_Services.csproj", "{8DD1D62C-AB07-4321-B5BB-F7B456BFABFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Koi_Game_Services", "Koi_Game_Services\Koi_Game_Services.csproj", "{8DD1D62C-AB07-4321-B5BB-F7B456BFABFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koi_Game_Reposities", "Koi_Game_Reposities\Koi_Game_Reposities.csproj", "{97F144E9-1B60-43D9-BF21-9142054F5AAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Koi_Game_Reposities", "Koi_Game_Reposities\Koi_Game_Reposities.csproj", "{97F144E9-1B60-43D9-BF21-9142054F5AAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
