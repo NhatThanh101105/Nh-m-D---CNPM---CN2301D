@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 using Koi_Game_Reposities.Class;
 using Koi_Game_Reposities.Entities;
 using Koi_Game_Reposities.Interfaces;
@@ -7,14 +5,11 @@ using Koi_Game_Services.Class;
 using Koi_Game_Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
->>>>>>> HaiTh
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-<<<<<<< HEAD
-=======
 
 // cau hinh database
 builder.Services.AddDbContext<KoiGameDatabaseContext>(options =>
@@ -30,7 +25,6 @@ builder.Services.AddScoped<ILoginService, LoginService>();
 
 
 
->>>>>>> HaiTh
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
