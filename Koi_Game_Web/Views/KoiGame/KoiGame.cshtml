@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Koi Breeding Game";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <!-- Liên kết đến file CSS -->
+    <link rel="stylesheet" href="~/css/koi-game-style.css" />
+</head>
+<body>
+    <div class="game-container">
+        <h1>Game Sinh Sản Cá Koi</h1>
+
+        <!-- Khu vực hiển thị cá koi -->
+        <div class="koi-container ripple">
+            <!-- Các cá koi sẽ được thêm vào đây bởi JavaScript -->
+        </div>
+
+        <!-- Nút thêm cá koi mới -->
+        <button id="breedButton" class="button">Thêm Cá Koi Mới</button>
+    </div>
+
+    <!-- Liên kết đến file JavaScript -->
+    <script src="~/js/koi-game-script.js"></script>
+</body>
+</html>
