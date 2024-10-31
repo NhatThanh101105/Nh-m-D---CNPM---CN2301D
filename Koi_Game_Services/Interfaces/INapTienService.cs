@@ -8,6 +8,6 @@ namespace Koi_Game_Services.Interfaces
 {
     public interface INapTienService
     {
-        bool napTien(string username, int coin);
+        bool napTien(string username, int VND, string seri);
     }
 }

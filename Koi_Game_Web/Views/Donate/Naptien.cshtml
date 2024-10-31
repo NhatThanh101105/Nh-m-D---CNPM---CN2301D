@@ -1,0 +1,33 @@
+﻿@model Koi_Game_Web.Models.NaptheViewModel
+
+<form asp-action="Naptien" asp-controller="Naptien" method="post">
+    <div class="form-group">
+        <label for="account">Tài Khoản</label>
+        <input type="text" name="Account" id="account" class="form-control" placeholder="Nhập tài khoản" required>
+    </div>
+
+    <div class="form-group">
+        <label for="serialNumber">Số Seri</label>
+        <input type="text" name="SerialNumber" id="serialNumber" class="form-control" placeholder="Nhập số seri" required>
+    </div>
+
+    <div class="form-group">
+        <label for="amount">Mệnh Giá</label>
+        <select name="Amount" id="amount" class="form-control" required>
+            <option value="20000">20.000đ</option>
+            <option value="50000">50.000đ</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn">Nạp Tiền</button>
+
+    @if (ViewBag.ErrorMessage != null)
+    {
+        <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+    }
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+    }
+</form>

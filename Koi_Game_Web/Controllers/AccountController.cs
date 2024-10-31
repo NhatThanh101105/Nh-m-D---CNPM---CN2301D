@@ -25,7 +25,7 @@ public class AccountController : Controller
             //var result = _loginService.ValidateUser(model.Username, model.Password);
             if (_loginService.Login(model.Username, model.Password))
             {
-                return RedirectToAction("Privacy", "Home"); // Điều hướng đến trang Home/Index khi đăng nhập thành công
+                return RedirectToAction("Index","Home"); // Điều hướng đến trang Home/Index khi đăng nhập thành công
             }
             //ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không đúng.");
             ViewBag.ErrorMessage = "Tên người dùng hoặc mật khẩu không đúng.";
@@ -49,11 +49,11 @@ public class AccountController : Controller
             // var isRegistered = _loginService.Register(model.Username, model.Password, model.Name, model.ConfirmPassword);
             if (_loginService.Register(model.Username, model.Password, model.Name, model.ConfirmPassword))
             {
-                return RedirectToAction("Login", "Account"); // Điều hướng về trang đăng nhập khi đăng ký thành công
+                return RedirectToAction("~/Views/Account/Login.cshtml"); // Điều hướng về trang đăng nhập khi đăng ký thành công
             }
             else
             {
-                ViewBag.ErrorMessage = "Đăng ký không thành công. Tài khoản có thể đã tồn tại.";
+                ViewBag.ErrorMessage = "Đăng ký không thành công. Tài khoản có thể đã tồn tại Hoặc xác nhận mật khẩu không đúng";
             }
 
             //ViewBag.ErrorMessage = "Xác nhận mật khẩu không khớp.";
