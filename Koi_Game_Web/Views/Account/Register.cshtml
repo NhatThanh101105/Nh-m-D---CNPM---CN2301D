@@ -1,0 +1,48 @@
+﻿@model RegisterViewModel
+
+@{
+    ViewBag.Title = "Đăng Ký";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/koi-game-style.css" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div class="background-container">
+        <div class="register-box">
+            <h2>Đăng Ký Tài Khoản</h2>
+            <form asp-action="Register" method="post">
+                <div class="form-group">
+                    <label for="username">Tên Người Dùng</label>
+                    <input type="text" asp-for="Username" class="form-control" placeholder="Nhập tên người dùng" required />
+                </div>
+                <div class="form-group">
+                    <label for="password">Mật Khẩu</label>
+                    <input type="password" asp-for="Password" class="form-control" placeholder="Nhập mật khẩu" required />
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Xác Nhận Mật Khẩu</label>
+                    <input type="password" asp-for="ConfirmPassword" class="form-control" placeholder="Xác nhận mật khẩu" required />
+                </div>
+                <div class="form-group">
+                    <label for="name">Tên Hiển Thị</label>
+                    <input type="text" asp-for="Name" class="form-control" placeholder="Nhập tên hiển thị" required />
+                </div>
+                <button type="submit" class="btn">Đăng Ký</button>
+            </form>
+
+            @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+            {
+                <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+            }
+
+            <p>Đã có tài khoản? <a asp-action="Login">Đăng Nhập</a></p>
+        </div>
+    </div>
+</body>
+</html>
