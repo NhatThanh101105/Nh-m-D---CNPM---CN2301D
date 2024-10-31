@@ -10,7 +10,6 @@ namespace Koi_Game_Services.Interfaces
     {
         bool Login(string username, string password);
         bool Register(string username, string password,string name, string correctPassword);
-        //bool ValidateUser(string username, string password);
 
     }
 }
