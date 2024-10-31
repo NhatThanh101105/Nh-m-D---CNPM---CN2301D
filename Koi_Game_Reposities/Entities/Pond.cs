@@ -7,11 +7,9 @@ public partial class Pond
 {
     public int PondId { get; set; }
 
-    public string? PondName { get; set; }
+    public string? Size { get; set; }
 
-    public int? Level { get; set; }
+    public int? Capacity { get; set; }
 
-    public int? Size { get; set; }
-
-    public decimal? PondPrice { get; set; }
+    public decimal? Price { get; set; }
 }

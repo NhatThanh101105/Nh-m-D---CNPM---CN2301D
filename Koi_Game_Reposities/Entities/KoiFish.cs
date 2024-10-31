@@ -9,15 +9,15 @@ public partial class KoiFish
 
     public string? KoiName { get; set; }
 
-    public string? KoiColor { get; set; }
+    public string? Color { get; set; }
 
-    public int? KoiAge { get; set; }
+    public string? Rare { get; set; }
 
-    public string? KoiRare { get; set; }
+    public int? Age { get; set; }
 
-    public string? KoiGen { get; set; }
+    public decimal? Price { get; set; }
 
-    public decimal? KoiPrice { get; set; }
+    public virtual ICollection<PlayerKoi> PlayerKois { get; set; } = new List<PlayerKoi>();
 
-    public virtual ICollection<PlayerKoiFish> PlayerKoiFishes { get; set; } = new List<PlayerKoiFish>();
+    public virtual ICollection<Trade> Trades { get; set; } = new List<Trade>();
 }

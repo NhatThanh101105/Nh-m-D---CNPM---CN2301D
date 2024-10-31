@@ -12,9 +12,9 @@ namespace Koi_Game_Reposities.Class
     public class PlayerRepository : IPlayerRepository
     {
 
-        private readonly KoiDatabaseContext _dbcontext;
+        private readonly KoiGameDatabaseContext _dbcontext;
 
-        public PlayerRepository(KoiDatabaseContext dbcontext)
+        public PlayerRepository(KoiGameDatabaseContext dbcontext)
         {
             _dbcontext = dbcontext;
         }
@@ -48,7 +48,7 @@ namespace Koi_Game_Reposities.Class
 
         public  Player  GetPlayerByUsername(string username)
         {
-            return _dbcontext.Players.FirstOrDefault(p => p.UserName == username);
+            return _dbcontext.Players.FirstOrDefault(p => p.UserName==username);
         }
     }
 }
