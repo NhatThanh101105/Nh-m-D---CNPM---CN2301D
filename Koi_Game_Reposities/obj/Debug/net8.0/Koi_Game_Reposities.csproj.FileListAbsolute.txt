@@ -26,18 +26,3 @@ D:\HoangQuocFolders\GITHUB\Project\HQ Branch\Koi_Game_Reposities\obj\Debug\net8.
 D:\HoangQuocFolders\GITHUB\Project\HQ Branch\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.pdb
 D:\HoangQuocFolders\GITHUB\Project\HQ Branch\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.genruntimeconfig.cache
 D:\HoangQuocFolders\GITHUB\Project\HQ Branch\Koi_Game_Reposities\obj\Debug\net8.0\ref\Koi_Game_Reposities.dll
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.deps.json
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.runtimeconfig.json
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.dll
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.pdb
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.AssemblyReference.cache
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.GeneratedMSBuildEditorConfig.editorconfig
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfoInputs.cache
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfo.cs
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.CoreCompileInputs.cache
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.sourcelink.json
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.dll
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\refint\Koi_Game_Reposities.dll
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.pdb
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.genruntimeconfig.cache
-D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Reposities\obj\Debug\net8.0\ref\Koi_Game_Reposities.dll
