@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args); // Tạo builder cho ứng d�
 
 // Đăng ký DbContext
 builder.Services.AddDbContext<KoiDatabaseContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("YourConnectionStringName"))); // Thay "YourConnectionStringName" bằng tên connection string của bạn trong appsettings.json
+    options.UseSqlServer(builder.Configuration.GetConnectionString("sql"))); // Thay "YourConnectionStringName" bằng tên connection string của bạn trong appsettings.json
 
 // Đăng ký các dịch vụ cần thiết cho ứng dụng
 builder.Services.AddControllersWithViews();

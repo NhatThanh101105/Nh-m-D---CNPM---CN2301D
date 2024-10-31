@@ -22,16 +22,15 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            var result = _loginService.ValidateUser(model.Username, model.Password);
-            if (result)
+            //var result = _loginService.ValidateUser(model.Username, model.Password);
+            if (_loginService.Login(model.Username, model.Password))
             {
-                return RedirectToAction("Index", "Home"); // Điều hướng đến trang Home/Index khi đăng nhập thành công
+                return RedirectToAction("Privacy", "Home"); // Điều hướng đến trang Home/Index khi đăng nhập thành công
             }
-            else
-            {
-                ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không đúng.");
-            }
-        }
+			//ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không đúng.");
+			ViewBag.ErrorMessage = "Tên người dùng hoặc mật khẩu không đúng.";
+		}
+    //    ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không đúng.");
         return View("Login", model); // Trả về trang đăng nhập khi đăng nhập không thành công
     }
 
@@ -46,10 +45,9 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            if (model.Password == model.ConfirmPassword)
-            {
-                var isRegistered = _loginService.Register(model.Username, model.Password, model.Name, model.ConfirmPassword);
-                if (isRegistered)
+            
+               // var isRegistered = _loginService.Register(model.Username, model.Password, model.Name, model.ConfirmPassword);
+                if (_loginService.Register(model.Username, model.Password, model.Name, model.ConfirmPassword))
                 {
                     return RedirectToAction("Login", "Account"); // Điều hướng về trang đăng nhập khi đăng ký thành công
                 }
@@ -57,11 +55,8 @@ public class AccountController : Controller
                 {
                     ViewBag.ErrorMessage = "Đăng ký không thành công. Tài khoản có thể đã tồn tại.";
                 }
-            }
-            else
-            {
-                ViewBag.ErrorMessage = "Xác nhận mật khẩu không khớp.";
-            }
+         
+                //ViewBag.ErrorMessage = "Xác nhận mật khẩu không khớp.";
         }
         return View("Register", model); // Trả về trang đăng ký với thông báo lỗi
     }

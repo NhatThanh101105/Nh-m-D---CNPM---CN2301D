@@ -28,3 +28,19 @@ D:\HoangQuocFolders\GITHUB\Project\HQ Branch\Koi_Game_Services\obj\Debug\net8.0\
 D:\HoangQuocFolders\GITHUB\Project\HQ Branch\Koi_Game_Services\obj\Debug\net8.0\refint\Koi_Game_Services.dll
 D:\HoangQuocFolders\GITHUB\Project\HQ Branch\Koi_Game_Services\obj\Debug\net8.0\Koi_Game_Services.pdb
 D:\HoangQuocFolders\GITHUB\Project\HQ Branch\Koi_Game_Services\obj\Debug\net8.0\ref\Koi_Game_Services.dll
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\bin\Debug\net8.0\Koi_Game_Services.deps.json
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\bin\Debug\net8.0\Koi_Game_Services.dll
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\bin\Debug\net8.0\Koi_Game_Services.pdb
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\bin\Debug\net8.0\Koi_Game_Reposities.dll
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\bin\Debug\net8.0\Koi_Game_Reposities.pdb
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\Koi_Game_Services.csproj.AssemblyReference.cache
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\Koi_Game_Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\Koi_Game_Services.AssemblyInfoInputs.cache
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\Koi_Game_Services.AssemblyInfo.cs
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\Koi_Game_Services.csproj.CoreCompileInputs.cache
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\Koi_Game_Services.sourcelink.json
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\Koi_Game.1A5079F6.Up2Date
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\Koi_Game_Services.dll
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\refint\Koi_Game_Services.dll
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\Koi_Game_Services.pdb
+D:\CNPM\Git\Nh-m-D---CNPM---CN2301D\Koi_Game_Services\obj\Debug\net8.0\ref\Koi_Game_Services.dll
