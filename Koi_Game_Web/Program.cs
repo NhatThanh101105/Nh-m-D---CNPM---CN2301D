@@ -20,9 +20,9 @@ builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
 
 
 // dang ki login, player serivce
-builder.Services.AddScoped<IPlayerService,PlayerService>   ();
+builder.Services.AddScoped<IPlayerService,PlayerService> ();
 builder.Services.AddScoped<ILoginService, LoginService>();
-
+builder.Services.AddScoped<INapTienService, NapTienService>();
 
 
 var app = builder.Build();
@@ -44,6 +44,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
 app.Run();

@@ -23,7 +23,15 @@ namespace Koi_Game_Services.Class
         public  bool Login(string username, string password)
         {
             var player=  _playerRepository.GetPlayerByUsername(username);
-            return player != null && player.Password == password;
+            if (player != null)
+            {
+                password = password.Trim();
+                if (string.Equals(player.Password.Trim(), password, StringComparison.Ordinal))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
 

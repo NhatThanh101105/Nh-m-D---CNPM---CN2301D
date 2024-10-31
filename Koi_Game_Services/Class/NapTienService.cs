@@ -16,17 +16,37 @@ namespace Koi_Game_Services.Class
             _playerRepository = playerRepository;
         }
 
-        public bool napTien(string username, int coin)
+        public bool napTien(string username, int VND, string seri)
         {
+            
             var player = _playerRepository.GetPlayerByUsername(username);
             if (player == null) { return false; }
-            if (coin <= 0)
+
+            // kiem tra so seri, cho mac dinhh chuoi 00000000
+            if (seri != "00000000") { return false; }
+            //vnd==20k
+            if (VND == 20000)
             {
-                return false ;
+                player.Coin += 20;
+                _playerRepository.UpdatePlayer(player);
+                return true;
+
             }
-             player.Coin += coin;
-            _playerRepository.UpdatePlayer(player);
-            return true;
+            //vnd==50k
+            else if (VND == 50000)
+            {
+                player.Coin += 50;
+                _playerRepository.UpdatePlayer(player);
+                return true;
+            }
+            //vnd==100k
+            else  
+            {
+                player.Coin += 100;
+                _playerRepository.UpdatePlayer(player);
+                return true;
+            }
+
         }
 
         
