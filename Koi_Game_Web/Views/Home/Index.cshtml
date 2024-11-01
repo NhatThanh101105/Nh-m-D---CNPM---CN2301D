@@ -74,6 +74,16 @@
                 background-color: #FFC300; /* Màu nền khi hover */
                 color: #fff; /* Màu chữ khi hover */
             }
+
+        .notification-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid #FFD700; /* Viền màu vàng */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            width: 300px; /* Chiều rộng của ô thông báo */
+            text-align: center; /* Canh giữa nội dung */
+        }
     </style>
 </head>
 <body>
@@ -84,8 +94,12 @@
         <div class="top-right-corner">
             <span class="username-display">Xin chào, @User.Identity.Name</span>
             <a href="@Url.Action("Naptien", "Donate")" class="button">Nạp Tiền</a> <!-- Chuyển hướng đến trang Nạp Tiền -->
-            <a href="@Url.Action("Index", "Game")" class="button">Vào Game</a> <!-- Chuyển hướng đến Game -->
+            <a href="@Url.Action("KoiGame", "Game")" class="button">Vào Game</a> <!-- Chuyển hướng đến game -->
         </div>
+
+        <!-- Các ô thông báo -->
+        <div class="notification-box">Thông báo 1</div>
+        <div class="notification-box">Thông báo 2</div>
     </div>
 </body>
 </html>

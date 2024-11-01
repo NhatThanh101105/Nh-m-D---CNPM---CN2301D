@@ -1,0 +1,120 @@
+﻿@{
+    ViewBag.Title = "Khám Phá Koi Breeding Games";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/koi-game-style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('@Url.Content("~/images/background-koi-trangchu.jpg")');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .intro-container {
+            max-width: 800px;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.7); /* Độ mờ nền để làm nổi bật văn bản */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            color: #fff;
+            margin: 80px auto; /* Căn giữa nội dung và thêm khoảng cách trên */
+            text-align: center; /* Căn giữa văn bản trong container */
+        }
+
+        .intro-title {
+            font-size: 32px;
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .intro-section {
+            margin-bottom: 20px;
+        }
+
+            .intro-section h3 {
+                color: #FF4500;
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+        .highlight {
+            color: #1E90FF;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            max-width: 250px;
+            margin: 20px auto;
+            padding: 12px 20px;
+            background-color: #FFD700;
+            color: #333;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+            .cta-button:hover {
+                background-color: #FFC300;
+                color: #fff;
+            }
+    </style>
+</head>
+<body>
+    <div class="intro-container">
+        <h1 class="intro-title">Khám Phá Thế Giới Koi Breeding Games</h1>
+
+        <div class="intro-section">
+            <h3>Tạo Tài Khoản Ngay Hôm Nay!</h3>
+            <p>Tham gia cộng đồng yêu thích cá Koi và <span class="highlight">trải nghiệm những điều thú vị</span> trong trò chơi. Hãy nhanh chóng nạp tiền vào tài khoản để sẵn sàng cho các cuộc phiêu lưu bất tận!</p>
+        </div>
+
+        <div class="intro-section">
+            <h3>Khám Phá Chi Tiết Về Cá Koi</h3>
+            <p>Với Koi Breeding Games, bạn sẽ không chỉ là một người nuôi cá. Bạn sẽ <span class="highlight">trở thành một nhà sưu tập</span> với khả năng xem từng chi tiết về các chú cá Koi: từ nguồn gốc đến các đặc điểm độc đáo của chúng!</p>
+        </div>
+
+        <div class="intro-section">
+            <h3>Thiết Kế Hồ Cá Độc Đáo</h3>
+            <p>Hãy tạo ra những hồ cá Koi tuyệt đẹp của riêng bạn! Nâng cấp môi trường sống để đảm bảo cá Koi của bạn luôn được chăm sóc tốt nhất.</p>
+        </div>
+
+        <div class="intro-section">
+            <h3>Tham Gia Sinh Sản Cá Koi</h3>
+            <p>Khám phá <span class="highlight">quá trình sinh sản thủ công và tự động</span> để tạo ra những chú cá Koi mới. Bạn sẽ là người định hình thế hệ tương lai của cá Koi!</p>
+        </div>
+
+        <div class="intro-section">
+            <h3>Chăm Sóc Cá Koi Đúng Cách</h3>
+            <p>Hãy mua thức ăn và các vật phẩm chăm sóc cá Koi để <span class="highlight">tăng cường sức khỏe và tiềm năng sinh sản</span>. Cách duy nhất để sở hữu những chú cá Koi độc đáo!</p>
+        </div>
+
+        <div class="intro-section">
+            <h3>Thương Mại và Trao Đổi Cá Koi</h3>
+            <p>Giao dịch và trao đổi cá Koi với những người chơi khác để <span class="highlight">mở rộng bộ sưu tập</span> và nhận được những phần thưởng hấp dẫn.</p>
+        </div>
+
+        <a href="@Url.Action("Register", "Account")" class="cta-button">Tham Gia Ngay</a>
+    </div>
+</body>
+</html>

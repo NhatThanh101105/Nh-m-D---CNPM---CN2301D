@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "H5pZzZEJJZrerpI/pszfHE9O1ei5Nl7WvPptqmJllW0=",
+  "Hash": "mopfd2I9FDJb0TeQ1fc8FAZbzxLMImMu99/zgEcp1nw=",
   "Source": "Koi_Game_Web",
   "BasePath": "_content/Koi_Game_Web",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\background-koi.jpg"
+    },
+    {
+      "Identity": "D:\\HoangQuocFolders\\GITHUB\\Project\\HQ Branch\\Koi_Game_Web\\wwwroot\\images\\background-koi-trangchu.jpg",
+      "SourceId": "Koi_Game_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\HoangQuocFolders\\GITHUB\\Project\\HQ Branch\\Koi_Game_Web\\wwwroot\\",
+      "BasePath": "_content/Koi_Game_Web",
+      "RelativePath": "images/background-koi-trangchu.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\background-koi-trangchu.jpg"
     },
     {
       "Identity": "D:\\HoangQuocFolders\\GITHUB\\Project\\HQ Branch\\Koi_Game_Web\\wwwroot\\images\\koi1.png",
