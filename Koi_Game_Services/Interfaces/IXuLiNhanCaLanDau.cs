@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Koi_Game_Services.Interfaces
 {
-    public interface ILoginService
-    {
-        Player Login(string username, string password);
-        bool Register(string username, string password,string name, string correctPassword);
 
+    public interface IXuLiNhanCaLanDau
+    { 
+        Task<List<KoiFish>> getThreeKois();
+        void NhanCa(int idPlayer, List<int> idkois);
     }
 }

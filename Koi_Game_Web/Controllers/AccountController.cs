@@ -22,9 +22,15 @@ public class AccountController : Controller
     {
         if (ModelState.IsValid)
         {
-            //var result = _loginService.ValidateUser(model.Username, model.Password);
-            if (_loginService.Login(model.Username, model.Password))
+            var player = _loginService.Login(model.Username, model.Password);
+            if (player!=null)
             {
+                HttpContext.Session.SetInt32("playerId", player.PlayerId);
+                HttpContext.Session.SetString("userName", player.UserName);
+              //  HttpContext.Session.SetInt32("coin", (int)(player.Coin ?? 0));
+                HttpContext.Session.SetString("name", player.Name);
+
+
                 return RedirectToAction("Index","Home"); // Điều hướng đến trang Home/Index khi đăng nhập thành công
             }
             //ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không đúng.");

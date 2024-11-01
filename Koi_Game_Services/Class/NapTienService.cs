@@ -40,9 +40,23 @@ namespace Koi_Game_Services.Class
                 return true;
             }
             //vnd==100k
-            else  
+            else  if(VND == 100000)
             {
                 player.Coin += 100;
+                _playerRepository.UpdatePlayer(player);
+                return true;
+            }
+            //vnd==200k
+            else if (VND == 200000)
+            {
+                player.Coin += 200;
+                _playerRepository.UpdatePlayer(player);
+                return true;
+            }
+            //vnd==500k
+            else
+            {
+                player.Coin += 500;
                 _playerRepository.UpdatePlayer(player);
                 return true;
             }

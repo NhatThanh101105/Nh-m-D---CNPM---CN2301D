@@ -1,33 +1,224 @@
 ﻿@model Koi_Game_Web.Models.NaptheViewModel
 
-<form asp-action="Naptien" asp-controller="Naptien" method="post">
-    <div class="form-group">
-        <label for="account">Tài Khoản</label>
-        <input type="text" name="Account" id="account" class="form-control" placeholder="Nhập tài khoản" required>
+@{
+    ViewBag.Title = "Nạp Tiền";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/koi-game-style.css" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            background-image: url('@Url.Content("~/images/background-koi.jpg")'); /* Đường dẫn tới hình ảnh nền của bạn */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+            display: flex;
+            flex-direction: column; /* Sắp xếp theo chiều dọc */
+        }
+
+        .background-container {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Đặt theo chiều dọc */
+            height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+        }
+
+        .title {
+            font-size: 60px; /* Kích thước chữ lớn */
+            color: #1E90FF; /* Màu xanh biển */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), /* Hiệu ứng viền */
+            0 0 25px rgba(30, 144, 255, 0.5), /* Hiệu ứng sóng nước */
+            0 0 5px rgba(30, 144, 255, 0.5); /* Hiệu ứng sóng nước */
+            margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+            font-family: 'Arial', sans-serif; /* Font chữ */
+            font-weight: bold; /* Chữ đậm */
+            text-transform: uppercase; /* Chữ in hoa */
+            letter-spacing: 2px; /* Khoảng cách giữa các chữ cái */
+            animation: wave 2s infinite; /* Hiệu ứng sóng nước */
+        }
+
+        keyframes wave {
+            0%, 100%
+
+        {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-5px); /* Đưa lên cao một chút */
+        }
+
+        }
+
+        .naptien-box {
+            background-color: rgba(255, 255, 255, 0.8); /* Màu nền ô nạp tiền */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+            color: #333; /* Màu chữ cho dễ nhìn hơn */
+            position: absolute; /* Đặt ở vị trí tuyệt đối */
+            left: 20px; /* Vị trí từ bên trái */
+            top: 50%; /* Căn giữa theo chiều dọc */
+            transform: translateY(-50%); /* Căn giữa hoàn toàn */
+            z-index: 2; /* Đặt lên trên các phần tử khác */
+        }
+
+            .naptien-box h2 {
+                color: #007bff; /* Màu chữ tiêu đề */
+            }
+
+        .form-group {
+            margin-bottom: 15px; /* Khoảng cách giữa các ô nhập */
+        }
+
+            .form-group label {
+                color: #333; /* Màu chữ cho nhãn */
+            }
+
+        .form-control {
+            color: #000; /* Màu chữ cho ô nhập */
+            width: 100%; /* Chiếm toàn bộ chiều rộng ô nhập */
+            padding: 10px; /* Padding cho ô nhập */
+            border: 1px solid #ccc; /* Đường viền */
+            border-radius: 5px; /* Bo tròn góc ô nhập */
+        }
+
+        .btn {
+            background-color: #007bff; /* Màu nền nút */
+            color: #fff; /* Màu chữ nút */
+            border: none; /* Bỏ viền */
+            padding: 10px 15px; /* Padding cho nút */
+            border-radius: 5px; /* Bo tròn góc nút */
+            cursor: pointer; /* Con trỏ chuột khi di chuột qua */
+            transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
+        }
+
+            .btn:hover {
+                background-color: #0056b3; /* Màu nền khi hover */
+            }
+
+        .alert {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center; /* Căn giữa thông báo */
+        }
+
+        .alert-danger {
+            background-color: rgba(255, 0, 0, 0.8); /* Nền đỏ */
+            color: #fff; /* Chữ trắng */
+        }
+
+        .alert-success {
+            background-color: rgba(0, 255, 0, 0.8); /* Nền xanh lá */
+            color: #fff; /* Chữ trắng */
+        }
+
+        /* CSS cho cá koi */
+        .koi {
+            position: absolute;
+            width: 50px; /* Kích thước cá koi */
+            height: auto;
+            z-index: 1; /* Đặt cá koi dưới ô nạp tiền */
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <h1 class="title">Koi Breeding Games</h1> <!-- Tiêu đề chính -->
+        <div class="naptien-box">
+            <h2>Nạp Tiền</h2>
+            <form asp-action="Naptien" asp-controller="Naptien" method="post">
+                <!-- cai controller ten gi thi asp-controller phai ten nhu v -->
+                <div class="form-group">
+                    <label for="account">Tài Khoản</label>
+                    <input type="text" asp-for="Account" class="form-control" placeholder="Nhập tài khoản" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="serialNumber">Số Seri</label>
+                    <input type="text" asp-for="SerialNumber" class="form-control" placeholder="Nhập số seri" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Mệnh Giá</label>
+                    <select asp-for="Amount" class="form-control" required>
+                        <option value="20000">20.000đ</option>
+                        <option value="50000">50.000đ</option>
+                        <option value="100000">100.000đ</option>
+                        <option value="200000">200.000đ</option>
+                        <option value="500000">500.000đ</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Nạp Tiền</button>
+
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+                }
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+                }
+            </form>
+        </div>
+
+        <!-- Phần cá koi bơi lội -->
+        <div id="koiContainer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;"></div>
+
+        <script>
+            // Tạo cá koi bơi lội
+            const koiImages = [
+                '@Url.Content("~/images/koi1.png")',
+                '@Url.Content("~/images/koi2.png")',
+                '@Url.Content("~/images/koi3.png")'
+            ]; // Đường dẫn tới hình ảnh cá koi
+            const koiContainer = document.getElementById('koiContainer');
+
+            function createKoi() {
+                const koi = document.createElement('img');
+                const randomIndex = Math.floor(Math.random() * koiImages.length);
+                koi.src = koiImages[randomIndex];
+                koi.classList.add('koi');
+                koi.style.top = Math.random() * 100 + 'vh'; // Vị trí dọc ngẫu nhiên
+                koi.style.left = '100%'; // Bắt đầu từ bên phải
+                koi.style.transform = 'translateY(-50%)'; // Căn giữa theo chiều dọc
+
+                koiContainer.appendChild(koi);
+
+                // Di chuyển cá koi
+                let moveInterval = setInterval(() => {
+                    const currentLeft = parseFloat(koi.style.left);
+                    if (currentLeft < -50) { // Nếu cá koi đi ra ngoài màn hình
+                        clearInterval(moveInterval);
+                        koi.remove(); // Xóa cá koi khi nó ra ngoài
+                    } else {
+                        koi.style.left = currentLeft - 1 + 'px'; // Di chuyển cá koi
+                    }
+                }, 30);
+
+                // Tạo cá koi mới sau mỗi 1 giây
+                setTimeout(createKoi, 1000);
+            }
+
+            createKoi(); // Bắt đầu tạo cá koi
+        </script>
     </div>
-
-    <div class="form-group">
-        <label for="serialNumber">Số Seri</label>
-        <input type="text" name="SerialNumber" id="serialNumber" class="form-control" placeholder="Nhập số seri" required>
-    </div>
-
-    <div class="form-group">
-        <label for="amount">Mệnh Giá</label>
-        <select name="Amount" id="amount" class="form-control" required>
-            <option value="20000">20.000đ</option>
-            <option value="50000">50.000đ</option>
-        </select>
-    </div>
-
-    <button type="submit" class="btn">Nạp Tiền</button>
-
-    @if (ViewBag.ErrorMessage != null)
-    {
-        <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
-    }
-
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
-    }
-</form>
+</body>
+</html>

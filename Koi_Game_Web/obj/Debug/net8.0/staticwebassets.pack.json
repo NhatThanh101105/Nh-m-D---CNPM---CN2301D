@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background-koi-trangchu.jpg",
+      "PackagePath": "staticwebassets\\images\\background-koi-trangchu.jpg"
+    },
+    {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background-koi.jpg",
       "PackagePath": "staticwebassets\\images\\background-koi.jpg"
     },

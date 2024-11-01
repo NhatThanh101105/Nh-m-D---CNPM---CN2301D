@@ -25,6 +25,15 @@ builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<INapTienService, NapTienService>();
 
 
+
+// cau hinnhf session
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Th?i gian h?t h?n session
+    options.Cookie.HttpOnly = true; // B?o m?t cookie session
+    options.Cookie.IsEssential = true; // ??m b?o cookie ???c g?i ngay c? khi không có s? ??ng ý
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,6 +48,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession();
 
 app.UseAuthorization();
 

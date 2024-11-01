@@ -69,5 +69,16 @@ namespace Koi_Game_Services.Class
             };
             _playerRepository.UpdatePlayer(player);
         }
+
+        public  async Task<int> GetCoinPlayer(int id)
+        {
+            var player = await _playerRepository.GetPlayer(id);
+            if (player != null)
+            {
+                int coin = (int)player.Coin;
+                return coin;
+            }
+            return 0;
+        }
     }
 }

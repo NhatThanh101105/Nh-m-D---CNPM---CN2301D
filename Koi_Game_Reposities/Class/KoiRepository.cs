@@ -25,5 +25,16 @@ namespace Koi_Game_Reposities.Class
         {
             return await _dbcontext.KoiFishes.FindAsync(id);
         }
+        // lay ra 3 con ca 
+        public async Task<List<KoiFish>> GetThreeKois()
+        {
+            return await _dbcontext.KoiFishes.Take(3).ToListAsync();
+        }
+
+        public void SaveFishToPlayer(PlayerKoi playerKoi)
+        {
+            _dbcontext.PlayerKois.Add(playerKoi);
+            _dbcontext.SaveChanges();
+        }
     }
 }

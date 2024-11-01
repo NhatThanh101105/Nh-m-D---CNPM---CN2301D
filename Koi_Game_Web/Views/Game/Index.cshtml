@@ -1,0 +1,38 @@
+﻿@model PlayerViewModel
+
+@{
+    ViewBag.Title = "Koi Breeding Games";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/koi-game-style.css" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            background-image: url('@Url.Content("~/images/background-koi.jpg")');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        .username-display {
+            font-size: 32px;
+            color: #000; /* Màu chữ đen */
+            margin-right: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Trang trống, không có nội dung nào -->
+    <span class="username-display">Xin chào, @Model.name</span>
+</body>
+</html>
