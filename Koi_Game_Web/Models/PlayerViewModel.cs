@@ -1,5 +1,6 @@
 ﻿namespace Koi_Game_Web.Models
 {
+    // tao player viewmodel de luu cac du lieeu owr session maf khoong dungf toiws viewbag
     public class PlayerViewModel
     {
         public int id { get; set; }
