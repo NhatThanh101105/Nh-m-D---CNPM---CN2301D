@@ -13,7 +13,7 @@ namespace Koi_Game_Reposities.Interfaces
         Task<KoiFish> GetKoiFishById(int id);
 
         // laay 3 con ca de tang nguoi choi moiws
-        Task<List<KoiFish>> GetThreeKois();
+        Task<List<int>> GetThreeKois();
         // luu ca vao bang PlayerKoi 
         void SaveFishToPlayer(PlayerKoi playerKoi);
     }

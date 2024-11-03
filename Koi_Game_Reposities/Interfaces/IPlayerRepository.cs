@@ -23,7 +23,7 @@ namespace Koi_Game_Reposities.Interfaces
 
         // get nguoi choi theo ten dang nhap de su dung chuc nang dang nhap 
         Player GetPlayerByUsername (string username);
-
+        
 
     }
     

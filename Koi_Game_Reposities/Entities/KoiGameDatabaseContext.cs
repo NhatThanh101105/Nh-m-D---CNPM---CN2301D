@@ -23,7 +23,7 @@ public partial class KoiGameDatabaseContext : DbContext
 
     public virtual DbSet<Player> Players { get; set; }
 
-    public virtual DbSet<PlayerKoi> PlayerKois { get; set; }
+    public virtual DbSet<PlayerKoi> PlayerKoi { get; set; }
 
     public virtual DbSet<Pond> Ponds { get; set; }
 
@@ -86,6 +86,8 @@ public partial class KoiGameDatabaseContext : DbContext
             entity.Property(e => e.Name).HasMaxLength(50);
             entity.Property(e => e.Password).HasMaxLength(50);
             entity.Property(e => e.UserName).HasMaxLength(50);
+            entity.Property(e => e.IsNewPlayer) // Đảm bảo rằng IsNewPlayer đã được thêm vào lớp Player
+     .IsRequired();
         });
 
         modelBuilder.Entity<PlayerKoi>(entity =>

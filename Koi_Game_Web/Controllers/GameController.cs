@@ -20,6 +20,7 @@ namespace Koi_Game_Web.Controllers
             if (playerId.HasValue && !string.IsNullOrEmpty(userName))
             {
                 int coins= await _playerService.GetCoinPlayer(playerId.Value);
+
                 // Truyền thông tin người dùng vào View
                 var player = new PlayerViewModel
                 {

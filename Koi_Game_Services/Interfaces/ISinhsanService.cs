@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace Koi_Game_Services.Interfaces
 {
-
-    public interface IXuLiNhanCaLanDau
-    { 
-        Task<List<int>> getThreeKois();
-        void NhanCa(int idPlayer, List<int> idkois);
-       Task< bool> kiemtraNewPlayer(int idPlayer);
+    public interface ISinhsanService
+    {
+        Task<bool> SinhSan (int koiId_1,int koiId_2,int idPlayer);
     }
 }
