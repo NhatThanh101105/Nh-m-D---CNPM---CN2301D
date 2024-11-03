@@ -11,7 +11,7 @@
     <title>@ViewBag.Title</title>
     <style>
         body {
-            background-image: url('@Url.Content("~/images/background-koi.jpg")');
+            background-image: url('@Url.Content("~/images/background/background-koi.jpg")');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -53,7 +53,7 @@
 
         .username-display {
             font-size: 16px;
-            color: #fff;
+            color: #000; /* Màu chữ đen */
             margin-right: 10px;
         }
 
@@ -74,16 +74,6 @@
                 background-color: #FFC300; /* Màu nền khi hover */
                 color: #fff; /* Màu chữ khi hover */
             }
-
-        .notification-box {
-            background-color: rgba(0, 0, 0, 0.7);
-            border: 1px solid #FFD700; /* Viền màu vàng */
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
-            width: 300px; /* Chiều rộng của ô thông báo */
-            text-align: center; /* Canh giữa nội dung */
-        }
     </style>
 </head>
 <body>
@@ -92,9 +82,10 @@
 
         <!-- Hiển thị tên đăng nhập và các nút Nạp Tiền và Vào Game -->
         <div class="top-right-corner">
-            <span class="username-display">Xin chào, @User.Identity.Name</span>
-            <a href="@Url.Action("Naptien", "Donate")" class="button">Nạp Tiền</a> <!-- Chuyển hướng đến trang Nạp Tiền -->
+            <span class="username-display">Xin chào, @ViewBag.UserName</span> <!-- Hiển thị tên người dùng -->
+            <a href="@Url.Action("Naptien", "Naptien")" class="button">Nạp Tiền</a> <!-- Chuyển hướng đến trang Nạp Tiền -->
             <a href="@Url.Action("KoiGame", "Game")" class="button">Vào Game</a> <!-- Chuyển hướng đến game -->
+            <!-- Game la ten controller, koigame la method cua game -->
         </div>
 
         <!-- Các ô thông báo -->
