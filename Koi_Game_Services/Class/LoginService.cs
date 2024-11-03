@@ -20,10 +20,19 @@ namespace Koi_Game_Services.Class
      
      
         // chuc nang dang nhap
-        public  bool Login(string username, string password)
+        public  Player Login(string username, string password)
         {
             var player=  _playerRepository.GetPlayerByUsername(username);
-            return player != null && player.Password == password;
+            if (player != null)
+            {
+                password = password.Trim();
+                if (string.Equals(player.Password.Trim(), password, StringComparison.Ordinal))
+                {
+                    return player;
+                }
+            }
+            return null;
+           
         }
 
 

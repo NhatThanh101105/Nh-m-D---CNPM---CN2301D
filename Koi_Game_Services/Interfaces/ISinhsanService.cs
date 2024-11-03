@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Koi_Game_Reposities.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Koi_Game_Services.Interfaces
 {
-    public interface INapTienService
+    public interface ISinhsanService
     {
-        bool napTien(string username, int VND, string seri);
+        Task<bool> SinhSan (int koiId_1,int koiId_2,int idPlayer);
     }
 }

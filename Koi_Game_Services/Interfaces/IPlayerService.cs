@@ -15,5 +15,7 @@ namespace Koi_Game_Services.Interfaces
         void AddPlayer (PlayerDTO playerDTO);
         void UpdatePlayer (PlayerDTO playerDTO);
         void DeletePlayer (PlayerDTO playerDTO); 
+
+        Task<int> GetCoinPlayer(int id);
     }
 }

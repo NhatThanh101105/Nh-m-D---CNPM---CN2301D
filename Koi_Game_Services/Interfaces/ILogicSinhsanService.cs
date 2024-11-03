@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Koi_Game_Services.Interfaces
 {
-    public interface INapTienService
+    public interface ILogicSinhsanService
     {
-        bool napTien(string username, int VND, string seri);
+        Task<int> GetIdKoi_SauSinh(string color_1,string color_2);
     }
 }

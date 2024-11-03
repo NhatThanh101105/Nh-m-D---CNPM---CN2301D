@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Koi_Game_Services.Interfaces
 {
-    public interface INapTienService
+    public interface IAddKoiToPlayerService
     {
-        bool napTien(string username, int VND, string seri);
+
+        void AddKoiToPlayer(int idPlayer,int idKoi);
     }
 }
