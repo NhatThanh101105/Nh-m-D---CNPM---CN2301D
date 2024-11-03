@@ -15,6 +15,8 @@ public partial class Player
 
     public decimal? Coin { get; set; }
 
+    public bool IsNewPlayer { get; set; } = true; // Mặc định là true cho người chơi mới
+
     public virtual ICollection<Inventory> Inventories { get; set; } = new List<Inventory>();
 
     public virtual ICollection<PlayerKoi> PlayerKois { get; set; } = new List<PlayerKoi>();

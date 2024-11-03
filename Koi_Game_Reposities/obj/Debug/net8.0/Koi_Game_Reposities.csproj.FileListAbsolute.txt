@@ -12,45 +12,45 @@ D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\refint\Koi_Gam
 D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.pdb
 D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.genruntimeconfig.cache
 D:\CNPM\Project\Koi_Game_Web\Koi_Game_Reposities\obj\Debug\net8.0\ref\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.deps.json
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.runtimeconfig.json
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.pdb
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.AssemblyReference.cache
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.GeneratedMSBuildEditorConfig.editorconfig
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfoInputs.cache
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfo.cs
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.CoreCompileInputs.cache
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\obj\Debug\net8.0\refint\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.pdb
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.genruntimeconfig.cache
-D:\HoangQuocFolders\GITHUB\Project\backup\Koi_Game_Reposities\obj\Debug\net8.0\ref\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.deps.json
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.runtimeconfig.json
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.pdb
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.AssemblyReference.cache
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.GeneratedMSBuildEditorConfig.editorconfig
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfoInputs.cache
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfo.cs
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.CoreCompileInputs.cache
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\obj\Debug\net8.0\refint\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.pdb
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.genruntimeconfig.cache
-D:\HoangQuocFolders\GITHUB\Project\New folder\Koi_Game_Reposities\obj\Debug\net8.0\ref\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.deps.json
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.runtimeconfig.json
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.pdb
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.AssemblyReference.cache
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.GeneratedMSBuildEditorConfig.editorconfig
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfoInputs.cache
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfo.cs
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.CoreCompileInputs.cache
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\obj\Debug\net8.0\refint\Koi_Game_Reposities.dll
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.pdb
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.genruntimeconfig.cache
-D:\HoangQuocFolders\GITHUB\Project\backup1\Koi_Game_Reposities\obj\Debug\net8.0\ref\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.deps.json
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.runtimeconfig.json
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.pdb
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.AssemblyReference.cache
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.GeneratedMSBuildEditorConfig.editorconfig
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfoInputs.cache
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfo.cs
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.CoreCompileInputs.cache
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\obj\Debug\net8.0\refint\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.pdb
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.genruntimeconfig.cache
+D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Reposities\obj\Debug\net8.0\ref\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.deps.json
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.runtimeconfig.json
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.pdb
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.AssemblyReference.cache
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.GeneratedMSBuildEditorConfig.editorconfig
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfoInputs.cache
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfo.cs
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.CoreCompileInputs.cache
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\obj\Debug\net8.0\refint\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.pdb
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.genruntimeconfig.cache
+D:\HoangQuocFolders\GITHUB\KoiBreedingGames\Koi_Game_Reposities\obj\Debug\net8.0\ref\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.deps.json
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.runtimeconfig.json
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\bin\Debug\net8.0\Koi_Game_Reposities.pdb
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.AssemblyReference.cache
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.GeneratedMSBuildEditorConfig.editorconfig
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfoInputs.cache
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.AssemblyInfo.cs
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.csproj.CoreCompileInputs.cache
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\obj\Debug\net8.0\refint\Koi_Game_Reposities.dll
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.pdb
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\obj\Debug\net8.0\Koi_Game_Reposities.genruntimeconfig.cache
+D:\HoangQuocFolders\GITHUB\HQ\Koi_Game_Reposities\obj\Debug\net8.0\ref\Koi_Game_Reposities.dll
