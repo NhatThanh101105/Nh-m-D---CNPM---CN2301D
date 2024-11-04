@@ -1,4 +1,4 @@
-using Koi_Game_Reposities.Class;
+ï»¿using Koi_Game_Reposities.Class;
 using Koi_Game_Reposities.Entities;
 using Koi_Game_Reposities.Interfaces;
 using Koi_Game_Services.Class;
@@ -17,13 +17,15 @@ builder.Services.AddDbContext<KoiGameDatabaseContext>(options =>
 
 // dang ki player repo
 builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
+builder.Services.AddScoped<IPlayerKoiFishRepository, PlayerKoiFishRepository>();
+builder.Services.AddScoped<IKoiRepository, KoiRepository>();
 
 
 // dang ki login, player serivce
-builder.Services.AddScoped<IPlayerService,PlayerService> ();
+builder.Services.AddScoped<IPlayerService, PlayerService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<INapTienService, NapTienService>();
-
+builder.Services.AddScoped<IXuLiNhanCaLanDau, XuLiNhanCaLanDau>();
 
 
 // cau hinnhf session
@@ -31,7 +33,7 @@ builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(30); // Th?i gian h?t h?n session
     options.Cookie.HttpOnly = true; // B?o m?t cookie session
-    options.Cookie.IsEssential = true; // ??m b?o cookie ???c g?i ngay c? khi không có s? ??ng ý
+    options.Cookie.IsEssential = true; // ??m b?o cookie ???c g?i ngay c? khi khÃ´ng cÃ³ s? ??ng Ã½
 });
 
 var app = builder.Build();

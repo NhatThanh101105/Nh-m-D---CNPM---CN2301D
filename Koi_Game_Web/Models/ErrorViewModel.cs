@@ -1,4 +1,4 @@
-﻿namespace Koi_Game_Web.Models
+namespace Koi_Game_Web.Models
 {
     public class ErrorViewModel
     {

@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Koi_Game_Web.Controllers
+namespace KoiBreedingGame.Controllers
 {
     public class KoiGameController : Controller
     {
+        // GET: KoiGame/Index
         public IActionResult Index()
         {
             return View();

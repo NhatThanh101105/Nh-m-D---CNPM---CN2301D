@@ -13,7 +13,7 @@
     <title>@ViewBag.Title</title>
     <style>
         body {
-            background-image: url('@Url.Content("~/images/background-koi.jpg")'); /* Đường dẫn tới hình ảnh nền của bạn */
+            background-image: url('@Url.Content("~/images/background/background-koi.jpg")'); /* Đường dẫn tới hình ảnh nền của bạn */
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -50,14 +50,12 @@
         }
 
         keyframes wave {
-            0%, 100%{
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(-5px); /* Đưa lên cao một chút */
-        }
-
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px); /* Đưa lên cao một chút */
+            }
         }
 
         .naptien-box {
@@ -75,17 +73,17 @@
             z-index: 2; /* Đặt lên trên các phần tử khác */
         }
 
-            .naptien-box h2 {
-                color: #007bff; /* Màu chữ tiêu đề */
-            }
+        .naptien-box h2 {
+            color: #007bff; /* Màu chữ tiêu đề */
+        }
 
         .form-group {
             margin-bottom: 15px; /* Khoảng cách giữa các ô nhập */
         }
 
-            .form-group label {
-                color: #333; /* Màu chữ cho nhãn */
-            }
+        .form-group label {
+            color: #333; /* Màu chữ cho nhãn */
+        }
 
         .form-control {
             color: #000; /* Màu chữ cho ô nhập */
@@ -105,9 +103,9 @@
             transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
         }
 
-            .btn:hover {
-                background-color: #0056b3; /* Màu nền khi hover */
-            }
+        .btn:hover {
+            background-color: #0056b3; /* Màu nền khi hover */
+        }
 
         .alert {
             margin-top: 10px;
@@ -141,7 +139,6 @@
         <div class="naptien-box">
             <h2>Nạp Tiền</h2>
             <form asp-action="Naptien" asp-controller="Naptien" method="post">
-                <!-- cai controller ten gi thi asp-controller phai ten nhu v -->
                 <div class="form-group">
                     <label for="account">Tài Khoản</label>
                     <input type="text" asp-for="Account" class="form-control" placeholder="Nhập tài khoản" required>
@@ -183,9 +180,9 @@
         <script>
             // Tạo cá koi bơi lội
             const koiImages = [
-                '@Url.Content("~/images/koi1.png")',
-                '@Url.Content("~/images/koi2.png")',
-                '@Url.Content("~/images/koi3.png")'
+                '@Url.Content("~/images/background/koi1.png")',
+                '@Url.Content("~/images/background/koi2.png")',
+                '@Url.Content("~/images/background/koi3.png")'
             ]; // Đường dẫn tới hình ảnh cá koi
             const koiContainer = document.getElementById('koiContainer');
 

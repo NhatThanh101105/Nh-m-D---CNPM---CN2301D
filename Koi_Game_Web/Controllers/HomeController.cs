@@ -15,25 +15,17 @@ namespace Koi_Game_Web.Controllers
 
         public IActionResult Index()
         {
-            
-                // Ki?m tra xem ng??i dùng ?ã ??ng nh?p ch?a
-                var playerId = HttpContext.Session.GetInt32("playerId");
-                var userName = HttpContext.Session.GetString("userName");
-
-                if (playerId.HasValue && !string.IsNullOrEmpty(userName))
-                {
-                    // Truy?n thông tin ng??i dùng vào View
-                    ViewBag.PlayerId = playerId.Value;
-                    ViewBag.UserName = userName;
-                }
-                else
-                {
-                    // N?u ch?a ??ng nh?p, có th? chuy?n h??ng ??n trang ??ng nh?p
-                    return RedirectToAction("Login", "Account");
-                }
-
-                return View(); // Tr? v? View Index
+            var username = HttpContext.Session.GetString("username");
+            var idplayer = HttpContext.Session.GetInt32("playerId");
+            if(!string.IsNullOrEmpty(username)&& idplayer.HasValue)
+            {
+               ViewBag.UserName = username;
+               ViewBag.Idplayer = idplayer.Value;
             }
+            else return RedirectToAction("Login", "Account");
+            
+            return View();
+        }
 
         public IActionResult Privacy()
         {

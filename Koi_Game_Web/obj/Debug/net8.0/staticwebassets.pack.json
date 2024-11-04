@@ -17,28 +17,48 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background-koi-trangchu.jpg",
-      "PackagePath": "staticwebassets\\images\\background-koi-trangchu.jpg"
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\9koi.png",
+      "PackagePath": "staticwebassets\\images\\background\\9koi.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background-koi.jpg",
-      "PackagePath": "staticwebassets\\images\\background-koi.jpg"
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background-koi-trangchu.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\background-koi-trangchu.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\koi1.png",
-      "PackagePath": "staticwebassets\\images\\koi1.png"
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background-koi.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\background-koi.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\koi2.png",
-      "PackagePath": "staticwebassets\\images\\koi2.png"
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\koi1.png",
+      "PackagePath": "staticwebassets\\images\\background\\koi1.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\koi3.png",
-      "PackagePath": "staticwebassets\\images\\koi3.png"
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\koi2.png",
+      "PackagePath": "staticwebassets\\images\\background\\koi2.png"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\koi3.png",
+      "PackagePath": "staticwebassets\\images\\background\\koi3.png"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-do.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-do.png"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-vang.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-vang.png"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-xanh.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-xanh.png"
     },
     {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\koi-game-script.js",
       "PackagePath": "staticwebassets\\js\\koi-game-script.js"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\koi-selection.js",
+      "PackagePath": "staticwebassets\\js\\koi-selection.js"
     },
     {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\site.js",

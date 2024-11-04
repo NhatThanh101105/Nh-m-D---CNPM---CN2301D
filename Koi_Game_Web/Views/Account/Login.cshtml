@@ -1,7 +1,4 @@
-﻿@model LoginViewModel
-
-
-@{
+﻿@{
     ViewBag.Title = "Đăng Nhập";
 }
 
@@ -14,7 +11,7 @@
     <title>@ViewBag.Title</title>
     <style>
         body {
-            background-image: url('@Url.Content("~/images/background-koi.jpg")'); /* Đường dẫn tới hình ảnh nền của bạn */
+            background-image: url('@Url.Content("~/images/background/background-koi.jpg")'); /* Đường dẫn tới hình ảnh nền của bạn */
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -118,6 +115,7 @@
             height: auto;
             z-index: 1; /* Đặt cá koi dưới ô đăng nhập */
         }
+
     </style>
 </head>
 <body>
@@ -151,52 +149,51 @@
         <div id="koiContainer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;"></div>
 
         <script>
-                    // Tạo cá koi bơi lội
-                const koiImages = [
-                    '@Url.Content("~/images/koi1.png")',
-                    '@Url.Content("~/images/koi2.png")',
-                    '@Url.Content("~/images/koi3.png")'
-                    ]; // Đường dẫn tới hình ảnh cá koi
-                const koiContainer = document.getElementById('koiContainer');
+            // Tạo cá koi bơi lội
+            const koiImages = [
+                '@Url.Content("~/images/koi1.png")',
+                '@Url.Content("~/images/koi2.png")',
+                '@Url.Content("~/images/koi3.png")'
+            ]; // Đường dẫn tới hình ảnh cá koi
+            const koiContainer = document.getElementById('koiContainer');
 
-                function createKoi() {
-                    const koi = document.createElement('img');
-            const randomIndex = Math.floor(Math.random() * koiImages.length);
-            koi.src = koiImages[randomIndex];
-            koi.classList.add('koi');
+            function createKoi() {
+                const koi = document.createElement('img');
+                const randomIndex = Math.floor(Math.random() * koiImages.length);
+                koi.src = koiImages[randomIndex];
+                koi.classList.add('koi');
 
-            // Đặt vị trí ngẫu nhiên cho cá koi
-                    koi.style.top = Math.random() * 100 + '%';
-            koi.style.left = Math.random() * 100 + '%';
+                // Đặt vị trí ngẫu nhiên cho cá koi
+                koi.style.top = Math.random() * 100 + '%';
+                koi.style.left = Math.random() * 100 + '%';
 
-            koiContainer.appendChild(koi);
+                koiContainer.appendChild(koi);
 
-            // Di chuyển cá koi
+                // Di chuyển cá koi
                 moveKoi(koi);
-                }
+            }
 
-                function moveKoi(koi) {
-                    const duration = Math.random() * 3000 + 2000; // Thời gian di chuyển ngẫu nhiên
-                    const targetX = Math.random() * 100;
-                    const targetY = Math.random() * 100;
+            function moveKoi(koi) {
+                const duration = Math.random() * 3000 + 2000; // Thời gian di chuyển ngẫu nhiên
+                const targetX = Math.random() * 100;
+                const targetY = Math.random() * 100;
 
-                    koi.animate([
-                        { transform: 'translate(0, 0)' },
-                        { transform: `translate(${targetX}%, ${targetY}%)` }
-                    ], {
-                        duration: duration,
-                        easing: 'ease-in-out',
-                        fill: 'forwards'
-                    }).onfinish = () => {
-                        koi.remove(); // Xóa cá koi sau khi di chuyển xong
-                        createKoi(); // Tạo cá koi mới
-                    };
-                }
+                koi.animate([
+                    { transform: 'translate(0, 0)' },
+                    { transform: `translate(${targetX}%, ${targetY}%)` }
+                ], {
+                    duration: duration,
+                    easing: 'ease-in-out',
+                    fill: 'forwards'
+                }).onfinish = () => {
+                    koi.remove(); // Xóa cá koi sau khi di chuyển xong
+                    createKoi(); // Tạo cá koi mới
+                };
+            }
 
-                // Tạo cá koi mỗi giây
-                setInterval(createKoi, 1000);
+            // Tạo cá koi mỗi giây
+            setInterval(createKoi, 1000);
         </script>
     </div>
 </body>
 </html>
-
