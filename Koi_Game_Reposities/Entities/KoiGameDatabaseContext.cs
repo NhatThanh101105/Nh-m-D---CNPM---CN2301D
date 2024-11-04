@@ -33,6 +33,8 @@ public partial class KoiGameDatabaseContext : DbContext
 
     public virtual DbSet<Upgrade> Upgrades { get; set; }
 
+    public virtual DbSet<PondKoi> PondKois { get; set; }
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
         => optionsBuilder.UseSqlServer("Server=HAI2\\SQLEXPRESS; DataBase=Koi_Game_Database;Integrated Security=true;TrustServerCertificate=True");
@@ -155,6 +157,23 @@ public partial class KoiGameDatabaseContext : DbContext
             entity.Property(e => e.Description).HasMaxLength(255);
             entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
             entity.Property(e => e.UpgradeName).HasMaxLength(50);
+        });
+
+        modelBuilder.Entity<PondKoi>(entity =>
+        {
+            entity.HasKey(e => e.PondKoiId).HasName("PK__PondKoi__X"); // Thay 'X' bằng ID khóa chính thực tế.
+
+            entity.ToTable("PondKoi");
+
+            entity.HasOne(d => d.Pond) // Ràng buộc tới bảng Pond
+                .WithMany(p => p.PondKois) // Có thể có nhiều cá trong một hồ
+                .HasForeignKey(d => d.PondId) // Chỉ định khóa ngoại
+                .OnDelete(DeleteBehavior.Cascade); // Xóa cả cá trong hồ khi hồ bị xóa
+
+            entity.HasOne(d => d.PlayerKoi) // Ràng buộc tới bảng PlayerKoi
+                .WithMany(p => p.PondKois) // Có thể có nhiều cá trong một hồ
+                .HasForeignKey(d => d.PlayerKoiId) // Chỉ định khóa ngoại
+                .OnDelete(DeleteBehavior.Cascade); // Xóa cá khi nó bị xóa khỏi hồ
         });
 
         OnModelCreatingPartial(modelBuilder);

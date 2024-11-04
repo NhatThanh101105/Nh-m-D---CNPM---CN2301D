@@ -14,4 +14,5 @@ public partial class PlayerKoi
     public virtual KoiFish? Koi { get; set; }
 
     public virtual Player? Player { get; set; }
+    public virtual ICollection<PondKoi> PondKois { get; set; } = new List<PondKoi>();
 }

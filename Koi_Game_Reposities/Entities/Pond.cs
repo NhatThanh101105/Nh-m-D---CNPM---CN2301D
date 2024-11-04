@@ -12,4 +12,5 @@ public partial class Pond
     public int? Capacity { get; set; }
 
     public decimal? Price { get; set; }
+    public virtual ICollection<PondKoi> PondKois { get; set; } = new List<PondKoi>();
 }
