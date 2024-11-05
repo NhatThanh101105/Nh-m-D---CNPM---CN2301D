@@ -270,23 +270,24 @@ $.validator.addMethod( "cifES", function( value, element ) {
 	}
 
 	all_sum = even_sum + odd_sum;
-	control_digit = ( 10 - ( all_sum ).toString().substr( -1 ) ).toString();
-	control_digit = parseInt( control_digit, 10 ) > 9 ? "0" : control_digit;
-	control_letter = "JABCDEFGHI".substr( control_digit, 1 ).toString();
+	control_digit = (10 - (all_sum).toString().slice(-1)).toString(); // Thay thế substr bằng slice
+	control_digit = parseInt(control_digit, 10) > 9 ? "0" : control_digit;
+	control_letter = "JABCDEFGHI".slice(control_digit, control_digit + 1); // Thay thế substr bằng slice
 
 	// Control must be a digit
-	if ( letter.match( /[ABEH]/ ) ) {
+	if (letter.match(/[ABEH]/)) {
 		return control === control_digit;
 
-	// Control must be a letter
-	} else if ( letter.match( /[KPQS]/ ) ) {
+		// Control must be a letter
+	} else if (letter.match(/[KPQS]/)) {
 		return control === control_letter;
 	}
 
 	// Can be either
 	return control === control_digit || control === control_letter;
 
-}, "Please specify a valid CIF number." );
+}, "Please specify a valid CIF number.");
+
 
 /*
  * Brazillian CNH number (Carteira Nacional de Habilitacao) is the License Driver number.

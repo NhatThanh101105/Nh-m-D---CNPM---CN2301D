@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\images\\background\\background-koi.jpg"
     },
     {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\background\\game.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\game.jpg"
+    },
+    {
       "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\background\\koi1.png",
       "PackagePath": "staticwebassets\\images\\background\\koi1.png"
     },
@@ -41,16 +45,52 @@
       "PackagePath": "staticwebassets\\images\\background\\koi3.png"
     },
     {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-black.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-black.png"
+    },
+    {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-blue.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-blue.png"
+    },
+    {
       "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-do.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-do.png"
+    },
+    {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-green.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-green.png"
+    },
+    {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-orange.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-orange.png"
+    },
+    {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-purple.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-purple.png"
+    },
+    {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-rainbow.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-rainbow.png"
+    },
+    {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-red.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-red.png"
     },
     {
       "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-vang.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-vang.png"
     },
     {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-white.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-white.png"
+    },
+    {
       "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-xanh.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-xanh.png"
+    },
+    {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-yellow.png",
+      "PackagePath": "staticwebassets\\images\\fish\\koi-yellow.png"
     },
     {
       "Id": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\wwwroot\\js\\koi-game-script.js",

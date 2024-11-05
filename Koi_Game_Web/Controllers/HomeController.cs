@@ -15,6 +15,15 @@ namespace Koi_Game_Web.Controllers
 
         public IActionResult Index()
         {
+            var username = HttpContext.Session.GetString("username");
+            var idplayer = HttpContext.Session.GetInt32("playerId");
+            if(!string.IsNullOrEmpty(username)&& idplayer.HasValue)
+            {
+               ViewBag.UserName = username;
+               ViewBag.Idplayer = idplayer.Value;
+            }
+            else return RedirectToAction("Login", "Account");
+            
             return View();
         }
 

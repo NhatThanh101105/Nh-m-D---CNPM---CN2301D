@@ -5,10 +5,12 @@ using Koi_Game_Web.Models; // Thay YourNamespace thành namespace thực tế c�
 public class AccountController : Controller
 {
     private readonly ILoginService _loginService;
+    //private readonly IXuLiNhanCaLanDau _xuLiNhanCaLanDau;
 
     public AccountController(ILoginService loginService)
     {
         _loginService = loginService;
+       //_xuLiNhanCaLanDau= xuLiNhanCaLanDau;
     }
 
     [HttpGet]
@@ -26,11 +28,9 @@ public class AccountController : Controller
             if (player != null)
             {
                 HttpContext.Session.SetInt32("playerId", player.PlayerId);
-                HttpContext.Session.SetString("userName", player.UserName);
+                HttpContext.Session.SetString("username", player.UserName);
                 //  HttpContext.Session.SetInt32("coin", (int)(player.Coin ?? 0));
                 HttpContext.Session.SetString("name", player.Name);
-
-
                 return RedirectToAction("Index", "Home"); // Điều hướng đến trang Home/Index khi đăng nhập thành công
             }
             //ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không đúng.");

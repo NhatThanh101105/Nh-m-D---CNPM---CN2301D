@@ -138,7 +138,7 @@
         <h1 class="title">Koi Breeding Games</h1> <!-- Tiêu đề chính -->
         <div class="naptien-box">
             <h2>Nạp Tiền</h2>
-            <form asp-action="Naptien" asp-controller="Donate" method="post">
+            <form asp-action="Naptien" asp-controller="Naptien" method="post">
                 <div class="form-group">
                     <label for="account">Tài Khoản</label>
                     <input type="text" asp-for="Account" class="form-control" placeholder="Nhập tài khoản" required>
@@ -180,9 +180,9 @@
         <script>
             // Tạo cá koi bơi lội
             const koiImages = [
-                '@Url.Content("~/images/koi1.png")',
-                '@Url.Content("~/images/koi2.png")',
-                '@Url.Content("~/images/koi3.png")'
+                '@Url.Content("~/images/background/koi1.png")',
+                '@Url.Content("~/images/background/koi2.png")',
+                '@Url.Content("~/images/background/koi3.png")'
             ]; // Đường dẫn tới hình ảnh cá koi
             const koiContainer = document.getElementById('koiContainer');
 

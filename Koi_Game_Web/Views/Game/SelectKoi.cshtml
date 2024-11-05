@@ -1,27 +1,16 @@
-﻿<div class="koi-selection">
-    <form asp-action="StartGame" method="post" id="koiSelectionForm">
-        <div class="koi-container">
-            <div class="koi-image" data-color="Đỏ" data-id="1" onclick="selectKoi(this)">
-                <img src="~/images/fish/koi-do.jpg" alt="Koi Đỏ" style="width:100px;height:auto;" />
-                <p>Koi Đỏ</p>
-            </div>
-            <div class="koi-image" data-color="Xanh" data-id="2" onclick="selectKoi(this)">
-                <img src="~/images/fish/koi-xanh.jpg" alt="Koi Xanh" style="width:100px;height:auto;" />
-                <p>Koi Xanh</p>
-            </div>
-            <div class="koi-image" data-color="Vàng" data-id="3" onclick="selectKoi(this)">
-                <img src="~/images/fish/koi-vang.jpg" alt="Koi Vàng" style="width:100px;height:auto;" />
-                <p>Koi Vàng</p>
-            </div>
-        </div>
+﻿<div class="gift-notification">
+    <h2>CHÀO MỪNG NGƯỜI CHƠI MỚI</h2>
+    <h3>Quà Tân Thủ: 3 Con Cá Koi</h3>
+    <p>Chúc mừng bạn! Bạn đã nhận được quà tân thủ: 3 con cá koi!</p>
+    <div class="koi-images">
+        <img src="~/images/fish/koi-red.png" alt="Cá Koi Đỏ" style="width: 100px; height: auto; margin: 10px;" />
+        <img src="~/images/fish/koi-blue.png" alt="Cá Koi Xanh" style="width: 100px; height: auto; margin: 10px;" />
+        <img src="~/images/fish/koi-yellow.png" alt="Cá Koi Vàng" style="width: 100px; height: auto; margin: 10px;" />
+    </div>
 
-        <input type="hidden" name="koiColor" id="selectedKoiColor" required />
-        <input type="hidden" name="koiId" id="selectedKoiId" required /> <!-- Thêm trường ẩn cho ID cá koi -->
-
-        <div class="button-container">
-            <button type="submit" class="button">Xác Nhận</button>
-        </div>
-    </form>
+    <div class="button-container">
+        <button class="button" onclick="receiveGift()">Nhận Quà</button>
+    </div>
 </div>
 
 <style>
@@ -30,7 +19,7 @@
         margin: 0; /* Bỏ margin mặc định */
     }
 
-    .koi-selection {
+    .gift-notification {
         display: flex;
         flex-direction: column;
         justify-content: center; /* Canh giữa theo chiều dọc */
@@ -38,25 +27,11 @@
         height: 100vh; /* Đặt chiều cao bằng chiều cao của cửa sổ */
     }
 
-    .koi-container {
-        display: flex; /* Sử dụng Flexbox để sắp xếp theo hàng ngang */
-        justify-content: center; /* Canh giữa các hình ảnh */
+    .koi-images {
+        display: flex; /* Sử dụng Flexbox để sắp xếp hình ảnh cá koi theo hàng ngang */
+        justify-content: center; /* Căn giữa các hình ảnh */
         margin-bottom: 20px; /* Khoảng cách dưới cùng */
     }
-
-    .koi-image {
-        display: inline-block;
-        margin: 10px; /* Khoảng cách giữa các hình ảnh */
-        cursor: pointer; /* Chỉ thị rằng có thể nhấp vào */
-        text-align: center; /* Canh giữa nội dung */
-        transition: transform 0.3s; /* Hiệu ứng chuyển động nhẹ khi chọn */
-    }
-
-        .koi-image.selected {
-            border: 2px solid #FFD700; /* Viền vàng cho cá đã chọn */
-            border-radius: 5px;
-            transform: scale(1.05); /* Phóng to nhẹ cá đã chọn */
-        }
 
     .button-container {
         display: flex; /* Sử dụng flexbox để căn giữa nút */
@@ -82,22 +57,10 @@
         }
 </style>
 
-<!-- Thêm tệp JavaScript -->
-<script src="~/js/koi-selection.js"></script>
-
 <script>
-    function selectKoi(element) {
-        const selectedColor = element.getAttribute('data-color');
-        const selectedId = element.getAttribute('data-id');
-
-        // Cập nhật giá trị cho các trường ẩn
-        document.getElementById('selectedKoiColor').value = selectedColor;
-        document.getElementById('selectedKoiId').value = selectedId;
-
-        // Bỏ chọn tất cả các cá koi và đánh dấu cá vừa chọn
-        document.querySelectorAll('.koi-image').forEach(koi => {
-            koi.classList.remove('selected');
-        });
-        element.classList.add('selected');
+    function receiveGift() {
+        alert("Bạn đã nhận quà tân thủ: 3 con cá koi!");
+        // Chuyển hướng đến trang game
+        window.location.href = '/Game/Index'; // Đường dẫn tới trang game
     }
 </script>

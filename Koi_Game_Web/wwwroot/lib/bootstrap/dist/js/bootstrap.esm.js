@@ -1,4 +1,4 @@
-/*!
+﻿/*!
   * Bootstrap v5.1.0 (https://getbootstrap.com/)
   * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
@@ -558,23 +558,31 @@ const EventHandler = {
     let defaultPrevented = false;
     let evt = null;
 
-    if (inNamespace && $) {
-      jQueryEvent = $.Event(event, args);
-      $(element).trigger(jQueryEvent);
-      bubbles = !jQueryEvent.isPropagationStopped();
-      nativeDispatch = !jQueryEvent.isImmediatePropagationStopped();
-      defaultPrevented = jQueryEvent.isDefaultPrevented();
-    }
+      if (inNamespace && $) {
+          jQueryEvent = $.Event(event, args);
+          $(element).trigger(jQueryEvent);
+          bubbles = !jQueryEvent.isPropagationStopped();
+          nativeDispatch = !jQueryEvent.isImmediatePropagationStopped();
+          defaultPrevented = jQueryEvent.isDefaultPrevented();
+      }
 
-    if (isNative) {
-      evt = document.createEvent('HTMLEvents');
-      evt.initEvent(typeEvent, bubbles, true);
-    } else {
-      evt = new CustomEvent(event, {
-        bubbles,
-        cancelable: true
-      });
-    } // merge custom information in our event
+      if (isNative) {
+          // Thay thế đoạn này
+          // evt = document.createEvent('HTMLEvents');
+          // evt.initEvent(typeEvent, bubbles, true);
+
+          // Bằng đoạn mã mới
+          evt = new Event(typeEvent, {
+              bubbles: bubbles,
+              cancelable: true
+          });
+      } else {
+          evt = new CustomEvent(event, {
+              bubbles,
+              cancelable: true
+          });
+      }
+ // merge custom information in our event
 
 
     if (typeof args !== 'undefined') {
@@ -955,26 +963,27 @@ const Manipulator = {
       return {};
     }
 
-    const attributes = {};
-    Object.keys(element.dataset).filter(key => key.startsWith('bs')).forEach(key => {
-      let pureKey = key.replace(/^bs/, '');
-      pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1, pureKey.length);
-      attributes[pureKey] = normalizeData(element.dataset[key]);
-    });
-    return attributes;
-  },
+        const attributes = {};
+        Object.keys(element.dataset).filter(key => key.startsWith('bs')).forEach(key => {
+            let pureKey = key.replace(/^bs/, '');
+            pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1, pureKey.length);
+            attributes[pureKey] = normalizeData(element.dataset[key]);
+        });
+        return attributes;
+    },
 
-  getDataAttribute(element, key) {
-    return normalizeData(element.getAttribute(`data-bs-${normalizeDataKey(key)}`));
-  },
+    getDataAttribute(element, key) {
+        return normalizeData(element.getAttribute(`data-bs-${normalizeDataKey(key)}`));
+    },
 
-  offset(element) {
-    const rect = element.getBoundingClientRect();
-    return {
-      top: rect.top + window.pageYOffset,
-      left: rect.left + window.pageXOffset
-    };
-  },
+    offset(element) {
+        const rect = element.getBoundingClientRect();
+        return {
+            top: rect.top + window.scrollY,  // Đã thay thế pageYOffset bằng scrollY
+            left: rect.left + window.scrollX   // Đã thay thế pageXOffset bằng scrollX
+        };
+    },
+
 
   position(element) {
     return {
