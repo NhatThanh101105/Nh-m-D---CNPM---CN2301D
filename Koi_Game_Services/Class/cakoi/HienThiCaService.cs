@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Koi_Game_Services.Class
+namespace Koi_Game_Services.Class.cakoi
 {
-    public class HienThiCaService:IHienThiCaService
+    public class HienThiCaService : IHienThiCaService
     {
         private readonly IPlayerKoiFishRepository _playerKoiFishRepository;
         public HienThiCaService(IPlayerKoiFishRepository playerKoiFishRepository)

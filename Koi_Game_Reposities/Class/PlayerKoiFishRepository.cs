@@ -21,5 +21,10 @@ namespace Koi_Game_Reposities.Class
         {
             return   _dbcontext.PlayerKoi.Where(p=>p.PlayerId == playerID).Select(p=>p.KoiId).ToList();
         }
+        public void SaveFishToPlayer(PlayerKoi playerKoi)
+        {
+            _dbcontext.PlayerKoi.Add(playerKoi);
+            _dbcontext.SaveChanges();
+        }
     }
 }

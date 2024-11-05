@@ -9,14 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Koi_Game_Services.Class
+namespace Koi_Game_Services.Class.player
 {
     public class PlayerService : IPlayerService
     {
 
 
         private readonly IPlayerRepository _playerRepository;
-        public PlayerService (IPlayerRepository playerRepository)
+        public PlayerService(IPlayerRepository playerRepository)
         {
             _playerRepository = playerRepository;
         }
@@ -28,7 +28,7 @@ namespace Koi_Game_Services.Class
                 Name = playerDTO.Name,
                 UserName = playerDTO.UserName,
                 Password = playerDTO.Password,
-                Coin= 0
+                Coin = 0
             };
             _playerRepository.AddPlayer(player);
         }
@@ -37,7 +37,7 @@ namespace Koi_Game_Services.Class
         {
             var player = new Player
             {
-                PlayerId=playerDTO.Id,
+                PlayerId = playerDTO.Id,
                 Name = playerDTO.Name,
                 UserName = playerDTO.UserName,
                 Password = playerDTO.Password,
@@ -70,7 +70,7 @@ namespace Koi_Game_Services.Class
             _playerRepository.UpdatePlayer(player);
         }
 
-        public  async Task<int> GetCoinPlayer(int id)
+        public async Task<int> GetCoinPlayer(int id)
         {
             var player = await _playerRepository.GetPlayer(id);
             if (player != null)

@@ -1,7 +1,11 @@
 ﻿using Koi_Game_Reposities.Class;
 using Koi_Game_Reposities.Entities;
 using Koi_Game_Reposities.Interfaces;
-using Koi_Game_Services.Class;
+using Koi_Game_Services.Class.dangnhap;
+using Koi_Game_Services.Class.inventory;
+using Koi_Game_Services.Class.naptien;
+using Koi_Game_Services.Class.nhanca_newplayer;
+using Koi_Game_Services.Class.player;
 using Koi_Game_Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,14 +23,14 @@ builder.Services.AddDbContext<KoiGameDatabaseContext>(options =>
 builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
 builder.Services.AddScoped<IPlayerKoiFishRepository, PlayerKoiFishRepository>();
 builder.Services.AddScoped<IKoiRepository, KoiRepository>();
-
+builder.Services.AddScoped<IInventoryRepository, InventoryRepository>();
 
 // dang ki login, player serivce
 builder.Services.AddScoped<IPlayerService, PlayerService>();
 builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<INapTienService, NapTienService>();
 builder.Services.AddScoped<IXuLiNhanCaLanDau, XuLiNhanCaLanDau>();
-
+builder.Services.AddScoped<IInventoryService, InventoryService>();
 
 // cau hinnhf session
 builder.Services.AddSession(options =>

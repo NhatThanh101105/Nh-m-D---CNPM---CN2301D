@@ -41,5 +41,22 @@ namespace Koi_Game_Reposities.Class
                 .Select(pk=>pk.KoiId.Value)
                 .ToList();
         }
+        public void removeKoiFromPond(int playerKoiId)
+        {
+            var pondKoi = _dbcontext.PondKois.FirstOrDefault(pk=>pk.PlayerKoiId==playerKoiId);
+            if (pondKoi != null)
+            {
+                _dbcontext.PondKois.Remove(pondKoi);
+                _dbcontext.SaveChanges();
+            }
+        }
+        public List<int> getKoiInPond(int idplayer,int PondId)
+        {
+            return _dbcontext.PondKois
+                .Where(pk=>pk.PondId==PondId&&pk.PlayerKoi.PlayerId==idplayer)
+                .Select(pk=>pk.PlayerKoi.KoiId ?? 0)
+                .Where(koiId=>koiId!= 0)
+                .ToList();
+        }
     }
 }

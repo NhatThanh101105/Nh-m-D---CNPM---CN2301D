@@ -17,6 +17,8 @@ namespace Koi_Game_Web.Controllers
         
         public async Task<IActionResult> KoiGame()
         {
+
+            // lay session dda luu tu trang ddang nhaap
             var playerId = HttpContext.Session.GetInt32("playerId");
             var username= HttpContext.Session.GetString("username");
             var name= HttpContext.Session.GetString("name");
@@ -30,6 +32,7 @@ namespace Koi_Game_Web.Controllers
                     username = username,
                     id=playerId.Value
                 };
+                Console.WriteLine(coin);
                 bool check=await _xuLiNhanCaLanDau.kiemtraNewPlayer(playerId.Value);
                 if (check)
                 {

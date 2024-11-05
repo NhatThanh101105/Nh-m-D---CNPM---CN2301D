@@ -29,15 +29,11 @@ namespace Koi_Game_Reposities.Class
         public async Task<List<int>> GetThreeKois()
         {
             var allKois= await GetAllKoiFishs();
-            var selectKois= allKois.Where(k => k.KoiId == 1 || k.KoiId == 2 || k.KoiId == 3).Select(k => k.KoiId).ToList(); // lay id ca 
+            var selectKois=  allKois.Where(k => k.KoiId == 1 || k.KoiId == 2 || k.KoiId == 3).Select(k => k.KoiId).ToList(); // lay id ca 
             // tra ve danh sach id ca koi
             return selectKois;
         }
 
-        public void SaveFishToPlayer(PlayerKoi playerKoi)
-        {
-            _dbcontext.PlayerKoi.Add(playerKoi);
-            _dbcontext.SaveChanges();
-        }
+
     }
 }

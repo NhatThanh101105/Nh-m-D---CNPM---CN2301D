@@ -13,5 +13,10 @@ namespace Koi_Game_Reposities.Interfaces
 
         // duaw cas vaof hoof
         void addKoiToPond(int playerKoiId, int PondId);
+
+
+        void removeKoiFromPond(int playerKoiId);
+
+        List<int> getKoiInPond(int idplayer,int pondId);
     }
 }

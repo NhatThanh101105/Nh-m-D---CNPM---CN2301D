@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Koi_Game_Services.Class
+namespace Koi_Game_Services.Class.cakoi
 {
     public class KoiService : IKoiService
     {

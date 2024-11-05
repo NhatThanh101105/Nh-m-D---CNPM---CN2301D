@@ -6,16 +6,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Koi_Game_Services.Class
+namespace Koi_Game_Services.Class.sinhsan
 {
     public class LogicSinhsanService : ILogicSinhsanService
     {
         public async Task<int> GetIdKoi_SauSinh(string color_1, string color_2)
         {
-            var random= new Random();
+            var random = new Random();
             int randomNum = (int)Math.Pow(random.NextDouble(), 2) * 100;// random phan phoi binh phuong tu 1 dens 100 
             // lai 2 con cung mau don gian red, yellow, blue 
-            if (color_1==color_2)
+            if (color_1 == color_2)
             {
                 if (color_1 == "Red") return 1; //id koi red
                 else if (color_1 == "Blue") return 2; //id koi blue
@@ -46,26 +46,26 @@ namespace Koi_Game_Services.Class
             else
             {
                 //lai 2 con khac mau don gian red, yellow, blue
-                if ((color_1 == "Red" && color_2 == "Blue") || (color_1 == "Blue" && color_2 == "Red"))
+                if (color_1 == "Red" && color_2 == "Blue" || color_1 == "Blue" && color_2 == "Red")
                 {
                     if (randomNum <= 20) return 4;//id koi pruple 20% la ra mauu tim
                     else if (randomNum <= 70) return 1;
                     else return 2;
                 }
-                else if ((color_1 == "Red" && color_2 == "Yellow") || (color_1 == "Yellow" && color_2 == "Red"))
+                else if (color_1 == "Red" && color_2 == "Yellow" || color_1 == "Yellow" && color_2 == "Red")
                 {
                     if (randomNum <= 20) return 5;//id koi orange 20% ra mau cam
                     else if (randomNum <= 90) return 1;
                     else return 3;
                 }
-                else if ((color_1 == "Yellow" && color_2 == "Blue") || (color_1 == "Blue" && color_2 == "Yellow"))
+                else if (color_1 == "Yellow" && color_2 == "Blue" || color_1 == "Blue" && color_2 == "Yellow")
                 {
                     if (randomNum <= 40) return 6;//id koi green 40% ra mau xanh la
                     else if (randomNum <= 80) return 2;
                     else return 3;
                 }
                 // lai ca khac mau tim, cam, xanh la
-                else if ((color_1 == "Purple" && color_2 == "Orange") || (color_1 == "Orange" && color_2 == "Purple"))
+                else if (color_1 == "Purple" && color_2 == "Orange" || color_1 == "Orange" && color_2 == "Purple")
                 {
                     if (randomNum <= 5) return 7;//5% ra ca cau vong 
                     else if (randomNum <= 35) return 1;// 30% ra ca do
@@ -75,7 +75,7 @@ namespace Koi_Game_Services.Class
                     else if (randomNum <= 85) return 4;// 15% ra ca tim
                     else return 5;// 15% ra ca cam
                 }
-                else if ((color_1 == "Purple" && color_2 == "Green") || (color_1 == "Green" && color_2 == "Purple"))
+                else if (color_1 == "Purple" && color_2 == "Green" || color_1 == "Green" && color_2 == "Purple")
                 {
                     if (randomNum <= 5) return 7;//5% ra ca cau vong 
                     else if (randomNum <= 40) return 2;// 35% ra ca blue
@@ -85,7 +85,7 @@ namespace Koi_Game_Services.Class
                     else if (randomNum <= 90) return 4;// 15% ra ca tim
                     else return 5;// 10% ra ca cam
                 }
-                else if ((color_1 == "Green" && color_2 == "Orange") || (color_1 == "Orange" && color_2 == "Green"))
+                else if (color_1 == "Green" && color_2 == "Orange" || color_1 == "Orange" && color_2 == "Green")
                 {
                     if (randomNum <= 5) return 7;//5% ra ca cau vong 
                     else if (randomNum <= 25) return 3;// 20% vang
@@ -96,19 +96,19 @@ namespace Koi_Game_Services.Class
                     else return 4;//10% tim
                 }
                 // lai giua 3 mau :do, bllue, vang voi 3 mau:  tim, cam, green
-                else if ((color_1 == "Purple" && color_2 == "Red") || (color_1 == "Red" && color_2 == "Purple"))
+                else if (color_1 == "Purple" && color_2 == "Red" || color_1 == "Red" && color_2 == "Purple")
                 {
                     if (randomNum <= 80) return 1;
                     else if (randomNum <= 93) return 2;
                     else return 4;
                 }
-                else if ((color_1 == "Orange" && color_2 == "Red") || (color_1 == "Red" && color_2 == "Orange"))
+                else if (color_1 == "Orange" && color_2 == "Red" || color_1 == "Red" && color_2 == "Orange")
                 {
                     if (randomNum <= 80) return 1;
                     else if (randomNum <= 90) return 3;
                     else return 5;
                 }
-                else if ((color_1 == "Green" && color_2 == "Red") || (color_1 == "Red" && color_2 == "Green"))
+                else if (color_1 == "Green" && color_2 == "Red" || color_1 == "Red" && color_2 == "Green")
                 {
                     if (randomNum <= 3) return 7;
                     else if (randomNum <= 63) return 1;
@@ -117,13 +117,13 @@ namespace Koi_Game_Services.Class
                     else if (randomNum <= 95) return 4;
                     else return 5;
                 }
-                else if ((color_1 == "Purple" && color_2 == "Blue") || (color_1 == "Blue" && color_2 == "Purple"))
+                else if (color_1 == "Purple" && color_2 == "Blue" || color_1 == "Blue" && color_2 == "Purple")
                 {
                     if (randomNum <= 60) return 2;
                     else if (randomNum <= 95) return 1;
                     else return 4;
                 }
-                else if ((color_1 == "Blue" && color_2 == "Orange") || (color_1 == "Orange" && color_2 == "Blue"))
+                else if (color_1 == "Blue" && color_2 == "Orange" || color_1 == "Orange" && color_2 == "Blue")
                 {
                     if (randomNum <= 4) return 7;
                     else if (randomNum <= 54) return 2;
@@ -132,13 +132,13 @@ namespace Koi_Game_Services.Class
                     else if (randomNum <= 90) return 6;
                     else return 4;
                 }
-                else if ((color_1 == "Blue" && color_2 == "Green") || (color_1 == "Green" && color_2 == "Blue"))
+                else if (color_1 == "Blue" && color_2 == "Green" || color_1 == "Green" && color_2 == "Blue")
                 {
                     if (randomNum <= 80) return 2;
                     else if (randomNum <= 85) return 3;
                     else return 6;
                 }
-                else if ((color_1 == "Purple" && color_2 == "Yellow") || (color_1 == "Yellow" && color_2 == "Purple"))
+                else if (color_1 == "Purple" && color_2 == "Yellow" || color_1 == "Yellow" && color_2 == "Purple")
                 {
                     if (randomNum <= 3) return 7;
                     else if (randomNum <= 43) return 3;
@@ -147,13 +147,13 @@ namespace Koi_Game_Services.Class
                     else if (randomNum <= 95) return 5;
                     else return 6;
                 }
-                else if ((color_1 == "Yellow" && color_2 == "Orange") || (color_1 == "Orange" && color_2 == "Yellow"))
+                else if (color_1 == "Yellow" && color_2 == "Orange" || color_1 == "Orange" && color_2 == "Yellow")
                 {
                     if (randomNum <= 50) return 3;
                     else if (randomNum <= 9) return 1;
                     else return 5;
                 }
-                else if ((color_1 == "Yellow" && color_2 == "Green") || (color_1 == "Green" && color_2 == "Yellow"))
+                else if (color_1 == "Yellow" && color_2 == "Green" || color_1 == "Green" && color_2 == "Yellow")
                 {
                     if (randomNum <= 50) return 3;
                     else if (randomNum <= 90) return 2;
@@ -203,7 +203,7 @@ namespace Koi_Game_Services.Class
                     else if (color_1 == "Purple") return 4;
                     else if (color_1 == "Orange") return 5;
                     else if (color_1 == "Green") return 6;
-                    else  return 7;
+                    else return 7;
                     /*
                     else
                     {
@@ -212,7 +212,7 @@ namespace Koi_Game_Services.Class
                         else return 7;
                     }*/
                 }
-                else if (color_2=="white")
+                else if (color_2 == "white")
                 {
                     if (color_1 == "Red") return 1;
                     else if (color_1 == "Blue") return 2;
@@ -238,7 +238,7 @@ namespace Koi_Game_Services.Class
                     else if (color_2 == "Purple") return 4;
                     else if (color_2 == "Orange") return 5;
                     else return 6;
-                    
+
                 }
                 else
                 {

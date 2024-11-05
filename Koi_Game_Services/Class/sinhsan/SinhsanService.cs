@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Koi_Game_Services.Class
+namespace Koi_Game_Services.Class.sinhsan
 {
     public class SinhsanService : ISinhsanService
     {
@@ -22,8 +22,8 @@ namespace Koi_Game_Services.Class
         }
         public async Task<bool> SinhSan(int koiId_1, int koiId_2, int idPlayer)
         {
-            var koi_1= await _koiRepository.GetKoiFishById(koiId_1);
-            var koi_2= await _koiRepository.GetKoiFishById(koiId_1);
+            var koi_1 = await _koiRepository.GetKoiFishById(koiId_1);
+            var koi_2 = await _koiRepository.GetKoiFishById(koiId_1);
             if (koi_1 == null && koi_2 == null)
             {
                 return false;
@@ -31,7 +31,7 @@ namespace Koi_Game_Services.Class
 
             int id_koi_con = await _logicSinhsanService.GetIdKoi_SauSinh(koi_1.Color, koi_2.Color);
 
-            _addKoiToPlayerService.AddKoiToPlayer(idPlayer,id_koi_con);
+            _addKoiToPlayerService.AddKoiToPlayer(idPlayer, id_koi_con);
 
             return true;
 

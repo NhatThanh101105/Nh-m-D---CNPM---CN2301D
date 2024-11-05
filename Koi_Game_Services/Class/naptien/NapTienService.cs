@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Koi_Game_Services.Class
+namespace Koi_Game_Services.Class.naptien
 {
-    public class NapTienService: INapTienService
+    public class NapTienService : INapTienService
     {
         private readonly IPlayerRepository _playerRepository;
         public NapTienService(IPlayerRepository playerRepository)
@@ -18,7 +18,7 @@ namespace Koi_Game_Services.Class
 
         public bool napTien(string username, int VND, string seri)
         {
-            
+
             var player = _playerRepository.GetPlayerByUsername(username);
             if (player == null) { return false; }
 
@@ -40,7 +40,7 @@ namespace Koi_Game_Services.Class
                 return true;
             }
             //vnd==100k
-            else  if(VND == 100000)
+            else if (VND == 100000)
             {
                 player.Coin += 100;
                 _playerRepository.UpdatePlayer(player);
@@ -63,6 +63,6 @@ namespace Koi_Game_Services.Class
 
         }
 
-        
+
     }
 }

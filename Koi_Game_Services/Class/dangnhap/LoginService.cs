@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Koi_Game_Services.Class
+namespace Koi_Game_Services.Class.dangnhap
 {
     public class LoginService : ILoginService
     {
@@ -17,12 +17,12 @@ namespace Koi_Game_Services.Class
         {
             _playerRepository = playerRepository;
         }
-     
-     
+
+
         // chuc nang dang nhap
-        public  Player Login(string username, string password)
+        public Player Login(string username, string password)
         {
-            var player=  _playerRepository.GetPlayerByUsername(username);
+            var player = _playerRepository.GetPlayerByUsername(username);
             if (player != null)
             {
                 password = password.Trim();
@@ -32,7 +32,7 @@ namespace Koi_Game_Services.Class
                 }
             }
             return null;
-           
+
         }
 
 
@@ -62,7 +62,7 @@ namespace Koi_Game_Services.Class
             };
             _playerRepository.AddPlayer(player);
             return true;
-            
+
         }
     }
 }
