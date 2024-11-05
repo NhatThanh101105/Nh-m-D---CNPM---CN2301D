@@ -16,6 +16,7 @@ public partial class KoiFish
     public int? Age { get; set; }
 
     public decimal? Price { get; set; }
+    public string ImageURL { get; set; }
 
     public virtual ICollection<PlayerKoi> PlayerKois { get; set; } = new List<PlayerKoi>();
 
