@@ -74,6 +74,9 @@ public partial class KoiGameDatabaseContext : DbContext
             entity.Property(e => e.KoiName).HasMaxLength(50);
             entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
             entity.Property(e => e.Rare).HasMaxLength(20);
+            entity.Property(e => e.ImageURL).HasColumnType("nvarchar(max)").IsRequired(false);
+
+
         });
 
         modelBuilder.Entity<Player>(entity =>

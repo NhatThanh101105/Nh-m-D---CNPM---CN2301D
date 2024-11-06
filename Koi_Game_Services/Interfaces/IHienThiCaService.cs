@@ -9,5 +9,7 @@ namespace Koi_Game_Services.Interfaces
     public interface IHienThiCaService
     {
         List<int?> getKoiByIdPlayer(int idPlayer);
+
+      //  Task<string> getImage(int idkoi);
     }
 }

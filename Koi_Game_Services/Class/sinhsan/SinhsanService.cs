@@ -24,7 +24,7 @@ namespace Koi_Game_Services.Class.sinhsan
         {
             var koi_1 = await _koiRepository.GetKoiFishById(koiId_1);
             var koi_2 = await _koiRepository.GetKoiFishById(koiId_1);
-            if (koi_1 == null && koi_2 == null)
+            if (koi_1 == null || koi_2 == null)
             {
                 return false;
             }

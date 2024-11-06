@@ -33,7 +33,12 @@ namespace Koi_Game_Reposities.Class
             // tra ve danh sach id ca koi
             return selectKois;
         }
+       // public string getImage(int id)
+        //{
+         //   var koi=_dbcontext.KoiFishes.Find(id);
+         //   return koi.ImageURL;
 
+        //}
 
     }
 }
