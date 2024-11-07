@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Koi_Game_Reposities.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +13,7 @@ namespace Koi_Game_Reposities.Interfaces
         List<int?> getSl(int idplayer);
         void addNewItems(int idplayer, int itemId, string name, int quantity);
         void removeItems(int idplayer, int itemId, string name, int quantity);
+
+        List<Inventory> getItemByTypeName(int idplayer,string typeName);
     }
 }

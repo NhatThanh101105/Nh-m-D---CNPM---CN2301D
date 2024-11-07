@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Koi_Game_Services\Koi_Game_Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\pond\" />
+  </ItemGroup>
+
 </Project>

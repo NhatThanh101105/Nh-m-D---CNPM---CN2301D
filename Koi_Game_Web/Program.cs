@@ -1,11 +1,13 @@
 ﻿using Koi_Game_Reposities.Class;
 using Koi_Game_Reposities.Entities;
 using Koi_Game_Reposities.Interfaces;
+using Koi_Game_Services.Class.cakoi;
 using Koi_Game_Services.Class.dangnhap;
 using Koi_Game_Services.Class.inventory;
 using Koi_Game_Services.Class.naptien;
 using Koi_Game_Services.Class.nhanca_newplayer;
 using Koi_Game_Services.Class.player;
+using Koi_Game_Services.Class.pond;
 using Koi_Game_Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +26,9 @@ builder.Services.AddScoped<IPlayerRepository, PlayerRepository>();
 builder.Services.AddScoped<IPlayerKoiFishRepository, PlayerKoiFishRepository>();
 builder.Services.AddScoped<IKoiRepository, KoiRepository>();
 builder.Services.AddScoped<IInventoryRepository, InventoryRepository>();
+builder.Services.AddScoped<IPondKoiRepository, PondKoiRepository>();
+builder.Services.AddScoped<IPondRepository, PondRepository>();
+builder.Services.AddScoped<IPlayerPondRepository, PlayerPondRepository>();
 
 // dang ki login, player serivce
 builder.Services.AddScoped<IPlayerService, PlayerService>();
@@ -31,11 +36,13 @@ builder.Services.AddScoped<ILoginService, LoginService>();
 builder.Services.AddScoped<INapTienService, NapTienService>();
 builder.Services.AddScoped<IXuLiNhanCaLanDau, XuLiNhanCaLanDau>();
 builder.Services.AddScoped<IInventoryService, InventoryService>();
-
+builder.Services.AddScoped<IHienThiCaService,HienThiCaService>();
+builder.Services.AddScoped<IPlayerPondService, PlayerPondService>();
+builder.Services.AddScoped<IPondKoiService,PondKoiService>();
 // cau hinnhf session
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Th?i gian h?t h?n session
+    options.IdleTimeout = TimeSpan.FromMinutes(10000); // Th?i gian h?t h?n session
     options.Cookie.HttpOnly = true; // B?o m?t cookie session
     options.Cookie.IsEssential = true; // ??m b?o cookie ???c g?i ngay c? khi không có s? ??ng ý
 });

@@ -167,6 +167,29 @@ namespace Koi_Game_Reposities.Migrations
                     b.ToTable("PlayerKoi", (string)null);
                 });
 
+            modelBuilder.Entity("Koi_Game_Reposities.Entities.PlayerPond", b =>
+                {
+                    b.Property<int>("PlayerPondId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PlayerPondId"));
+
+                    b.Property<int>("PlayerId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PondId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PlayerPondId");
+
+                    b.HasIndex("PlayerId");
+
+                    b.HasIndex("PondId");
+
+                    b.ToTable("PlayerPond");
+                });
+
             modelBuilder.Entity("Koi_Game_Reposities.Entities.Pond", b =>
                 {
                     b.Property<int>("PondId")
@@ -176,6 +199,9 @@ namespace Koi_Game_Reposities.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PondId"));
 
                     b.Property<int?>("Capacity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Level")
                         .HasColumnType("int");
 
                     b.Property<decimal?>("Price")
@@ -202,17 +228,21 @@ namespace Koi_Game_Reposities.Migrations
                     b.Property<int>("PlayerKoiId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PondId")
+                    b.Property<int>("PlayerPondId")
                         .HasColumnType("int");
 
-                    b.HasKey("PondKoiId")
-                        .HasName("PK__PondKoi__X");
+                    b.Property<int?>("PondId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PondKoiId");
 
                     b.HasIndex("PlayerKoiId");
 
+                    b.HasIndex("PlayerPondId");
+
                     b.HasIndex("PondId");
 
-                    b.ToTable("PondKoi", (string)null);
+                    b.ToTable("PondKois");
                 });
 
             modelBuilder.Entity("Koi_Game_Reposities.Entities.Shop", b =>
@@ -331,6 +361,25 @@ namespace Koi_Game_Reposities.Migrations
                     b.Navigation("Player");
                 });
 
+            modelBuilder.Entity("Koi_Game_Reposities.Entities.PlayerPond", b =>
+                {
+                    b.HasOne("Koi_Game_Reposities.Entities.Player", "Player")
+                        .WithMany()
+                        .HasForeignKey("PlayerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Koi_Game_Reposities.Entities.Pond", "Pond")
+                        .WithMany()
+                        .HasForeignKey("PondId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Player");
+
+                    b.Navigation("Pond");
+                });
+
             modelBuilder.Entity("Koi_Game_Reposities.Entities.PondKoi", b =>
                 {
                     b.HasOne("Koi_Game_Reposities.Entities.PlayerKoi", "PlayerKoi")
@@ -339,15 +388,19 @@ namespace Koi_Game_Reposities.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Koi_Game_Reposities.Entities.Pond", "Pond")
-                        .WithMany("PondKois")
-                        .HasForeignKey("PondId")
+                    b.HasOne("Koi_Game_Reposities.Entities.PlayerPond", "PlayerPond")
+                        .WithMany()
+                        .HasForeignKey("PlayerPondId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("Koi_Game_Reposities.Entities.Pond", null)
+                        .WithMany("PondKois")
+                        .HasForeignKey("PondId");
+
                     b.Navigation("PlayerKoi");
 
-                    b.Navigation("Pond");
+                    b.Navigation("PlayerPond");
                 });
 
             modelBuilder.Entity("Koi_Game_Reposities.Entities.Trade", b =>

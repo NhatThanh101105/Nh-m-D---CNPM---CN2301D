@@ -1,0 +1,49 @@
+﻿/* CSS dành cho Inventory */
+.pond-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.pond-item {
+    width: 150px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    overflow: hidden;
+}
+
+.pond-image {
+    width: 100%;
+    height: 100px;
+}
+
+.pond-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pond-info {
+    padding: 10px;
+}
+
+    .pond-info p {
+        font-weight: bold;
+    }
+
+    .pond-info a {
+        display: inline-block;
+        margin-top: 5px;
+        padding: 5px 10px;
+        background-color: #26a69a;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+        .pond-info a:hover {
+            background-color: #00897b;
+        }

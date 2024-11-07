@@ -16,14 +16,18 @@ namespace Koi_Game_Services.Class.pond
             _pondKoiRepository = pondKoiRepository;
         }
 
-        public void addKoiToPond(int playerId, int pondId)
+        public async Task<bool> addKoiToPond(int playerKoiId, int playerPondId,int idplayer)
         {
-            _pondKoiRepository.addKoiToPond(playerId, pondId);
+            return await _pondKoiRepository.addKoiToPond(playerKoiId,playerPondId,idplayer);
         }
 
         public List<int> getKoiPlayer(int playerId)
         {
             return _pondKoiRepository.getKoiPlayer(playerId);
+        }
+        public async Task<bool> removeKoiFromPond(int playerKoiId,int playerPondId, int  idplayer)
+        {
+            return await _pondKoiRepository.removeKoiFromPond(playerKoiId ,playerPondId,idplayer);
         }
     }
 }

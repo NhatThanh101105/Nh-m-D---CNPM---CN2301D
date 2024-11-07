@@ -26,5 +26,19 @@ namespace Koi_Game_Reposities.Class
             _dbcontext.PlayerKoi.Add(playerKoi);
             _dbcontext.SaveChanges();
         }
+
+        public List<PlayerKoi> getAllKoiPlayer(int idplayer)
+        {
+            return _dbcontext.PlayerKoi 
+                .Include(pk => pk.Koi)   
+                .Where(pk => pk.PlayerId == idplayer)
+                .ToList();
+        }
+
+        public int getPlayerKoiId(int idplayer,int KoiId)
+        {
+            var playerKoi= _dbcontext.PlayerKoi.FirstOrDefault(pk=>pk.PlayerId==idplayer &&  pk.KoiId==KoiId);
+            return playerKoi.PlayerKoiId;
+        }
     }
 }

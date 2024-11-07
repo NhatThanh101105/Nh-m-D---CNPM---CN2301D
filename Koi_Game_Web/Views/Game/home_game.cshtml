@@ -1,0 +1,69 @@
+﻿@model GameViewModel 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Pond</title>
+    <link rel="stylesheet" href="~/css/game.css">
+    <script src="~/js/game.js"></script>
+</head>
+<body>
+
+    <!-- Thông tin người chơi -->
+    <div class="player-info">
+        <h2>Welcome, @Model.player.name!</h2>
+        <p>Coins: @Model.player.coin</p>
+    </div>
+
+    <!-- Hồ nước chính của người chơi -->
+    <div class="main-pond">
+        <h3>Your Selected Pond</h3>
+        <div class="pond-container">
+            <div class="pond-item">
+                @* Thay showKoiList() bằng liên kết đến ViewPond *@
+                <a href="@Url.Action("ViewPond", "Pond", new { pondId = Model.PondDetail.pondId })">
+                    <!-- Hiển thị ảnh của hồ dựa trên pondId -->
+                    <img src="@Model.PondDetail.PondImageUrl" alt="Pond Image" class="pond-img" />
+                </a>
+
+                <!-- Hiển thị danh sách cá trong hồ (nếu có) -->
+                @if (Model.PondDetail.koilist.Any())
+                {
+                    <div class="koi-container">
+                        @foreach (var koi in Model.PondDetail.koilist)
+                        {
+                            <div class="koi-item">
+                                <img src="@koi.ImageURL" alt="@koi.name" class="koi-img" />
+                                <p>@koi.name</p>
+                            </div>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <p class="empty-pond-message">This pond is empty.</p>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="navigation-buttons">
+        <a href="@Url.Action("Inventory", "Inventory")" class="btn-inventory"> Inventory</a>
+    </div>
+    <!-- Danh sách cá của người chơi (ẩn, hiện khi nhấp vào hồ) -->
+    <div id="koi-list" class="koi-list hidden">
+        <h4>Your Koi Collection</h4>
+        <!-- KoiCollection chứa tất cả cá mà người chơi sở hữu -->
+        @foreach (var koi in Model.Koi) 
+        {
+            <div class="koi-item" onclick="addKoiToPond(@koi.koiId)">
+                <img src="@koi.ImageURL" alt="@koi.name" class="koi-img" />
+                <p>@koi.name</p>
+            </div>
+        }
+    </div>
+
+</body>
+</html>

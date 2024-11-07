@@ -34,10 +34,12 @@ public partial class KoiGameDatabaseContext : DbContext
     public virtual DbSet<Upgrade> Upgrades { get; set; }
 
     public virtual DbSet<PondKoi> PondKois { get; set; }
+    public virtual DbSet<PlayerPond> PlayerPonds { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=HAI2\\SQLEXPRESS; DataBase=Koi_Game_Database;Integrated Security=true;TrustServerCertificate=True");
+    { }
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+  //      => optionsBuilder.UseSqlServer("Server=HAI2\\SQLEXPRESS; DataBase=Koi_Game_Database;Integrated Security=true;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -161,22 +163,58 @@ public partial class KoiGameDatabaseContext : DbContext
             entity.Property(e => e.Price).HasColumnType("decimal(10, 2)");
             entity.Property(e => e.UpgradeName).HasMaxLength(50);
         });
+        /*
+                modelBuilder.Entity<PondKoi>(entity =>
+                {
+                    entity.HasKey(e => e.PondKoiId).HasName("PK__PondKoi__X"); // Thay 'X' bằng ID khóa chính thực tế.
+
+                    entity.ToTable("PondKoi");
+
+                    entity.HasOne(d => d.PlayerPond) // Ràng buộc tới bảng Pond
+                        .WithMany(p => p.PondKois) // Có thể có nhiều cá trong một hồ
+                        .HasForeignKey(d => d.PondId) // Chỉ định khóa ngoại
+                        .OnDelete(DeleteBehavior.Cascade); // Xóa cả cá trong hồ khi hồ bị xóa
+
+                    entity.HasOne(d => d.PlayerKoi) // Ràng buộc tới bảng PlayerKoi
+                        .WithMany(p => p.PondKois) // Có thể có nhiều cá trong một hồ
+                        .HasForeignKey(d => d.PlayerKoiId) // Chỉ định khóa ngoại
+                        .OnDelete(DeleteBehavior.Cascade); // Xóa cá khi nó bị xóa khỏi hồ
+                });*/
 
         modelBuilder.Entity<PondKoi>(entity =>
         {
-            entity.HasKey(e => e.PondKoiId).HasName("PK__PondKoi__X"); // Thay 'X' bằng ID khóa chính thực tế.
+            entity.HasKey(e => e.PondKoiId).HasName("PK_PondKoi");
 
             entity.ToTable("PondKoi");
 
-            entity.HasOne(d => d.Pond) // Ràng buộc tới bảng Pond
-                .WithMany(p => p.PondKois) // Có thể có nhiều cá trong một hồ
-                .HasForeignKey(d => d.PondId) // Chỉ định khóa ngoại
-                .OnDelete(DeleteBehavior.Cascade); // Xóa cả cá trong hồ khi hồ bị xóa
+            entity.HasOne(d => d.PlayerPond)
+                .WithMany(p => p.PondKois)
+                .HasForeignKey(d => d.PlayerPondId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_PondKoi_PlayerPond");
 
-            entity.HasOne(d => d.PlayerKoi) // Ràng buộc tới bảng PlayerKoi
-                .WithMany(p => p.PondKois) // Có thể có nhiều cá trong một hồ
-                .HasForeignKey(d => d.PlayerKoiId) // Chỉ định khóa ngoại
-                .OnDelete(DeleteBehavior.Cascade); // Xóa cá khi nó bị xóa khỏi hồ
+            entity.HasOne(d => d.PlayerKoi)
+                .WithMany(p => p.PondKois)
+                .HasForeignKey(d => d.PlayerKoiId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_PondKoi_PlayerKoi");
+        });
+
+        modelBuilder.Entity<PlayerPond>(entity =>
+        {
+            entity.HasKey(e => e.PlayerPondId).HasName("PK_PlayerPond");
+
+            entity.ToTable("PlayerPond");
+
+            entity.HasOne(d => d.Player)
+                .WithMany(p => p.PlayerPonds)
+                .HasForeignKey(d => d.PlayerId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            entity.HasOne(d => d.Pond)
+                .WithMany(p => p.PlayerPonds)
+                .HasForeignKey(d => d.PondId)
+                .OnDelete(DeleteBehavior.Cascade);
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -73,5 +73,12 @@ namespace Koi_Game_Reposities.Class
                 .Select(i=>i.Quantity)
                 .ToList();
         }
+
+        public List<Inventory> getItemByTypeName(int idplayer, string typeName) 
+        {
+                return _dbcontext.Inventories
+                .Where(i=>i.PlayerId==idplayer&& i.ItemType == typeName)// lay ra cac do dung dựa tren id, ten nametype
+                .ToList();
+        }
     }
 }

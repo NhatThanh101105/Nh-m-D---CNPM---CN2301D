@@ -37,5 +37,10 @@ namespace Koi_Game_Services.Class.player
                 _playerFishRepository.SaveFishToPlayer(playerKoi);
             }
         }
+
+        public int  getPlayerKoiId(int idplayer,int KoiId)
+        {
+            return _playerFishRepository.getPlayerKoiId(idplayer, KoiId);
+        }
     }
 }

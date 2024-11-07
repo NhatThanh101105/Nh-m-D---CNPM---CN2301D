@@ -11,5 +11,9 @@ namespace Koi_Game_Reposities.Interfaces
     {
        List<int?> getKoisByIdPlayer(int playerID);
        void SaveFishToPlayer(PlayerKoi playerKoi);
+
+        List<PlayerKoi> getAllKoiPlayer(int idplayer);
+
+        int getPlayerKoiId(int idplayer, int KoiId);
     }
 }

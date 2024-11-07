@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Koi_Game_Reposities.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,16 @@ namespace Koi_Game_Reposities.Interfaces
         List<int> getKoiPlayer(int playerID);
 
         // duaw cas vaof hoof
-        void addKoiToPond(int playerKoiId, int PondId);
+        Task<bool> addKoiToPond(int playerKoiId, int playerPondId,int idplayer);
 
 
-        void removeKoiFromPond(int playerKoiId);
+       Task<bool> removeKoiFromPond(int playerKoiId, int playerPondId,int idplayer);
 
-        List<int> getKoiInPond(int idplayer,int pondId);
+        List<int> getKoiInPond(int idplayer,int playerPondId);
+
+
+        // lay ra danh sach cas owr trong hof 
+        List<PlayerKoi> GetKoiInPond(int idplayer, int playerPondId);
+
     }
 }

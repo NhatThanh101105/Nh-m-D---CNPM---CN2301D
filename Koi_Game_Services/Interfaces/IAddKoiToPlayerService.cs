@@ -10,5 +10,7 @@ namespace Koi_Game_Services.Interfaces
     {
 
         void AddKoiToPlayer(int idPlayer,int idKoi);
+
+        int getPlayerKoiId(int idplayer, int koiId);
     }
 }

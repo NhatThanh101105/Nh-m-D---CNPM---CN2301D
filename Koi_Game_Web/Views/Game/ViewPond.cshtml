@@ -1,0 +1,42 @@
+﻿@model PondDetailViewModel
+
+<h2>Chi tiết Hồ - Loại Hồ @Model.pondId</h2> <!-- Hiển thị loại hồ nếu cần -->
+
+<div class="koi-in-pond">
+    <h3>Cá trong hồ:</h3>
+    @if (Model.koilist.Any())
+    {
+        @foreach (var playerKoi in Model.koilist)
+        {
+            <div class="koi-item">
+                <img src="@playerKoi.ImageURL" alt="@playerKoi.name" class="koi-img" />
+                <p>@playerKoi.name</p>
+                <form asp-action="removeKoiFromPond" asp-controller="Pond" method="post">
+                    <input type="hidden" name="playerPondId" value="@Model.playerPondId" />
+                    <input type="hidden" name="playerKoiId" value="@playerKoi.playerKoiId" />
+                    <button type="submit" class="btn-remove">Xóa</button>
+                </form>
+            </div>
+        }
+    }
+    else
+    {
+        <p>Hồ này hiện đang trống.</p>
+    }
+</div>
+
+<div class="koi-not-in-pond">
+    <h3>Thêm cá vào hồ:</h3>
+    @foreach (var playerKoi in Model.koiNotInPond)
+    {
+        <div class="koi-item">
+            <img src="@playerKoi.ImageURL" alt="@playerKoi.name" class="koi-img" />
+            <p>@playerKoi.name</p>
+            <form asp-action="addKoiToPond" asp-controller="Pond" method="post">
+                <input type="hidden" name="playerPondId" value="@Model.playerPondId" />
+                <input type="hidden" name="playerKoiId" value="@playerKoi.playerKoiId" />
+                <button type="submit" class="btn-add">Thêm</button>
+            </form>
+        </div>
+    }
+</div>

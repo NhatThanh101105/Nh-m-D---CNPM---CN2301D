@@ -1,0 +1,76 @@
+﻿/* Căn chỉnh thông tin người chơi */
+.player-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Hồ chính */
+.main-pond {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pond-container {
+    position: relative;
+}
+
+.pond-img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+.koi-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.koi-item {
+    margin: 5px;
+    text-align: center;
+}
+
+.koi-img {
+    width: 50px;
+    height: auto;
+}
+
+/* Danh sách cá của người chơi (ẩn theo mặc định) */
+.koi-list {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    max-width: 300px;
+    z-index: 100;
+}
+
+    .koi-list.visible {
+        display: block;
+    }
+
+.empty-pond-message {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-inventory {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+    .btn-inventory:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }

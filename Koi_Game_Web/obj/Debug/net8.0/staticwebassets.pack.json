@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Koi_Game_Web.bundle.scp.css"
     },
     {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\game.css",
+      "PackagePath": "staticwebassets\\css\\game.css"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\inventory.css",
+      "PackagePath": "staticwebassets\\css\\inventory.css"
+    },
+    {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\koi-game-style.css",
       "PackagePath": "staticwebassets\\css\\koi-game-style.css"
     },
@@ -51,6 +59,22 @@
     {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-xanh.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-xanh.png"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\pond\\pond1.jpg",
+      "PackagePath": "staticwebassets\\images\\pond\\pond1.jpg"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\pond\\pond5.jpg",
+      "PackagePath": "staticwebassets\\images\\pond\\pond5.jpg"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\pond\\pond7.jpg",
+      "PackagePath": "staticwebassets\\images\\pond\\pond7.jpg"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\game.js",
+      "PackagePath": "staticwebassets\\js\\game.js"
     },
     {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\koi-game-script.js",

@@ -1,4 +1,5 @@
-﻿using Koi_Game_Reposities.Interfaces;
+﻿using Koi_Game_Reposities.Entities;
+using Koi_Game_Reposities.Interfaces;
 using Koi_Game_Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -32,6 +33,11 @@ namespace Koi_Game_Services.Class.inventory
         public void removeItem(int idplayer, int itemId, string name, int quantity)
         {
             _inventoryRepository.removeItems(idplayer, itemId, name, quantity);
+        }
+
+        public List<Inventory> getItemByNameType(int idplayer,string nameType)
+        {
+            return _inventoryRepository.getItemByTypeName(idplayer, nameType);
         }
     }
 }

@@ -24,4 +24,5 @@ public partial class Player
     public virtual ICollection<Trade> TradeBuyers { get; set; } = new List<Trade>();
 
     public virtual ICollection<Trade> TradeSellers { get; set; } = new List<Trade>();
+    public virtual ICollection<PlayerPond> PlayerPonds { get; set; } = new List<PlayerPond>();
 }
