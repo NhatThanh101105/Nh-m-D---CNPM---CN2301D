@@ -2,6 +2,10 @@
 
 <h2>Chi tiết Hồ - Loại Hồ @Model.pondId</h2> <!-- Hiển thị loại hồ nếu cần -->
 
+<head>
+    <link rel="stylesheet" href="~/css/danhsachKoi.css" />
+</head>
+
 <div class="koi-in-pond">
     <h3>Cá trong hồ:</h3>
     @if (Model.koilist.Any())
@@ -9,7 +13,7 @@
         @foreach (var playerKoi in Model.koilist)
         {
             <div class="koi-item">
-                <img src="@playerKoi.ImageURL" alt="@playerKoi.name" class="koi-img" />
+                <img src="@Url.Content(playerKoi.ImageURL)" alt="@playerKoi.name" class="koi-img" style="width: 100px; height: 100px;" />
                 <p>@playerKoi.name</p>
                 <form asp-action="removeKoiFromPond" asp-controller="Pond" method="post">
                     <input type="hidden" name="playerPondId" value="@Model.playerPondId" />
@@ -26,11 +30,11 @@
 </div>
 
 <div class="koi-not-in-pond">
-    <h3>Thêm cá vào hồ:</h3>
+    <h3>Cá của bạn:</h3>
     @foreach (var playerKoi in Model.koiNotInPond)
     {
         <div class="koi-item">
-            <img src="@playerKoi.ImageURL" alt="@playerKoi.name" class="koi-img" />
+            <img src="@Url.Content(playerKoi.ImageURL)" alt="@playerKoi.name" class="koi-img" style=" width: 100px; height: 100px;" />
             <p>@playerKoi.name</p>
             <form asp-action="addKoiToPond" asp-controller="Pond" method="post">
                 <input type="hidden" name="playerPondId" value="@Model.playerPondId" />

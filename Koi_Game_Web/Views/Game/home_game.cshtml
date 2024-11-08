@@ -7,20 +7,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Pond</title>
-    <link rel="stylesheet" href="~/css/game.css">
+    <link rel="stylesheet" href="~/css/game.css?v=1.1" />
+
     <script src="~/js/game.js"></script>
+
+    <style>
+        body {
+            background-image: url('@Url.Content("~/images/background/bgGame.jpg")'); /* Path to your background image */
+            background-size: cover; /* Ensures the image covers the whole page */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-attachment: fixed; /* Keeps the background in place while scrolling */
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Thông tin người chơi -->
-    <div class="player-info">
-        <h2>Welcome, @Model.player.name!</h2>
-        <p>Coins: @Model.player.coin</p>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="@Url.Action("Inventory", "Inventory")" class="sidebar-item">
+            <img src="~/images/inventory/tuido.png" alt="Inventory Icon" class="sidebar-icon">
+            túi đồ
+        </a>
+        <a href="@Url.Action("Logout", "Account")" class="sidebar-item">
+            <img src="~/images/logout.jpg" alt="Logout Icon" class="sidebar-icon">
+            Đăng xuất
+        </a>
     </div>
+
+    <!-- Thông tin người chơi -->
+<div class="player-info">
+    <h2 class="player-name">
+        <img src="~/images/icon/player.png" alt="User Icon" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 5px;">
+            @Model.player.name
+    </h2>
+    <p class="player-coin">
+        <img src="~/images/icon/coin.png" alt="Coin Icon" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 5px;">
+            @Model.player.coin
+    </p>
+</div>
+
 
     <!-- Hồ nước chính của người chơi -->
     <div class="main-pond">
-        <h3>Your Selected Pond</h3>
+        <h3></h3>
         <div class="pond-container">
             <div class="pond-item">
                 @* Thay showKoiList() bằng liên kết đến ViewPond *@
@@ -36,8 +66,9 @@
                         @foreach (var koi in Model.PondDetail.koilist)
                         {
                             <div class="koi-item">
-                                <img src="@koi.ImageURL" alt="@koi.name" class="koi-img" />
-                                <p>@koi.name</p>
+                                <img src="@Url.Content(koi.ImageURL)" alt="@koi.name" class="koi-img" />
+
+                                
                             </div>
                         }
                     </div>
@@ -48,21 +79,6 @@
                 }
             </div>
         </div>
-    </div>
-    <div class="navigation-buttons">
-        <a href="@Url.Action("Inventory", "Inventory")" class="btn-inventory"> Inventory</a>
-    </div>
-    <!-- Danh sách cá của người chơi (ẩn, hiện khi nhấp vào hồ) -->
-    <div id="koi-list" class="koi-list hidden">
-        <h4>Your Koi Collection</h4>
-        <!-- KoiCollection chứa tất cả cá mà người chơi sở hữu -->
-        @foreach (var koi in Model.Koi) 
-        {
-            <div class="koi-item" onclick="addKoiToPond(@koi.koiId)">
-                <img src="@koi.ImageURL" alt="@koi.name" class="koi-img" />
-                <p>@koi.name</p>
-            </div>
-        }
     </div>
 
 </body>

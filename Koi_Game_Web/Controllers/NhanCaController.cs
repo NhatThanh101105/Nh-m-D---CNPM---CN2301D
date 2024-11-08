@@ -20,7 +20,7 @@ namespace Koi_Game_Web.Controllers
             {
                 List<int> koiIds = idKois.Split(',').Select(int.Parse).ToList();
                 _xuLiNhanCaLanDau.NhanCa(idplayer.Value,koiIds);
-                return RedirectToAction("Privacy","Home");
+                return RedirectToAction("KoiGame","Game");
             }
             return RedirectToAction("Login","Account");
         }

@@ -47,7 +47,7 @@ namespace Koi_Game_Web.Controllers
                 var pondId = HttpContext.Session.GetInt32("pondId");
 
                 // 
-                if (!playerPondId.HasValue || !pondId.HasValue) { return RedirectToAction("Inventory", "Inventory"); }
+              if (!playerPondId.HasValue || !pondId.HasValue) { return RedirectToAction("Inventory", "Inventory"); }
 
                 var koilist = _hienThiCaService.GetKoiInPond(playerId.Value,playerPondId.Value)
                     .Select(k=> new KoiViewModel
