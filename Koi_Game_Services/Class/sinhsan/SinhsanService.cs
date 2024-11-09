@@ -23,7 +23,7 @@ namespace Koi_Game_Services.Class.sinhsan
         public async Task<bool> SinhSan(int koiId_1, int koiId_2, int idPlayer)
         {
             var koi_1 = await _koiRepository.GetKoiFishById(koiId_1);
-            var koi_2 = await _koiRepository.GetKoiFishById(koiId_1);
+            var koi_2 = await _koiRepository.GetKoiFishById(koiId_2);
             if (koi_1 == null || koi_2 == null)
             {
                 return false;
@@ -34,8 +34,6 @@ namespace Koi_Game_Services.Class.sinhsan
             _addKoiToPlayerService.AddKoiToPlayer(idPlayer, id_koi_con);
 
             return true;
-
-
         }
     }
 }

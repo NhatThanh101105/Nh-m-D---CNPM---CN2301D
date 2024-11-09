@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Koi_Game_Reposities.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,9 @@ namespace Koi_Game_Reposities.Interfaces
 {
     public interface IGameStatusRepository
     {
-        int getPondId(int idplayer);
-        int getPlayerPondId(int idplayer);
+
+
+        void saveGame(int idplayer, int pondId,int playerPondId);
+        GameStatus getPlayerStatus (int idplayer);
     }
 }

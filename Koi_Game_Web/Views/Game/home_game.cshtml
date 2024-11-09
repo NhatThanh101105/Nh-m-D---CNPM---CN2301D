@@ -19,7 +19,42 @@
             background-repeat: no-repeat; /* Prevents tiling */
             background-attachment: fixed; /* Keeps the background in place while scrolling */
         }
+
+        .tempdata-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 18px;
+            border-radius: 8px;
+            z-index: 1000;
+            text-align: center;
+            max-width: 80%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+            /* Separate colors for success and fail messages */
+            .tempdata-message.success {
+                background-color: rgba(0, 128, 0, 0.9);
+            }
+
+            .tempdata-message.fail {
+                background-color: rgba(255, 0, 0, 0.9);
+            }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                const tempdataMessages = document.querySelectorAll('.tempdata-message');
+                tempdataMessages.forEach(function (message) {
+                    message.style.display = 'none';
+                });
+            }, 3000); // Thời gian hiển thị (3000ms = 3 giây)
+        });
+    </script>
 </head>
 <body>
 
@@ -28,6 +63,10 @@
         <a href="@Url.Action("Inventory", "Inventory")" class="sidebar-item">
             <img src="~/images/inventory/tuido.png" alt="Inventory Icon" class="sidebar-icon">
             túi đồ
+        </a>
+        <a href="@Url.Action("BreedKoi", "SinhSan")" class="sidebar-item">
+            <img src="~/images/icon/breed.png" alt="Breeding Icon" class="sidebar-icon">
+            Sinh sản
         </a>
         <a href="@Url.Action("Logout", "Account")" class="sidebar-item">
             <img src="~/images/logout.jpg" alt="Logout Icon" class="sidebar-icon">
@@ -67,8 +106,6 @@
                         {
                             <div class="koi-item">
                                 <img src="@Url.Content(koi.ImageURL)" alt="@koi.name" class="koi-img" />
-
-                                
                             </div>
                         }
                     </div>
@@ -80,6 +117,14 @@
             </div>
         </div>
     </div>
+    @if (TempData["Success"] != null)
+    {
+        <div class="tempdata-message success">@TempData["Success"]</div>
+    }
+    @if (TempData["Fail"] != null)
+    {
+        <div class="tempdata-message fail">@TempData["Fail"]</div>
+    }
 
 </body>
 </html>

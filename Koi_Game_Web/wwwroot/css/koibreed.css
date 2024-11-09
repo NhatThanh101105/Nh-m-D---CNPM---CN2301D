@@ -1,5 +1,4 @@
-﻿
-.koi-container {
+﻿.koi-container {
     display: flex;
     flex-wrap: nowrap; /* To keep items in a single row */
     overflow-x: auto; /* Allows horizontal scrolling if there are too many items */
@@ -34,4 +33,3 @@
     width: 40px; /* Kích thước nhỏ hợp lý */
     height: 40px;
 }
-

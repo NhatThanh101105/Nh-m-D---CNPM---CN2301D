@@ -35,7 +35,7 @@ public partial class KoiGameDatabaseContext : DbContext
 
     public virtual DbSet<PondKoi> PondKois { get; set; }
     public virtual DbSet<PlayerPond> PlayerPonds { get; set; }
-
+    public virtual DbSet<GameStatus> GameStatuses { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     { }
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
@@ -216,7 +216,23 @@ public partial class KoiGameDatabaseContext : DbContext
                 .HasForeignKey(d => d.PondId)
                 .OnDelete(DeleteBehavior.Cascade);
         });
+        modelBuilder.Entity<GameStatus>(entity =>
+        {
+            entity.HasKey(e => e.gameStatus).HasName("PK_GameStatus");
 
+            entity.ToTable("GameStatus");
+
+            entity.Property(e => e.idPlayer)
+                .IsRequired();
+
+            entity.Property(e => e.PondId)
+                .IsRequired();
+
+            entity.Property(e => e.PlayerPondId)
+                .IsRequired();
+        });
+
+           
         OnModelCreatingPartial(modelBuilder);
     }
 

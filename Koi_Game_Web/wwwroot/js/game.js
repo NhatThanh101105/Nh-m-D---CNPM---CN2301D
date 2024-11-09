@@ -18,6 +18,8 @@ function addKoiToPond(koiId) {
         }
     });
 }
+
+
 // Tạo chuyển động ngẫu nhiên cho các cá koi
 function moveKoiWithVectors(koi) {
     const speed = 0.213456789; // Tốc độ di chuyển

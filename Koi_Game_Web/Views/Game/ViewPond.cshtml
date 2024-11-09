@@ -3,7 +3,7 @@
 <h2>Chi tiết Hồ - Loại Hồ @Model.pondId</h2> <!-- Hiển thị loại hồ nếu cần -->
 
 <head>
-    <link rel="stylesheet" href="~/css/danhsachKoi.css" />
+    <link rel="stylesheet" href="~/css/danhsachKoi.css?v=1.1" />
 </head>
 
 <div class="koi-in-pond">
@@ -43,4 +43,9 @@
             </form>
         </div>
     }
+</div>
+<div class="back-to-main">
+    <a href="@Url.Action("KoiGame", "Game")" class="btn-back">
+        <img src="~/images/icon/back.png" alt="Back Icon" class="back-icon">
+    </a>
 </div>
