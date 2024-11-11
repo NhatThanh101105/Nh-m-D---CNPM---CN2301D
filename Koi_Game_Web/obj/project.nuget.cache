@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8WPelXqnbsA=",
+  "dgSpecHash": "KvNwiyxGf48=",
   "success": true,
-  "projectFilePath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\Koi_Game_Web.csproj",
+  "projectFilePath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\Koi_Game_Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hoang Quoc\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Hoang Quoc\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

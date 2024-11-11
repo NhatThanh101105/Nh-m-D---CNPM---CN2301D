@@ -27,6 +27,7 @@ public class AccountController : Controller
             var player = _loginService.Login(model.Username, model.Password);
             if (player != null)
             {
+                // su dung session ddeer luu cac ddang nhapj
                 HttpContext.Session.SetInt32("playerId", player.PlayerId);
                 HttpContext.Session.SetString("username", player.UserName);
                 //  HttpContext.Session.SetInt32("coin", (int)(player.Coin ?? 0));
@@ -55,7 +56,7 @@ public class AccountController : Controller
             // var isRegistered = _loginService.Register(model.Username, model.Password, model.Name, model.ConfirmPassword);
             if (_loginService.Register(model.Username, model.Password, model.Name, model.ConfirmPassword))
             {
-                return RedirectToAction("~/Views/Account/Login.cshtml"); // Điều hướng về trang đăng nhập khi đăng ký thành công
+                return RedirectToAction("Login","Account"); // Điều hướng về trang đăng nhập khi đăng ký thành công
             }
             else
             {

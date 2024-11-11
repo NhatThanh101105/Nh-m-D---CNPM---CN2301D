@@ -552,37 +552,33 @@
         return null;
       }
 
-        const $ = getjQuery();
-        const typeEvent = getTypeEvent(event);
-        const inNamespace = event !== typeEvent;
-        const isNative = nativeEvents.has(typeEvent);
-        let jQueryEvent;
-        let bubbles = true;
-        let nativeDispatch = true;
-        let defaultPrevented = false;
-        let evt = null;
+      const $ = getjQuery();
+      const typeEvent = getTypeEvent(event);
+      const inNamespace = event !== typeEvent;
+      const isNative = nativeEvents.has(typeEvent);
+      let jQueryEvent;
+      let bubbles = true;
+      let nativeDispatch = true;
+      let defaultPrevented = false;
+      let evt = null;
 
-        if (inNamespace && $) {
-            jQueryEvent = $.Event(event, args);
-            $(element).trigger(jQueryEvent);
-            bubbles = !jQueryEvent.isPropagationStopped();
-            nativeDispatch = !jQueryEvent.isImmediatePropagationStopped();
-            defaultPrevented = jQueryEvent.isDefaultPrevented();
-        }
+      if (inNamespace && $) {
+        jQueryEvent = $.Event(event, args);
+        $(element).trigger(jQueryEvent);
+        bubbles = !jQueryEvent.isPropagationStopped();
+        nativeDispatch = !jQueryEvent.isImmediatePropagationStopped();
+        defaultPrevented = jQueryEvent.isDefaultPrevented();
+      }
 
-        if (isNative) {
-            // Thay thế phần này
-            evt = new CustomEvent(typeEvent, { // Sử dụng CustomEvent thay vì document.createEvent
-                bubbles: bubbles,
-                cancelable: true // Thêm tùy chọn cancelable
-            });
-        } else {
-            evt = new CustomEvent(event, {
-                bubbles,
-                cancelable: true
-            });
-        }
- // merge custom information in our event
+      if (isNative) {
+        evt = document.createEvent('HTMLEvents');
+        evt.initEvent(typeEvent, bubbles, true);
+      } else {
+        evt = new CustomEvent(event, {
+          bubbles,
+          cancelable: true
+        });
+      } // merge custom information in our event
 
 
       if (typeof args !== 'undefined') {
@@ -949,52 +945,49 @@
     return key.replace(/[A-Z]/g, chr => `-${chr.toLowerCase()}`);
   }
 
-    const Manipulator = {
-        setDataAttribute(element, key, value) {
-            element.setAttribute(`data-bs-${normalizeDataKey(key)}`, value);
-        },
+  const Manipulator = {
+    setDataAttribute(element, key, value) {
+      element.setAttribute(`data-bs-${normalizeDataKey(key)}`, value);
+    },
 
-        removeDataAttribute(element, key) {
-            element.removeAttribute(`data-bs-${normalizeDataKey(key)}`);
-        },
+    removeDataAttribute(element, key) {
+      element.removeAttribute(`data-bs-${normalizeDataKey(key)}`);
+    },
 
-        getDataAttributes(element) {
-            if (!element) {
-                return {};
-            }
+    getDataAttributes(element) {
+      if (!element) {
+        return {};
+      }
 
-            const attributes = {};
-            Object.keys(element.dataset)
-                .filter(key => key.startsWith('bs'))
-                .forEach(key => {
-                    let pureKey = key.replace(/^bs/, '');
-                    pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1);
-                    attributes[pureKey] = normalizeData(element.dataset[key]);
-                });
-            return attributes; // Trả về danh sách thuộc tính
-        },
+      const attributes = {};
+      Object.keys(element.dataset).filter(key => key.startsWith('bs')).forEach(key => {
+        let pureKey = key.replace(/^bs/, '');
+        pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1, pureKey.length);
+        attributes[pureKey] = normalizeData(element.dataset[key]);
+      });
+      return attributes;
+    },
 
-        getDataAttribute(element, key) {
-            return normalizeData(element.getAttribute(`data-bs-${normalizeDataKey(key)}`));
-        },
+    getDataAttribute(element, key) {
+      return normalizeData(element.getAttribute(`data-bs-${normalizeDataKey(key)}`));
+    },
 
-        offset(element) {
-            const rect = element.getBoundingClientRect();
-            return {
-                top: rect.top + window.scrollY,  // Đã thay thế
-                left: rect.left + window.scrollX   // Đã thay thế
-            };
-        },
+    offset(element) {
+      const rect = element.getBoundingClientRect();
+      return {
+        top: rect.top + window.pageYOffset,
+        left: rect.left + window.pageXOffset
+      };
+    },
 
-        position(element) {
-            return {
-                top: element.offsetTop,
-                left: element.offsetLeft
-            };
-        }
-    };
+    position(element) {
+      return {
+        top: element.offsetTop,
+        left: element.offsetLeft
+      };
+    }
 
-
+  };
 
   /**
    * --------------------------------------------------------------------------
