@@ -16,7 +16,7 @@ namespace Koi_Game_Services.Class.naptien
             _playerRepository = playerRepository;
         }
 
-        public bool napTien(string username, int VND, string seri)
+        public bool napTien(string username, decimal? VND, string seri)
         {
 
             var player = _playerRepository.GetPlayerByUsername(username);

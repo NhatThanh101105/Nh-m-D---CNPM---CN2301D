@@ -41,6 +41,16 @@ namespace Koi_Game_Services.Class.player
         public int  getPlayerKoiId(int idplayer,int KoiId)
         {
             return _playerFishRepository.getPlayerKoiId(idplayer, KoiId);
+        } 
+        public void RemoveKoiFromPlayer(int playerKoiId)
+        {
+
+ 
+            var playerkoi=_playerFishRepository.getPlayerKoiById(playerKoiId);
+            if(playerkoi!=null)
+            {
+                _playerFishRepository.RemoveFishFromPlayer(playerkoi);
+            }
         }
     }
 }

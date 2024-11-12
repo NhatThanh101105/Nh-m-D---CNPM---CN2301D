@@ -31,7 +31,7 @@ namespace Koi_Game_Web.Controllers
             var allKoi= _hienThiCaService.getAllKoiPlayer(idplayer.Value);// lay tat car cas cuar nguoiwf cvhoiw
 
 
-            var koiNotInPond = allKoi.Where(k => !koiInPond.Any(kinPond => kinPond.PlayerKoiId == k.PlayerKoiId)).ToList();
+            var koiNotInPond = allKoi.Where(k => !koiInPond.Any(kinPond => kinPond.PlayerKoiId == k.PlayerKoiId)&& !k.IsOnTrade).ToList();
             // lovj ra cacs con ca k cos trong hoof
 
 

@@ -5,7 +5,7 @@
     {
         public int id { get; set; }
         public string username { get; set; }
-        public int coin { get; set; }
+        public decimal? coin { get; set; }
         public string name { get; set; }
     }
 }

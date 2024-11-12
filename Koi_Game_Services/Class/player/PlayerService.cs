@@ -57,25 +57,18 @@ namespace Koi_Game_Services.Class.player
 
         }
 
-        public void UpdatePlayer(PlayerDTO playerDTO)
+        public void UpdatePlayer(Player player)
         {
-            var player = new Player
-            {
-                PlayerId = playerDTO.Id,
-                Name = playerDTO.Name,
-                UserName = playerDTO.UserName,
-                Password = playerDTO.Password,
-                Coin = playerDTO.Coin
-            };
+            
             _playerRepository.UpdatePlayer(player);
         }
 
-        public async Task<int> GetCoinPlayer(int id)
+        public async Task<decimal?> GetCoinPlayer(int id)
         {
             var player = await _playerRepository.GetPlayer(id);
             if (player != null)
             {
-                int coin = (int)player.Coin;
+                decimal? coin = player.Coin;
                 return coin;
             }
             return 0;

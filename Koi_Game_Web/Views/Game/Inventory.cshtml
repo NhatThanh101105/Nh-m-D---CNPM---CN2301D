@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="~/css/inventory.css" />
 </head>
 
-<h2>Your Ponds</h2>
+<h2 class="page-title">Your Ponds</h2>
 <div class="pond-list">
     @foreach (var pond in Model)
     {
@@ -12,9 +12,9 @@
             <div class="pond-image">
                 <img src="@pond.PondImageUrl" alt="@pond.nameType Image" class="pond-img" />
             </div>
-            <p>@pond.nameType</p>
-            <a href="@Url.Action("SelectPond", "Inventory", new { pondId = pond.itemId })">Select</a>
+            <p class="pond-name">@pond.nameType</p>
+            <a href="@Url.Action("SelectPond", "Inventory", new { pondId = pond.itemId })" class="select-button">Select</a>
         </div>
     }
 </div>
-<a href="@Url.Action("KoiGame", "Game")">Back to Main</a>
+<a href="@Url.Action("KoiGame", "Game")" class="back-button">Back to Main</a>

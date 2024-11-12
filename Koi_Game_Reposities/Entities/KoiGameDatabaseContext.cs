@@ -37,9 +37,9 @@ public partial class KoiGameDatabaseContext : DbContext
     public virtual DbSet<PlayerPond> PlayerPonds { get; set; }
     public virtual DbSet<GameStatus> GameStatuses { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    { }
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-  //      => optionsBuilder.UseSqlServer("Server=HAI2\\SQLEXPRESS; DataBase=Koi_Game_Database;Integrated Security=true;TrustServerCertificate=True");
+    
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+       => optionsBuilder.UseSqlServer("Server=HAI2\\SQLEXPRESS; DataBase=Koi_Game_Database;Integrated Security=true;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -102,6 +102,8 @@ public partial class KoiGameDatabaseContext : DbContext
             entity.HasKey(e => e.PlayerKoiId).HasName("PK__PlayerKo__C89132A3A6886891");
 
             entity.ToTable("PlayerKoi");
+            entity.Property(e => e.IsOnTrade)
+         .HasDefaultValue(false);
 
             entity.HasOne(d => d.Koi).WithMany(p => p.PlayerKois)
                 .HasForeignKey(d => d.KoiId)
@@ -153,7 +155,13 @@ public partial class KoiGameDatabaseContext : DbContext
             entity.HasOne(d => d.Seller).WithMany(p => p.TradeSellers)
                 .HasForeignKey(d => d.SellerId)
                 .HasConstraintName("FK__Trade__SellerId__46E78A0C");
+
+            entity.HasOne(d => d.PlayerKoi) // Quan hệ với PlayerKoi
+                .WithMany()  // Nhiều Trade có thể có nhiều PlayerKoi
+                .HasForeignKey(d => d.PlayerKoiId)
+                .HasConstraintName("FK__Trade__PlayerKoiId");
         });
+
 
         modelBuilder.Entity<Upgrade>(entity =>
         {

@@ -124,7 +124,7 @@
     width: 50px;
     height: auto;
     text-align: center;
-    transition: transform 1s ease-in-out; /* Làm mượt trong 2 giây */
+    transition: transform 5s ease-in-out; /* Làm mượt trong 2 giây */
 }
 
 

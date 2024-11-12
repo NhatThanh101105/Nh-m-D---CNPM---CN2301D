@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9nGhnPSBzc9Q5qBm7BPlvQydxiVsKMLlsEO0kDmYQ6w=",
+  "Hash": "00bBiL5Sgy1FGcc+uxvyu2EbS76zt1eIn2xIat2Pu+s=",
   "Source": "Koi_Game_Web",
   "BasePath": "_content/Koi_Game_Web",
   "Mode": "Default",
@@ -167,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\trade.css",
+      "SourceId": "Koi_Game_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\",
+      "BasePath": "_content/Koi_Game_Web",
+      "RelativePath": "css/trade.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\trade.css"
     },
     {
       "Identity": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\favicon.ico",
@@ -604,6 +623,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\icon\\player.png"
+    },
+    {
+      "Identity": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\trade.png",
+      "SourceId": "Koi_Game_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\",
+      "BasePath": "_content/Koi_Game_Web",
+      "RelativePath": "images/icon/trade.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\icon\\trade.png"
     },
     {
       "Identity": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\inventory\\tuido.png",

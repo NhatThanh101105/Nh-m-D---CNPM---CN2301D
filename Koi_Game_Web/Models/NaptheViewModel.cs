@@ -4,6 +4,6 @@
     {
         public string Account { get; set; }
         public string SerialNumber { get; set; }
-        public int Amount { get; set; } // Mệnh giá
+        public decimal? Amount { get; set; } // Mệnh giá
     }
 }

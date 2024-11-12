@@ -4,8 +4,8 @@
     {
         public int playerPondId { get; set; }
         public int pondId { get; set; }
-        public List<KoiViewModel > koilist { get; set; }
-        public List<KoiViewModel> koiNotInPond { get; set; }
+        public List<KoiViewModel> koilist { get; set; } = new List<KoiViewModel>();
+        public List<KoiViewModel> koiNotInPond { get; set; } =new List<KoiViewModel>();
         public string PondImageUrl
         {
             get

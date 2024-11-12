@@ -10,6 +10,7 @@ using Koi_Game_Services.Class.nhanca_newplayer;
 using Koi_Game_Services.Class.player;
 using Koi_Game_Services.Class.pond;
 using Koi_Game_Services.Class.sinhsan;
+using Koi_Game_Services.Class.trade;
 using Koi_Game_Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -32,6 +33,7 @@ builder.Services.AddScoped<IPondKoiRepository, PondKoiRepository>();
 builder.Services.AddScoped<IPondRepository, PondRepository>();
 builder.Services.AddScoped<IPlayerPondRepository, PlayerPondRepository>();
 builder.Services.AddScoped<IGameStatusRepository, GameStatusRepository>();
+builder.Services.AddScoped<ITradeRepository, TradeRepository>();
 
 // dang ki login, player serivce
 builder.Services.AddScoped<IPlayerService, PlayerService>();
@@ -46,6 +48,7 @@ builder.Services.AddScoped<IGameStatusService,GameStatusService>();
 builder.Services.AddScoped<ISinhsanService,SinhsanService>();
 builder.Services.AddScoped<ILogicSinhsanService,LogicSinhsanService>();
 builder.Services.AddScoped<IAddKoiToPlayerService,AddKoiToPlayerService>();
+builder.Services.AddScoped<ITradeService,TradeService>();
 
 // cau hinnhf session
 builder.Services.AddSession(options =>

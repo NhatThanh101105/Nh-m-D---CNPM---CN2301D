@@ -32,7 +32,7 @@ namespace Koi_Game_Web.Controllers
             var koiList= _hienThiCaService.getAllKoiPlayer(idplayer.Value);
 
 
-            var koiNotInPond = koiList.Where(k=>!koiInPond.Any(kip=>kip.PlayerKoiId==k.PlayerKoiId)).ToList();
+            var koiNotInPond = koiList.Where(k=>!koiInPond.Any(kip=>kip.PlayerKoiId==k.PlayerKoiId) && !k.IsOnTrade).ToList();
 
             var koiNotInPondViewModel = koiNotInPond.Select(k => new KoiViewModel
             {

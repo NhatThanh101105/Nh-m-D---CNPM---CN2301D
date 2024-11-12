@@ -25,7 +25,7 @@ namespace Koi_Game_Web.Controllers
             var name= HttpContext.Session.GetString("name");
             if (playerId.HasValue && !string.IsNullOrEmpty(username))
             {
-                int coin= await _playerService.GetCoinPlayer(playerId.Value);
+                decimal? coin= await _playerService.GetCoinPlayer(playerId.Value);
                 var player = new PlayerViewModel
                 {
                     name = name,

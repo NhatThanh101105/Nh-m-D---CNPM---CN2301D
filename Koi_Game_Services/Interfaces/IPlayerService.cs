@@ -13,9 +13,9 @@ namespace Koi_Game_Services.Interfaces
         Task<List<Player>> GetAllPlayers();
         Task<Player> GetPlayer(int id);
         void AddPlayer (PlayerDTO playerDTO);
-        void UpdatePlayer (PlayerDTO playerDTO);
+        void UpdatePlayer (Player player);
         void DeletePlayer (PlayerDTO playerDTO); 
-
-        Task<int> GetCoinPlayer(int id);
+   //     void updatePlayer(Player player);
+        Task<decimal?> GetCoinPlayer(int id);
     }
 }
