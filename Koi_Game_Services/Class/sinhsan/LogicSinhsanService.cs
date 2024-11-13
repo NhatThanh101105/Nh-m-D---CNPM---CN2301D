@@ -13,8 +13,11 @@ namespace Koi_Game_Services.Class.sinhsan
         public async Task<int> GetIdKoi_SauSinh(string color_1, string color_2)
         {
             var random = new Random();
-            int randomNum = (int)Math.Pow(random.NextDouble(), 2) * 100;// random phan phoi binh phuong tu 1 dens 100 
-            // lai 2 con cung mau don gian red, yellow, blue 
+            //int randomNum = (int)Math.Pow(random.NextDouble(), 2) * 100;
+            // int randomNum = random.Next(1, 101); // Tạo số ngẫu nhiên từ 1 đến 100
+            int randomNum = (int)(Math.Pow(random.NextDouble(), 0.5) * 100) + 1;
+            Console.WriteLine($"Random number generated: {randomNum}");                              // random phan phoi binh phuong tu 1 dens 100 
+                                                                                                     // lai 2 con cung mau don gian red, yellow, blue 
             if (color_1 == color_2)
             {
                 if (color_1 == "Red") return 1; //id koi red

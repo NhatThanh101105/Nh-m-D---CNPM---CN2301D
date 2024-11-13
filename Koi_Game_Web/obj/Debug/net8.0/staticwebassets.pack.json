@@ -57,6 +57,18 @@
       "PackagePath": "staticwebassets\\images\\background\\background1.gif"
     },
     {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background2.gif",
+      "PackagePath": "staticwebassets\\images\\background\\background2.gif"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background5.gif",
+      "PackagePath": "staticwebassets\\images\\background\\background5.gif"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\backpack.jpg",
+      "PackagePath": "staticwebassets\\images\\background\\backpack.jpg"
+    },
+    {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\bgGame.jpg",
       "PackagePath": "staticwebassets\\images\\background\\bgGame.jpg"
     },

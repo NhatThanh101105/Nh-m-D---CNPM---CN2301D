@@ -2,9 +2,16 @@
 .main-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    min-height: 60vh;
     padding: 20px;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 /* Đặt bảng giao dịch có thể cuộn */
@@ -14,8 +21,11 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.5); /* Màu trắng với độ trong suốt 80% */
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 1px;
+    flex-basis: 60%;
 }
 
 /* Cải thiện kiểu dáng cho tiêu đề */
@@ -27,7 +37,7 @@
 
 /* Cài đặt cho bảng có thể cuộn */
 .scrollable-content {
-    max-height: 400px; /* Điều chỉnh chiều cao tối đa của bảng */
+    max-height: 200px; /* Điều chỉnh chiều cao tối đa của bảng */
     overflow-y: auto; /* Thêm thanh cuộn dọc nếu bảng quá dài */
 }
 
@@ -40,7 +50,7 @@
 
     /* Kiểu dáng cho các tiêu đề của bảng */
     .trade-table th {
-        background-color: #e0e0e0;
+        background-color: rgba(255, 255, 255, 0.5);
         padding: 10px;
         text-align: left;
     }
@@ -48,6 +58,7 @@
     /* Kiểu dáng cho các hàng trong bảng */
     .trade-table td {
         padding: 10px;
+        font-weight: 600;
         text-align: left;
         border-bottom: 1px solid #ddd;
     }
@@ -95,9 +106,12 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.5);
+    
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: 20px; /* Khoảng cách giữa bảng giao dịch và bảng Koi đang bán */
+    margin-left: 0px; /* Khoảng cách giữa bảng giao dịch và bảng Koi đang bán */
+    margin: 0;
+    flex-basis: 40%;
 }
 
 /* Cải thiện kiểu dáng cho tiêu đề */
@@ -109,21 +123,29 @@
 
 /* Cài đặt cho bảng Koi đang bán có thể cuộn */
 .scrollable-content {
-    max-height: 400px; /* Điều chỉnh chiều cao tối đa của bảng */
-    overflow-y: auto; /* Thêm thanh cuộn dọc nếu bảng quá dài */
+    display: flex;
+    max-height: 200px; /* Điều chỉnh chiều cao tối đa của bảng */
+    overflow-x: auto; /* Thêm thanh cuộn dọc nếu bảng quá dài */
 }
 
 /* Kiểu dáng cho các mục trong bảng Koi đang bán */
 .koi-item {
-    margin-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
+    width: 145px; /* Điều chỉnh kích thước mỗi mục */
+    height: 180px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex-shrink: 0; /* Ngăn vật phẩm bị thu hẹp khi có nhiều vật phẩm */
 }
 
 /* Kiểu dáng cho ảnh cá trong bảng Koi đang bán */
 .koi-img {
-    width: 80px; /* Điều chỉnh kích thước ảnh cá */
-    height: 80px;
+    width: 50px; /* Điều chỉnh kích thước ảnh cá */
+    height: 50px;
     object-fit: cover; /* Đảm bảo ảnh không bị méo */
     border-radius: 50%; /* Tạo kiểu ảnh tròn */
     margin-bottom: 10px;
@@ -132,7 +154,7 @@
 /* Kiểu dáng cho tên cá */
 .koi-name {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 800;
     margin-bottom: 5px;
     color: #333;
 }
@@ -141,6 +163,7 @@
 .koi-price {
     font-size: 16px;
     color: #666;
+    font-weight: 500;
     margin-bottom: 10px;
 }
 
@@ -165,15 +188,22 @@
     font-style: italic;
 }
 
+
+
 /* Đặt container của bảng Koi của bạn ở dưới */
 .koi-not-on-sale-container {
-    width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng */
+    width: 100%;
+    margin: 10px 2px 10px 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Khoảng cách giữa bảng giao dịch và bảng Koi của bạn */
+    overflow: auto;
 }
 
 /* Cải thiện kiểu dáng cho tiêu đề */
@@ -185,33 +215,37 @@
 
 /* Cài đặt cho bảng Koi của bạn có thể cuộn ngang */
 .scrollable-content {
-    display: flex; /* Đặt các mục trong dạng dòng ngang */
+    display: flex;
+    max-height: 200px; /* Đặt các mục trong dạng dòng ngang */
     overflow-x: auto; /* Thêm thanh cuộn ngang nếu bảng quá dài */
-    gap: 20px; /* Khoảng cách giữa các mục */
+    gap: 20px;
 }
 
 /* Kiểu dáng cho các mục trong bảng Koi của bạn */
-.koi-item {
-    width: 150px; /* Điều chỉnh kích thước mỗi mục */
+.koi-item-2 {
+    width: 145px; /* Điều chỉnh kích thước mỗi mục */
+    height: 180px;
     text-align: center;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex-shrink: 0; /* Ngăn vật phẩm bị thu hẹp khi có nhiều vật phẩm */
 }
 
 /* Kiểu dáng cho ảnh cá trong bảng Koi của bạn */
-.koi-img {
-    width: 100px; /* Điều chỉnh kích thước ảnh cá */
-    height: 100px;
+.koi-img-2 {
+    width: 50px; /* Điều chỉnh kích thước ảnh cá */
+    height: 50px;
     object-fit: cover; /* Đảm bảo ảnh không bị méo */
     border-radius: 50%; /* Tạo kiểu ảnh tròn */
     margin-bottom: 10px;
 }
 
 /* Kiểu dáng cho tên cá */
-.koi-name {
+.koi-name-2 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -219,7 +253,7 @@
 }
 
 /* Kiểu dáng cho giá cá */
-.koi-price {
+.koi-price-2 {
     font-size: 16px;
     color: #666;
     margin-bottom: 10px;
@@ -247,35 +281,22 @@
 }
 
 /* Đặt nút "Back" ở góc trái dưới */
-.back-to-main {
-
-    left: 20px; /* Khoảng cách từ lề trái */
-    bottom: 20px; /* Khoảng cách từ đáy trang */
-    z-index: 1000; /* Đảm bảo nút ở trên cùng */
-}
-
-/* Kiểu dáng cho nút "Back" */
-.btn-back {
-    background-color: #4CAF50;
+.back-button {
+    position: fixed;
+    bottom: 70px;
+    left: 20px;
+    background-color: #78909c;
     color: white;
-    padding: 6px 12px; /* Kích thước nhỏ */
-    border: none;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px; /* Kích thước chữ nhỏ */
-    cursor: pointer;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
 }
 
-/* Kiểu dáng cho biểu tượng "Back" */
-.back-icon {
-    width: 16px; /* Kích thước nhỏ */
-    height: 16px;
-    margin-right: 8px; /* Khoảng cách giữa biểu tượng và chữ */
-}
+    .back-button:hover {
+        background-color: #546e7a;
+    }
 
-/* Hiệu ứng hover cho nút "Back" */
-.btn-back:hover {
-    background-color: #45a049;
-}

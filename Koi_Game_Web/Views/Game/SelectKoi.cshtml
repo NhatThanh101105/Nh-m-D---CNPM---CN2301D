@@ -2,15 +2,15 @@
     <form asp-action="NhanCa" asp-controller="NhanCa" method="post" id="koiSelectionForm">
         <div class="koi-container">
             <div class="koi-image" data-color="Đỏ" data-id="1" onclick="selectKoi(this)">
-                <img src="~/images/fish/koi-do.png" alt="Koi Đỏ" style="width:100px;height:auto;" />
+                <img src="~/images/fish/koi-red.png" alt="Koi Đỏ" style="width:100px;height:auto;" />
                 <p>Koi Đỏ</p>
             </div>
             <div class="koi-image" data-color="Xanh" data-id="2" onclick="selectKoi(this)">
-                <img src="~/images/fish/koi-xanh.png" alt="Koi Xanh" style="width:100px;height:auto;" />
+                <img src="~/images/fish/koi-blue.png" alt="Koi Xanh" style="width:100px;height:auto;" />
                 <p>Koi Xanh</p>
             </div>
             <div class="koi-image" data-color="Vàng" data-id="3" onclick="selectKoi(this)">
-                <img src="~/images/fish/koi-vang.png" alt="Koi Vàng" style="width:100px;height:auto;" />
+                <img src="~/images/fish/koi-yellow.png" alt="Koi Vàng" style="width:100px;height:auto;" />
                 <p>Koi Vàng</p>
             </div>
         </div>
@@ -106,4 +106,13 @@
         // Cập nhật trường ẩn với danh sách các ID cá đã chọn
         document.getElementById('selectedKoiIds').value = selectedKoiIds.join(",");
     }
+
+    // Kiểm tra số lượng cá đã chọn trước khi gửi biểu mẫu
+    document.getElementById('koiSelectionForm').addEventListener('submit', function (event) {
+        if (selectedKoiIds.length !== 2) {
+            event.preventDefault(); // Ngăn biểu mẫu gửi đi
+            alert("Bạn phải chọn chính xác 2 con cá.");
+        }
+    });
 </script>
+

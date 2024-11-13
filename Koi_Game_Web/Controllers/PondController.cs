@@ -32,7 +32,7 @@ namespace Koi_Game_Web.Controllers
 
 
             var koiNotInPond = allKoi.Where(k => !koiInPond.Any(kinPond => kinPond.PlayerKoiId == k.PlayerKoiId)&& !k.IsOnTrade).ToList();
-            // lovj ra cacs con ca k cos trong hoof
+            // lovj ra cacs con ca k cos trong hoof vaf treen ttcn =)))
 
 
             var koiInPondViewModel=koiInPond.Select(pk=>new KoiViewModel
