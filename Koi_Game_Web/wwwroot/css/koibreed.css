@@ -1,0 +1,35 @@
+﻿.koi-container {
+    display: flex;
+    flex-wrap: nowrap; /* To keep items in a single row */
+    overflow-x: auto; /* Allows horizontal scrolling if there are too many items */
+    gap: 10px; /* Adjust spacing between items */
+}
+
+.koi-item {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.koi-img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.back-to-main {
+    position: fixed;
+    bottom: 100px; /* Đưa xuống gần đáy */
+    left: 30px; /* Đưa về gần mép trái */
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.back-icon {
+    width: 40px; /* Kích thước nhỏ hợp lý */
+    height: 40px;
+}

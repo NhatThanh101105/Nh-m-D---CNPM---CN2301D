@@ -18,6 +18,5 @@
                 };
             }
         }
-        public List<KoiViewModel> KoiList { get; set; } = new List<KoiViewModel>();
     }
 }

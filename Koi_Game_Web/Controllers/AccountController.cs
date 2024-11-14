@@ -6,11 +6,12 @@ public class AccountController : Controller
 {
     private readonly ILoginService _loginService;
     //private readonly IXuLiNhanCaLanDau _xuLiNhanCaLanDau;
-
-    public AccountController(ILoginService loginService)
+    private readonly IGameStatusService _gameStatusService;
+    public AccountController(ILoginService loginService, IGameStatusService gameStatusService)
     {
         _loginService = loginService;
-       //_xuLiNhanCaLanDau= xuLiNhanCaLanDau;
+        _gameStatusService = gameStatusService;
+        //_xuLiNhanCaLanDau= xuLiNhanCaLanDau;
     }
 
     [HttpGet]
@@ -66,5 +67,19 @@ public class AccountController : Controller
             //ViewBag.ErrorMessage = "Xác nhận mật khẩu không khớp.";
         }
         return View("Register", model); // Trả về trang đăng ký với thông báo lỗi
+    }
+
+    public IActionResult Logout()
+    {
+        var idplayer = HttpContext.Session.GetInt32("playerId");
+        var pondId = HttpContext.Session.GetInt32("pondId");
+        var playerPondId = HttpContext.Session.GetInt32("playerPondId");
+        if (idplayer.HasValue)
+        {
+            _gameStatusService.saveGame(idplayer.Value, pondId.Value, playerPondId.Value);
+            HttpContext.Session.Clear();
+            return RedirectToAction("Login", "Account");
+        }
+        return RedirectToAction("KoiGame", "Game");
     }
 }

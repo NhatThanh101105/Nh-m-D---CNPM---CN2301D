@@ -1,29 +1,38 @@
 ﻿@model PondDetailViewModel
 
 <head>
-    <link rel="stylesheet" href="~/css/pond-details.css" />
+    <link rel="stylesheet" href="~/css/danhsachKoi.css?v=2.0" />
 </head>
 
-<h2>Chi tiết Hồ - Loại Hồ @Model.pondId</h2>
-
-<div class="koi-section koi-in-pond">
-    <h3>Cá trong hồ:</h3>
+<div class="koi-section">
+    <h3>Cá trong hồ</h3>
     @if (Model.koilist.Any())
     {
-        <div class="koi-list">
-            @foreach (var playerKoi in Model.koilist)
-            {
-                <div class="koi-item">
-                    <img src="@playerKoi.ImageURL" alt="@playerKoi.name" class="koi-img" />
-                    <p>@playerKoi.name</p>
-                    <form asp-action="removeKoiFromPond" asp-controller="Pond" method="post">
-                        <input type="hidden" name="playerPondId" value="@Model.playerPondId" />
-                        <input type="hidden" name="playerKoiId" value="@playerKoi.playerKoiId" />
-                        <button type="submit" class="btn-remove">Xóa</button>
-                    </form>
-                </div>
-            }
-        </div>
+        <table class="koi-table">
+            <thead>
+                <tr>
+                    <th>Hình ảnh</th>
+                    <th>Tên</th>
+                    <th>Hành động</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var playerKoi in Model.koilist)
+                {
+                    <tr>
+                        <td><img src="@Url.Content(playerKoi.ImageURL)" alt="@playerKoi.name" class="koi-img" /></td>
+                        <td>@playerKoi.name</td>
+                        <td>
+                            <form asp-action="removeKoiFromPond" asp-controller="Pond" method="post">
+                                <input type="hidden" name="playerPondId" value="@Model.playerPondId" />
+                                <input type="hidden" name="playerKoiId" value="@playerKoi.playerKoiId" />
+                                <button type="submit" class="btn-remove">Bắt cá</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
     }
     else
     {
@@ -31,20 +40,41 @@
     }
 </div>
 
-<div class="koi-section koi-not-in-pond">
-    <h3>Thêm cá vào hồ:</h3>
-    <div class="koi-list">
-        @foreach (var playerKoi in Model.koiNotInPond)
-        {
-            <div class="koi-item">
-                <img src="@playerKoi.ImageURL" alt="@playerKoi.name" class="koi-img" />
-                <p>@playerKoi.name</p>
-                <form asp-action="addKoiToPond" asp-controller="Pond" method="post">
-                    <input type="hidden" name="playerPondId" value="@Model.playerPondId" />
-                    <input type="hidden" name="playerKoiId" value="@playerKoi.playerKoiId" />
-                    <button type="submit" class="btn-add">Thêm</button>
-                </form>
-            </div>
-        }
-    </div>
+<div class="koi-section">
+    <h3>Cá của bạn</h3>
+    <table class="koi-table">
+        <thead>
+            <tr>
+                <th>Hình ảnh</th>
+                <th>Tên</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var playerKoi in Model.koiNotInPond)
+            {
+                <tr>
+                    <td><img src="@Url.Content(playerKoi.ImageURL)" alt="@playerKoi.name" class="koi-img" /></td>
+                    <td>@playerKoi.name</td>
+                    <td>
+                        <form asp-action="addKoiToPond" asp-controller="Pond" method="post">
+                            <input type="hidden" name="playerPondId" value="@Model.playerPondId" />
+                            <input type="hidden" name="playerKoiId" value="@playerKoi.playerKoiId" />
+                            <button type="submit" class="btn-add">Thả cá vào hồ</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>
+
+<div class="back-to-main">
+    <a href="@Url.Action("KoiGame", "Game")" class="btn-back">
+        Về thủy cung
+    </a>
+</div>
+
+
+
+<script src="~/js/view-pond.js"></script>

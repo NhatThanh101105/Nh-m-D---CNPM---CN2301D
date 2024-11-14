@@ -1,0 +1,128 @@
+﻿@model Koi_Game_Web.Models.TradeViewModel
+
+
+<h2 class="page-title">Chi tiết Giao dịch</h2>
+<head>
+    <link rel="stylesheet" href="~/css/trade.css?v=2.0" />
+</head>
+<div class="main-container">
+    <!-- Danh sách giao dịch (Khung giữa) -->
+    <div class="trade-list-container">
+        <h3 class="section-title">Danh sách giao dịch:</h3>
+        @if (Model.TradeItems != null && Model.TradeItems.Any())
+        {
+            <div class="scrollable-content">
+                <table class="trade-table">
+                    <thead>
+                        <tr>
+                            <th>Koi</th>
+                            <th>Người bán</th>
+                            <th>Tên Koi</th>
+                            <th>Giá</th>
+                            <th>Độ hiếm</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var trade in Model.TradeItems)
+                        {
+                            <tr>
+                                <td><img src="@Url.Content(trade.koi.ImageURL)" alt="@trade.koi.name" class="trade-koi-img" /></td>
+                                <td>@trade.sellerName</td>
+                                <td>@trade.koi.name</td>
+                                <td>@trade.price</td>
+                                <td>@trade.koi.rare</td>
+                                <td>
+                                    @if (trade.price > 0)
+                                    {
+                                        <form asp-action="Buy" asp-controller="Trade" method="post">
+                                            <input type="hidden" name="tradeId" value="@trade.tradeId" />
+                                            <input type="hidden" name="koiId" value="@trade.koi.koiId" />
+                                            <button type="submit" class="btn btn-buy">Mua</button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <p class="no-items">Không có cá để bán</p>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+        else
+        {
+            <p class="no-items">Không có giao dịch nào.</p>
+        }
+    </div>
+
+    <!-- Koi đang bán (Bên phải) -->
+    <div class="koi-on-sale-container">
+        <h3 class="section-title">Koi đang bán:</h3>
+        @if (Model.koiOnSale != null && Model.koiOnSale.Any())
+        {
+            <div class="scrollable-content">
+                @foreach (var koiOnSale in Model.koiOnSale)
+                {
+                    <div class="koi-item">
+                        <img src="@Url.Content(koiOnSale.koi.ImageURL)" alt="@koiOnSale.koi.name ?? " Không có tên Koi"" class="koi-img" />
+                        <p class="koi-name">@koiOnSale.koi.name</p>
+                        <p class="koi-price">Giá: @koiOnSale.koi.price</p>
+                        <form asp-action="Cancel" asp-controller="Trade" method="post" class="koi-action-form">
+                            <input type="hidden" name="tradeId" value="@koiOnSale.tradeId" />
+                            <button type="submit" class="btn btn-remove">Hủy bán</button>
+                        </form>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="no-items">Không có Koi nào đang bán.</p>
+        }
+    </div>
+
+    <!-- Koi của bạn (Dưới) -->
+    <div class="koi-not-on-sale-container">
+        <h3 class="section-title">Koi của bạn:</h3>
+        @if (Model.koiNotOnSale != null && Model.koiNotOnSale.Any())
+        {
+            <div class="scrollable-content">
+                @foreach (var koi in Model.koiNotOnSale)
+                {
+                    <div class="koi-item">
+                        <img src="@Url.Content(koi.ImageURL)" alt="@koi.name ?? " Không có tên Koi"" class="koi-img" />
+                        <p class="koi-name">@koi.name</p>
+                        <p class="koi-price">Giá: @koi.price</p>
+                        <form asp-action="Sell" asp-controller="Trade" method="post" class="koi-action-form">
+                            <input type="hidden" name="playerKoiId" value="@koi.playerKoiId" />
+                            <input type="hidden" name="price" value="@koi.price" />
+                            <button type="submit" class="btn btn-add">Bán</button>
+                        </form>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="no-items">Không có Koi nào chưa bán.</p>
+        }
+    </div>
+</div>
+
+@if (TempData["Success"] != null)
+{
+    <div class="tempdata-message success">@TempData["Success"]</div>
+}
+@if (TempData["Fail"] != null)
+{
+    <div class="tempdata-message fail">@TempData["Fail"]</div>
+}
+
+<!-- Back button -->
+<div class="back-to-main">
+    <a href="@Url.Action("KoiGame", "Game")" class="btn btn-back">
+    </a>
+</div>

@@ -26,9 +26,15 @@ namespace Koi_Game_Web.Controllers
 
             //int playerPondId = _playerPondService.getPlayerPondId(idplayer.Value, pondId);
 
-            var koiInPond= _hienThiCaService.GetKoiInPond(idplayer.Value,playerPondId.Value);
-            var allKoi= _hienThiCaService.getAllKoiPlayer(idplayer.Value);
-            var koiNotInPond = allKoi.Where(k => !koiInPond.Any(kinPond => kinPond.KoiId == k.KoiId)).ToList();
+            var koiInPond= _hienThiCaService.GetKoiInPond(idplayer.Value,playerPondId.Value);// lay cac con ca trong ho
+
+            var allKoi= _hienThiCaService.getAllKoiPlayer(idplayer.Value);// lay tat car cas cuar nguoiwf cvhoiw
+
+
+            var koiNotInPond = allKoi.Where(k => !koiInPond.Any(kinPond => kinPond.PlayerKoiId == k.PlayerKoiId)&& !k.IsOnTrade).ToList();
+            // lovj ra cacs con ca k cos trong hoof
+
+
             var koiInPondViewModel=koiInPond.Select(pk=>new KoiViewModel
             {
                 playerKoiId=pk.PlayerKoiId,
@@ -36,7 +42,6 @@ namespace Koi_Game_Web.Controllers
                 color=pk.Koi.Color,
                 ImageURL=pk.Koi.ImageURL,
                 name=pk.Koi.KoiName
-
             }).ToList();
             var koiNotInPondViewModel = koiNotInPond.Select(k => new KoiViewModel
             {
@@ -69,9 +74,11 @@ namespace Koi_Game_Web.Controllers
             if (add)
             {
                 Console.WriteLine("da check");
+                TempData["Success"] = "Thêm cá thành công";
                 return RedirectToAction("KoiGame","Game");
             }
             Console.WriteLine("that bai");
+            TempData["Fail"] = "Hồ đã đầy";
             return RedirectToAction("KoiGame", "Game");
         }
 

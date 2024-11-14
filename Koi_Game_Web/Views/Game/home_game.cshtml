@@ -7,20 +7,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Pond</title>
-    <link rel="stylesheet" href="~/css/game.css">
+    <link rel="stylesheet" href="~/css/game.css?v=1.1" />
+
     <script src="~/js/game.js"></script>
+
+    <style>
+        body {
+            background-image: url('@Url.Content("~/images/background/bgGame.jpg")'); /* Path to your background image */
+            background-size: cover; /* Ensures the image covers the whole page */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-attachment: fixed; /* Keeps the background in place while scrolling */
+        }
+
+        .tempdata-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 18px;
+            border-radius: 8px;
+            z-index: 1000;
+            text-align: center;
+            max-width: 80%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+            /* Separate colors for success and fail messages */
+            .tempdata-message.success {
+                background-color: rgba(0, 128, 0, 0.9);
+            }
+
+            .tempdata-message.fail {
+                background-color: rgba(255, 0, 0, 0.9);
+            }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                const tempdataMessages = document.querySelectorAll('.tempdata-message');
+                tempdataMessages.forEach(function (message) {
+                    message.style.display = 'none';
+                });
+            }, 3000); // Thời gian hiển thị (3000ms = 3 giây)
+        });
+    </script>
 </head>
 <body>
 
-    <!-- Thông tin người chơi -->
-    <div class="player-info">
-        <h2>Welcome, @Model.player.name!</h2>
-        <p>Coins: @Model.player.coin</p>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="@Url.Action("Inventory", "Inventory")" class="sidebar-item">
+            <img src="~/images/inventory/tuido.png" alt="Inventory Icon" class="sidebar-icon">
+            túi đồ
+        </a>
+        <a href="@Url.Action("BreedKoi", "SinhSan")" class="sidebar-item">
+            <img src="~/images/icon/breed.png" alt="Breeding Icon" class="sidebar-icon">
+            Sinh sản
+        </a>
+        <a href="@Url.Action("Trade", "Trade")" class="sidebar-item">
+            <img src="~/images/icon/trade.png" alt="Logout Icon" class="sidebar-icon">
+            Giao dịch
+        </a>
+        <a href="@Url.Action("Logout", "Account")" class="sidebar-item">
+            <img src="~/images/logout.jpg" alt="Logout Icon" class="sidebar-icon">
+            Đăng xuất
+        </a>
     </div>
+
+    <!-- Thông tin người chơi -->
+<div class="player-info">
+    <h2 class="player-name">
+        <img src="~/images/icon/player.png" alt="User Icon" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 5px;">
+            @Model.player.name
+    </h2>
+    <p class="player-coin">
+        <img src="~/images/icon/coin.png" alt="Coin Icon" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 5px;">
+            @Model.player.coin
+    </p>
+</div>
+
 
     <!-- Hồ nước chính của người chơi -->
     <div class="main-pond">
-        <h3>Your Selected Pond</h3>
+        <h3></h3>
         <div class="pond-container">
             <div class="pond-item">
                 @* Thay showKoiList() bằng liên kết đến ViewPond *@
@@ -36,8 +109,7 @@
                         @foreach (var koi in Model.PondDetail.koilist)
                         {
                             <div class="koi-item">
-                                <img src="@koi.ImageURL" alt="@koi.name" class="koi-img" />
-                                <p>@koi.name</p>
+                                <img src="@Url.Content(koi.ImageURL)" alt="@koi.name" class="koi-img" />
                             </div>
                         }
                     </div>
@@ -49,47 +121,14 @@
             </div>
         </div>
     </div>
-    <div class="navigation-buttons">
-        <a href="@Url.Action("Inventory", "Inventory")" class="btn-inventory"> Inventory</a>
-    </div>
-    <!-- Danh sách cá của người chơi (ẩn, hiện khi nhấp vào hồ) -->
-    <div id="koi-list" class="koi-list hidden">
-        <h4>Your Koi Collection</h4>
-        <!-- KoiCollection chứa tất cả cá mà người chơi sở hữu -->
-        @foreach (var koi in Model.Koi) 
-        {
-            <div class="koi-item" onclick="addKoiToPond(@koi.koiId)">
-                <img src="@koi.ImageURL" alt="@koi.name" class="koi-img" />
-                <p>@koi.name</p>
-            </div>
-        }
-    </div>
-
-</body>
-<style>
-    body {
-        background-image: url('@Url.Content("~/images/background/background-koi.jpg")');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        font-family: Arial, sans-serif;
-        position: relative; /* Cần thiết để pseudo-element::before được vị trí đúng */
+    @if (TempData["Success"] != null)
+    {
+        <div class="tempdata-message success">@TempData["Success"]</div>
+    }
+    @if (TempData["Fail"] != null)
+    {
+        <div class="tempdata-message fail">@TempData["Fail"]</div>
     }
 
-        /* Tạo lớp overlay với màu đen mờ */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); /* Màu đen với độ trong suốt */
-            z-index: -1; /* Đảm bảo lớp này nằm phía dưới nội dung */
-        }
-</style>
+</body>
 </html>

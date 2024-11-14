@@ -1,0 +1,66 @@
+﻿@model PondDetailViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Cá Để Sinh Sản</title>
+    <link rel="stylesheet" href="~/css/koibreed.css?v=1.1"/>
+    <style>
+        body {
+            background-image: url('@Url.Content("~/images/background/background1.gif")'); /* Path to your background image */
+            background-size: cover; /* Ensures the image covers the whole page */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-attachment: fixed; /* Keeps the background in place while scrolling */
+        }
+    </style>
+    <script>
+        function toggleKoiSelection(checkbox) {
+            const selectedKoi = document.querySelectorAll('input[name="selectedKoiIds"]:checked');
+            if (selectedKoi.length > 2) {
+                checkbox.checked = false;
+                alert("Chỉ có thể chọn tối đa 2 con cá để sinh sản.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Chọn Cá Để Sinh Sản</h2>
+
+    <div class="koi-not-in-pond">
+        <h3>Cá của bạn (không có trong hồ):</h3>
+        <form asp-action="SinhSan" asp-controller="SinhSan" method="post">
+            @foreach (var playerKoi in Model.koiNotInPond)
+            {
+                <div class="koi-item">
+                    <img src="@Url.Content(playerKoi.ImageURL)" alt="@playerKoi.name" class="koi-img" style="width: 100px; height: 100px;" />
+                    <p>@playerKoi.name</p>
+                    <label>
+                        <input type="checkbox" name="selectedKoiIds" value="@playerKoi.koiId" onchange="toggleKoiSelection(this)" /> Chọn
+                    </label>
+                </div>
+            }
+            <button type="submit" class="btn-breed" style="margin-top: 20px;">Sinh Sản</button>
+        </form>
+    </div>
+
+    @if (TempData["Message"] != null)
+    {
+        <p style="color: green;">@TempData["Message"]</p>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <p style="color: red;">@TempData["ErrorMessage"]</p>
+    }
+
+    <div class="back-to-main">
+        <a href="@Url.Action("KoiGame", "Game")" class="btn-back">
+            <img src="~/images/icon/back.png" alt="Back Icon" class="back-icon">
+        </a>
+    </div>
+
+</body>
+</html>

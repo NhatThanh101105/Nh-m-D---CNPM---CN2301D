@@ -1,0 +1,281 @@
+﻿/* Đặt container chính ở giữa màn hình */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Đặt bảng giao dịch có thể cuộn */
+.trade-list-container {
+    width: 80%; /* Điều chỉnh kích thước của bảng */
+    max-width: 1000px; /* Đảm bảo không quá rộng */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cải thiện kiểu dáng cho tiêu đề */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Cài đặt cho bảng có thể cuộn */
+.scrollable-content {
+    max-height: 400px; /* Điều chỉnh chiều cao tối đa của bảng */
+    overflow-y: auto; /* Thêm thanh cuộn dọc nếu bảng quá dài */
+}
+
+/* Kiểu dáng cho bảng */
+.trade-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+    /* Kiểu dáng cho các tiêu đề của bảng */
+    .trade-table th {
+        background-color: #e0e0e0;
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Kiểu dáng cho các hàng trong bảng */
+    .trade-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+/* Kích thước ảnh cá */
+.trade-koi-img {
+    width: 50px; /* Điều chỉnh kích thước ảnh cá */
+    height: 50px;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 50%; /* Tạo kiểu ảnh tròn */
+}
+
+/* Kiểu dáng cho nút mua */
+.btn-buy {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-buy:hover {
+        background-color: #45a049;
+    }
+
+/* Kiểu dáng cho thông báo "Không có cá để bán" */
+.no-items {
+    color: #ff0000;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Kiểu dáng cho thông báo "Không có giao dịch nào" */
+.no-items {
+    color: #ff0000;
+    text-align: center;
+}
+
+
+/* Đặt container của bảng Koi đang bán ở bên phải */
+.koi-on-sale-container {
+    width: 35%; /* Chiếm một phần nhỏ hơn so với bảng giao dịch */
+    max-width: 400px; /* Đảm bảo không quá rộng */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Khoảng cách giữa bảng giao dịch và bảng Koi đang bán */
+}
+
+/* Cải thiện kiểu dáng cho tiêu đề */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Cài đặt cho bảng Koi đang bán có thể cuộn */
+.scrollable-content {
+    max-height: 400px; /* Điều chỉnh chiều cao tối đa của bảng */
+    overflow-y: auto; /* Thêm thanh cuộn dọc nếu bảng quá dài */
+}
+
+/* Kiểu dáng cho các mục trong bảng Koi đang bán */
+.koi-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+}
+
+/* Kiểu dáng cho ảnh cá trong bảng Koi đang bán */
+.koi-img {
+    width: 80px; /* Điều chỉnh kích thước ảnh cá */
+    height: 80px;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 50%; /* Tạo kiểu ảnh tròn */
+    margin-bottom: 10px;
+}
+
+/* Kiểu dáng cho tên cá */
+.koi-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Kiểu dáng cho giá cá */
+.koi-price {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Kiểu dáng cho nút "Hủy bán" */
+.btn-remove {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-remove:hover {
+        background-color: #e53935;
+    }
+
+/* Kiểu dáng cho thông báo "Không có Koi nào đang bán" */
+.no-items {
+    color: #ff0000;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Đặt container của bảng Koi của bạn ở dưới */
+.koi-not-on-sale-container {
+    width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Khoảng cách giữa bảng giao dịch và bảng Koi của bạn */
+}
+
+/* Cải thiện kiểu dáng cho tiêu đề */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Cài đặt cho bảng Koi của bạn có thể cuộn ngang */
+.scrollable-content {
+    display: flex; /* Đặt các mục trong dạng dòng ngang */
+    overflow-x: auto; /* Thêm thanh cuộn ngang nếu bảng quá dài */
+    gap: 20px; /* Khoảng cách giữa các mục */
+}
+
+/* Kiểu dáng cho các mục trong bảng Koi của bạn */
+.koi-item {
+    width: 150px; /* Điều chỉnh kích thước mỗi mục */
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Kiểu dáng cho ảnh cá trong bảng Koi của bạn */
+.koi-img {
+    width: 100px; /* Điều chỉnh kích thước ảnh cá */
+    height: 100px;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 50%; /* Tạo kiểu ảnh tròn */
+    margin-bottom: 10px;
+}
+
+/* Kiểu dáng cho tên cá */
+.koi-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Kiểu dáng cho giá cá */
+.koi-price {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Kiểu dáng cho nút "Bán" */
+.btn-add {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-add:hover {
+        background-color: #45a049;
+    }
+
+/* Kiểu dáng cho thông báo "Không có Koi nào chưa bán" */
+.no-items {
+    color: #ff0000;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Đặt nút "Back" ở góc trái dưới */
+.back-to-main {
+
+    left: 20px; /* Khoảng cách từ lề trái */
+    bottom: 20px; /* Khoảng cách từ đáy trang */
+    z-index: 1000; /* Đảm bảo nút ở trên cùng */
+}
+
+/* Kiểu dáng cho nút "Back" */
+.btn-back {
+    background-color: #4CAF50;
+    color: white;
+    padding: 6px 12px; /* Kích thước nhỏ */
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px; /* Kích thước chữ nhỏ */
+    cursor: pointer;
+}
+
+/* Kiểu dáng cho biểu tượng "Back" */
+.back-icon {
+    width: 16px; /* Kích thước nhỏ */
+    height: 16px;
+    margin-right: 8px; /* Khoảng cách giữa biểu tượng và chữ */
+}
+
+/* Hiệu ứng hover cho nút "Back" */
+.btn-back:hover {
+    background-color: #45a049;
+}
