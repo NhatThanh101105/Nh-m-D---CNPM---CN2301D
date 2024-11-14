@@ -21,26 +21,28 @@
 
 /* Sidebar styling */
 /* Sidebar styling */
+/* Sidebar */
+/* Sidebar */
 .sidebar {
-    height: 300px; /* Adjust height as needed */
-    width: 20px; /* Collapsed width */
+    height: 259px;
+    width: 20px;
     position: fixed;
-    top: 50%; /* Center vertically */
+    top: 50%;
     left: 0;
-    transform: translateY(-50%); /* Center vertically */
-    background-color: #333; /* Dark background color */
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
     padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    transition: width 0.3s; /* Smooth transition for expanding */
-    z-index: 1000; /* Ensure sidebar is on top */
-    border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
+    transition: width 0.6s;
+    z-index: 1000;
+    border-radius: 0 10px 10px 0;
 }
 
     .sidebar:hover {
-        width: 200px; /* Expanded width on hover */
+        width: 230px;
     }
 
 .sidebar-item {
@@ -48,36 +50,46 @@
     align-items: center;
     width: 100%;
     padding: 10px;
-    color: white; /* White text */
+    color: black;
+    font-weight:800;
     text-decoration: none;
     font-size: 16px;
     transition: background-color 0.3s;
-    white-space: nowrap; /* Prevent text wrapping */
-    opacity: 0; /* Hide text initially */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth text appearance */
-    transform: translateX(-10px); /* Shift text slightly for a smooth effect */
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-10px);
 }
 
 .sidebar:hover .sidebar-item {
-    opacity: 1; /* Show text on hover */
-    transform: translateX(0); /* Reset text position */
+    opacity: 1;
+    transform: translateX(0);
 }
 
+/* Icon */
 .sidebar-icon {
-    width: 24px; /* Icon size */
+    width: 24px;
     height: 24px;
-    margin-right: 10px; /* Space between icon and text */
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Mượt mà khi phóng to */
+}
+
+/* Phóng to icon khi di chuột vào item */
+.sidebar-item:hover .sidebar-icon {
+    transform: scale(1.2);
 }
 
 .main-content {
-    margin-left: 40px; /* Offset by the collapsed width of the sidebar */
+    margin-left: 40px;
     padding: 20px;
-    transition: margin-left 0.3s; /* Smooth transition for main content shift */
+    transition: margin-left 0.3s;
 }
 
 .sidebar:hover ~ .main-content {
-    margin-left: 200px; /* Offset by the expanded width of the sidebar */
+    margin-left: 200px;
 }
+
+
 
 
 

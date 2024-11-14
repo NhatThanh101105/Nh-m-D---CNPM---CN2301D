@@ -95,6 +95,9 @@ public partial class KoiGameDatabaseContext : DbContext
             entity.Property(e => e.UserName).HasMaxLength(50);
             entity.Property(e => e.IsNewPlayer) // Đảm bảo rằng IsNewPlayer đã được thêm vào lớp Player
      .IsRequired();
+            entity.Property(e => e.SinhSan)
+          .HasColumnType("datetime2")
+          .IsRequired(false);
         });
 
         modelBuilder.Entity<PlayerKoi>(entity =>

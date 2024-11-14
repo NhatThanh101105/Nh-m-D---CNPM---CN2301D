@@ -1,37 +1,150 @@
-﻿
-.koi-container {
-    display: flex;
-    flex-wrap: nowrap; /* To keep items in a single row */
-    overflow-x: auto; /* Allows horizontal scrolling if there are too many items */
-    gap: 10px; /* Adjust spacing between items */
+﻿body {
+    background-image: url('../images/background/background2.gif'); /* Đặt nền với hiệu ứng hồ nước */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    font-family: 'Arial', sans-serif;
 }
 
-.koi-item {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.koi-section {
+    margin-bottom: 40px; /* Khoảng cách giữa các phần */
 }
 
 .koi-img {
+    border-radius: 50%;
+    border: 3px solid #6ca8d3; /* Viền màu xanh như hồ nước */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     width: 100px;
     height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Hiệu ứng mượt khi phóng to */
 }
 
+    .koi-img:hover {
+        transform: scale(1.2); /* Phóng to ảnh lên 1.2 lần khi hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Tăng bóng đổ khi hover */
+    }
 
-.back-to-main {
-    position: fixed;
-    bottom: 100px; /* Đưa xuống gần đáy */
-    left: 30px; /* Đưa về gần mép trái */
-    display: flex;
-    align-items: center;
-    background-color: #f1f1f1;
-    padding: 5px 10px;
+.koi-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+    .koi-table th, .koi-table td {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        color: #333;
+        font-size: 1em;
+    }
+
+    .koi-table th {
+        background-color: #f48f42; /* Màu cam cho tiêu đề bảáđáng */
+        color: white;
+        font-weight: bold;
+    }
+
+    .koi-table td img.koi-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 3px solid #6ca8d3;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .koi-table tr:hover {
+        background-color: #f1f1f1;
+    }
+
+h3 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffeb3b;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-add, .btn-remove {
+    padding: 8px 16px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+
+.btn-add {
+    background-color: #4CAF50;
+}
+
+.btn-remove {
+    background-color: #FF5722;
+}
+
+.btn-add:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.btn-remove:hover {
+    background-color: #e64a19;
+    transform: scale(1.1);
+}
+
+.back-to-main .btn-back {
+    display: inline-block;
+    background-color: #78909c;
     border-radius: 5px;
+    padding: 12px 24px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s, border 0.3s;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none; /* Xóa nét gạch chân */
 }
 
-.back-icon {
-    width: 40px; /* Kích thước nhỏ hợp lý */
-    height: 40px;
-}
+    .back-to-main .btn-back:hover {
+        background-color: #546e7a;
+        transform: scale(1.1) translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        border: 2px solid #ffffff;
+    }
 
+    .back-to-main .btn-back::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: rgba(255, 255, 255, 0.2); /* Hiệu ứng ánh sáng */
+        transform: rotate(45deg);
+        transition: opacity 0.5s, transform 0.5s;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .back-to-main .btn-back:hover::before {
+        opacity: 1;
+        transform: rotate(45deg) scale(1.3); /* Ánh sáng xuất hiện và phóng to */
+    }

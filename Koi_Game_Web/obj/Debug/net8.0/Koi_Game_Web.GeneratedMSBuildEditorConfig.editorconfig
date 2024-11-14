@@ -46,6 +46,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbnZlbnRvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/KoiListView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxLb2lMaXN0Vmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/SelectKoi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxTZWxlY3RLb2kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

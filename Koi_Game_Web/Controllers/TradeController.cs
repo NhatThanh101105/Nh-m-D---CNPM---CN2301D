@@ -24,13 +24,13 @@ namespace Koi_Game_Web.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
-            var koiInPond = _hienThiCaService.GetKoiInPond(idplayer.Value, playerPondId.Value);
+            var koiInPond = _hienThiCaService.GetKoiInPond(idplayer.Value, playerPondId.Value);//koi trong hôf
 
-            var allKoi = _hienThiCaService.getAllKoiPlayer(idplayer.Value);
+            var allKoi = _hienThiCaService.getAllKoiPlayer(idplayer.Value);// koi của người chơi
 
-            var koiOnSale = _tradeService.getKoiOnSale(idplayer.Value);
+            var koiOnSale = _tradeService.getKoiOnSale(idplayer.Value);// koi đang trên ttcn
 
-            var TradeList = _tradeService.getAllTrade(idplayer.Value);
+            var TradeList = _tradeService.getAllTrade(idplayer.Value);// danh sách cá koi đang bán
 
             //var koiNotInPond = allKoi.Where(k => !koiInPond.Any(kinPond => kinPond.PlayerKoiId == k.PlayerKoiId)).ToList();
 
@@ -99,11 +99,6 @@ namespace Koi_Game_Web.Controllers
                 return View("~/Views/Game/TradeView.cshtml", model);
             }
 
-
-
-
-
-
             return View("~/Views/Game/TradeView.cshtml");
         }
         [HttpPost]
@@ -114,7 +109,7 @@ namespace Koi_Game_Web.Controllers
             {
                 return RedirectToAction("Login", "Account");
             }
-
+            Console.WriteLine($"idplayer: {idplayer.Value}, playerKoiId: {playerKoiId}, price: {price}");
             bool newtrade = _tradeService.newTrade(idplayer.Value, playerKoiId, price);
             if (newtrade)
             {

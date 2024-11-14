@@ -17,6 +17,8 @@ public partial class Player
 
     public bool IsNewPlayer { get; set; } = true; // Mặc định là true cho người chơi mới
 
+    public DateTime? SinhSan { get; set; }
+
     public virtual ICollection<Inventory> Inventories { get; set; } = new List<Inventory>();
 
     public virtual ICollection<PlayerKoi> PlayerKois { get; set; } = new List<PlayerKoi>();
