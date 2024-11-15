@@ -183,9 +183,9 @@
 
 /* Kiểu dáng cho thông báo "Không có Koi nào đang bán" */
 .no-items {
-    color: #ff0000;
+    color: black;
+    font-weight: 800;
     text-align: center;
-    font-style: italic;
 }
 
 
@@ -275,9 +275,10 @@
 
 /* Kiểu dáng cho thông báo "Không có Koi nào chưa bán" */
 .no-items {
-    color: #ff0000;
+    color: black;
+    font-weight:800;
     text-align: center;
-    font-style: italic;
+ 
 }
 
 /* Đặt nút "Back" ở góc trái dưới */

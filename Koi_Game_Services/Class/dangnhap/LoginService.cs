@@ -64,5 +64,20 @@ namespace Koi_Game_Services.Class.dangnhap
             return true;
 
         }
+        public bool QuenMatKhau(string username, string otp, string newpass, string confirmpass) 
+        {
+            if (otp != "12345678") return false;
+            var player= _playerRepository.GetPlayerByUsername(username);
+            if(player== null) { return false; }
+            if(newpass!=confirmpass) { return false; }
+            player.Password= confirmpass;
+            _playerRepository.UpdatePlayer(player);
+            return true;
+        }
+
+        public Player getPlayerByUsername(string username)
+        {
+            return _playerRepository.GetPlayerByUsername(username);
+        }
     }
 }
