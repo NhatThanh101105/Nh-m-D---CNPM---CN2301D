@@ -1,43 +1,41 @@
-﻿// Đợi đến khi trang tải hoàn tất
-document.addEventListener("DOMContentLoaded", () => {
-    const breedButton = document.getElementById("breedButton");
-    const koiContainer = document.querySelector(".koi-container");
+﻿const koiImages = [
+    '@Url.Content("~/images/background/koi1.png")',
+    '@Url.Content("~/images/background/koi2.png")',
+    '@Url.Content("~/images/background/koi3.png")'
+];
 
-    // Xử lý sự kiện khi người dùng nhấn nút "Thêm Cá Koi Mới"
-    breedButton.addEventListener("click", () => {
-        let newKoi = createKoi();
-        koiContainer.appendChild(newKoi);
+const koiContainer = document.getElementById('koiContainer');
 
-        // Tự động xóa cá sau một khoảng thời gian để giữ khu vực sạch sẽ
-        setTimeout(() => {
-            newKoi.remove();
-        }, 10000); // Cá sẽ biến mất sau 10 giây
-    });
-});
-
-// Hàm tạo ra một cá koi với chuyển động bơi ngẫu nhiên
 function createKoi() {
-    let koi = document.createElement("div");
-    koi.classList.add("koi-fish");
+    const koi = document.createElement('img');
+    const randomIndex = Math.floor(Math.random() * koiImages.length);
+    koi.src = koiImages[randomIndex];
+    koi.classList.add('koi');
 
-    // Đặt vị trí ngẫu nhiên cho cá koi
-    koi.style.left = `${Math.random() * 80}vw`;
-    koi.style.top = `${Math.random() * 80}vh`;
+    koi.style.top = Math.random() * 100 + '%';
+    koi.style.left = Math.random() * 100 + '%';
 
-    // Áp dụng một hướng ngẫu nhiên để cá bơi (trái -> phải hoặc ngược lại)
-    if (Math.random() > 0.5) {
-        koi.style.animationDirection = "normal";
-    } else {
-        koi.style.animationDirection = "reverse";
-    }
+    console.log("Created koi:", koi); // Kiểm tra log trong console
+    koiContainer.appendChild(koi);
 
-    // Thêm hiệu ứng di chuyển nhẹ để giống bơi lội
-    koi.addEventListener("mouseover", () => {
-        koi.style.transform = `scale(${Math.random() * 0.3 + 1.1})`;
-    });
-    koi.addEventListener("mouseleave", () => {
-        koi.style.transform = `scale(1)`;
-    });
-
-    return koi;
+    moveKoi(koi);
 }
+
+function moveKoi(koi) {
+    const duration = Math.random() * 3000 + 2000; // Thời gian di chuyển ngẫu nhiên
+    const targetX = Math.random() * 100;
+    const targetY = Math.random() * 100;
+
+    koi.animate([
+        { transform: 'translate(0, 0)' },
+        { transform: `translate(${targetX}%, ${targetY}%)` }
+    ], {
+        duration: duration,
+        easing: 'ease-in-out',
+        fill: 'forwards'
+    }).onfinish = () => {
+        koi.remove(); // Xóa cá koi sau khi di chuyển xong
+        createKoi(); // Tạo cá koi mới
+    };
+}
+

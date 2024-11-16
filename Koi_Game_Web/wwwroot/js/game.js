@@ -19,10 +19,9 @@ function addKoiToPond(koiId) {
     });
 }
 
-
 // Tạo chuyển động ngẫu nhiên cho các cá koi
 function moveKoiWithVectors(koi) {
-    const speed = 0.213456789; // Tốc độ di chuyển
+    const speed = 0.06; // Tốc độ di chuyển
     const pondContainer = document.querySelector('.pond-container');
     const pondRadius = pondContainer.offsetWidth / 2;
     const koiRadius = koi.offsetWidth / 2;
@@ -33,6 +32,10 @@ function moveKoiWithVectors(koi) {
     let angle2 = Math.random() * 2 * Math.PI;
     let vector1 = { x: Math.cos(angle1) * speed, y: Math.sin(angle1) * speed };
     let vector2 = { x: Math.cos(angle2) * speed, y: Math.sin(angle2) * speed };
+
+    // Đảm bảo cá bắt đầu hướng lên (0 độ)
+    koi.style.transform = 'rotate(0deg)';
+    koi.style.transformOrigin = 'center top';  // Đảm bảo ảnh xoay từ phần trên của ảnh (đầu cá)
 
     function animate() {
         // Lấy vị trí hiện tại của cá
@@ -52,22 +55,22 @@ function moveKoiWithVectors(koi) {
 
         // Kiểm tra nếu cá chạm đến viền của vùng bơi
         if (distanceFromCenter + koiRadius >= swimRadius) {
-            // Đảo ngược hướng của các vector để cá quay đầu
+            // Đảo ngược hướng của các vector để cá quay đầu mà không tạo các vector ngẫu nhiên
             vector1.x = -vector1.x;
             vector1.y = -vector1.y;
             vector2.x = -vector2.x;
             vector2.y = -vector2.y;
-
-            // Tạo góc ngẫu nhiên mới cho cả hai vector
-            angle1 = Math.random() * 2 * Math.PI;
-            angle2 = Math.random() * 2 * Math.PI;
-            vector1 = { x: Math.cos(angle1) * speed, y: Math.sin(angle1) * speed };
-            vector2 = { x: Math.cos(angle2) * speed, y: Math.sin(angle2) * speed };
         }
 
         // Cập nhật vị trí của cá koi
         koi.style.left = `${currentX}px`;
         koi.style.top = `${currentY}px`;
+
+        // Tính góc xoay của cá dựa trên vector di chuyển
+        let angle = Math.atan2(directionY, directionX) * (180 / Math.PI); // Convert từ radian sang độ
+
+        // Cập nhật trực tiếp góc xoay mà không có hiệu ứng transition
+        koi.style.transform = `rotate(${angle}deg)`; // Áp dụng xoay cá ngay lập tức
 
         // Yêu cầu frame tiếp theo
         requestAnimationFrame(animate);
@@ -75,6 +78,9 @@ function moveKoiWithVectors(koi) {
 
     animate();
 }
+
+
+
 
 function startMovingKoi() {
     const koiItems = document.querySelectorAll('.koi-item');
@@ -106,6 +112,24 @@ function startMovingKoi() {
 
 // Khởi động chuyển động khi tải trang
 window.addEventListener('DOMContentLoaded', startMovingKoi);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
