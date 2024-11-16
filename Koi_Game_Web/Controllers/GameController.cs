@@ -42,6 +42,7 @@ namespace Koi_Game_Web.Controllers
                 //
                 // lay danh sach cac con cas trong ho
                 var koilist = _hienThiCaService.GetKoiInPond(playerId.Value,playerPondId.Value)
+                    .Where(k=>!k.IsOnTrade)// thêm vào, nếu người có lỡ bán thì cá cũng sẽ biến mất khỏi hồ
                     .Select(k=> new KoiViewModel
                     {
                         playerKoiId=k.PlayerKoiId,

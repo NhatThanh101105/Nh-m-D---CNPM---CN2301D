@@ -27,15 +27,16 @@ namespace Koi_Game_Web.Controllers
             //int playerPondId = _playerPondService.getPlayerPondId(idplayer.Value, pondId);
 
             var koiInPond= _hienThiCaService.GetKoiInPond(idplayer.Value,playerPondId.Value);// lay cac con ca trong ho
+            var koiInPond_1= koiInPond.Where(k=>!k.IsOnTrade).ToList();// cho ẩn nếu cá đó lỡ bán trên ttcn
 
             var allKoi= _hienThiCaService.getAllKoiPlayer(idplayer.Value);// lay tat car cas cuar nguoiwf cvhoiw
 
 
             var koiNotInPond = allKoi.Where(k => !koiInPond.Any(kinPond => kinPond.PlayerKoiId == k.PlayerKoiId)&& !k.IsOnTrade).ToList();
-            // lovj ra cacs con ca k cos trong hoof
+            // lovj ra cacs con ca k cos trong hoof vaf treen ttcn =)))
 
 
-            var koiInPondViewModel=koiInPond.Select(pk=>new KoiViewModel
+            var koiInPondViewModel=koiInPond_1.Select(pk=>new KoiViewModel
             {
                 playerKoiId=pk.PlayerKoiId,
                 koiId=pk.Koi.KoiId,

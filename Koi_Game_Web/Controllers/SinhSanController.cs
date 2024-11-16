@@ -8,12 +8,14 @@ namespace Koi_Game_Web.Controllers
     public class SinhSanController : Controller
     {
 
-        private ISinhsanService _sinhsanService;
-        private IHienThiCaService _hienThiCaService;
-        public SinhSanController(ISinhsanService sinhsanService, IHienThiCaService hienThiCaService)
+        private readonly ISinhsanService _sinhsanService;
+        private readonly IHienThiCaService _hienThiCaService;
+        private readonly IPlayerService _playerService;
+        public SinhSanController(ISinhsanService sinhsanService, IHienThiCaService hienThiCaService,IPlayerService playerService)
         {
             _sinhsanService = sinhsanService;
             _hienThiCaService = hienThiCaService;
+            _playerService = playerService;
         }
 
         [HttpGet]
@@ -66,12 +68,29 @@ namespace Koi_Game_Web.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
+            var player= await _playerService.GetPlayer(idplayer.Value);
+
+            if (player.SinhSan.HasValue)
+            {
+                var sinhsanlancuoi=DateTime.UtcNow-player.SinhSan.Value;
+                if (sinhsanlancuoi < TimeSpan.FromMinutes(30))
+                {
+                    TempData["ErrorMessage"] = $"Bạn phải chờ thêm {30-sinhsanlancuoi.Minutes} phút trước khi sinh lại";
+                    return RedirectToAction("BreedKoi");
+                }
+            }
+
             // Thực hiện sinh sản
             bool breed = await _sinhsanService.SinhSan(selectedKoiIds[0], selectedKoiIds[1], idplayer.Value);
 
             if (breed)
             {
+                player.SinhSan = DateTime.UtcNow;
+                _playerService.UpdatePlayer(player); 
+                
+                
                 TempData["Message"] = "Cá đã được sinh sản thành công!";
+
             }
             else
             {

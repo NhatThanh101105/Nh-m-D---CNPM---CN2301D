@@ -7,10 +7,12 @@ public class AccountController : Controller
     private readonly ILoginService _loginService;
     //private readonly IXuLiNhanCaLanDau _xuLiNhanCaLanDau;
     private readonly IGameStatusService _gameStatusService;
-    public AccountController(ILoginService loginService, IGameStatusService gameStatusService)
+    private readonly IPlayerService _playerService;
+    public AccountController(ILoginService loginService, IGameStatusService gameStatusService, IPlayerService playerService)
     {
         _loginService = loginService;
         _gameStatusService = gameStatusService;
+        _playerService = playerService;
         //_xuLiNhanCaLanDau= xuLiNhanCaLanDau;
     }
 
@@ -81,5 +83,48 @@ public class AccountController : Controller
             return RedirectToAction("Login", "Account");
         }
         return RedirectToAction("KoiGame", "Game");
+    }
+
+    [HttpGet]
+    public IActionResult CheckAcc()
+    {
+        return View("QuenMatKhau");
+    }
+
+    [HttpPost]
+    public IActionResult CheckAcc(QuenMatKhauViewModel model)
+    {
+        var player = _loginService.getPlayerByUsername(model.username);
+        if (player == null)
+        {
+            ViewBag.ErrorMessage = "Tài khoản không tồn tại.";
+            return View("QuenMatKhau", model);
+        }
+
+        return View("NewPassword", model);
+    }
+
+    [HttpGet]
+    public IActionResult QuenMatKhau()
+    {
+        return View("NewPassword");
+    }
+    [HttpPost]
+    public IActionResult QuenMatKhau(QuenMatKhauViewModel model)
+    {
+        Console.WriteLine("cccc");
+        if (ModelState.IsValid)
+        {
+            Console.WriteLine("đâsdasdasd");
+            if (_loginService.QuenMatKhau(model.username,model.otp,model.newpass,model.confirmpass))
+            {
+                return RedirectToAction("Login", "Account"); 
+            }
+            else
+            {
+                ViewBag.ErrorMessage = "kiểm tra lại otp hoặc xác nhận mật khẩu";
+            }
+        }
+        return View("NewPassword", model);
     }
 }
