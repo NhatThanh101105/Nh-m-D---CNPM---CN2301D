@@ -1,0 +1,147 @@
+﻿/* ======== CHUNG ======== */
+body {
+    background-image: url('../images/background/background-koi.jpg'); /* Đường dẫn ảnh nền */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.background-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    height: 100vh; 
+}
+
+.title {
+    font-size: 45px;
+    color: #1E90FF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 25px rgba(30, 144, 255, 0.5), 0 0 5px rgba(30, 144, 255, 0.5);
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: wave 2s infinite;
+}
+
+/* Ripple effect animation */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* ======== Ô ĐĂNG NHẬP ======== */
+.login-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    text-align: center;
+    color: #333;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+    .login-box h2 {
+        color: #007bff;
+        font-size: 22px;
+    }
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-control {
+    color: #000;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ======== NÚT ĐĂNG NHẬP VÀ NẠP TIỀN ======== */
+/* Nút chung với hiệu ứng ripple */
+.btn, .button {
+    display: inline-block;
+    padding: 8px 18px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn::after, .button::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.7);
+        transform: scale(0);
+        animation: ripple 0.6s linear;
+        pointer-events: none;
+    }
+
+/* Hiệu ứng ripple */
+@keyframes ripple {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Xử lý khi nhấp chuột vào nút */
+.btn:active::after, .button:active::after {
+    transform: scale(0);
+    animation: none;
+}
+
+/* Nút Nạp Tiền ở góc trên bên phải */
+.button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 14px;
+    background-color: #ffffff; /* Nền trắng */
+    color: #ff4500; /* Chữ màu cam đỏ */
+    border: 2px solid #ff4500; /* Viền cam đỏ */
+}
+
+    .button:hover {
+        background-color: #ff4500; /* Nền cam đỏ khi hover */
+        color: #ffffff; /* Chữ trắng khi hover */
+    }
+
+/* Các nút khác hover */
+.btn:hover {
+    background-color: #0056b3; /* Màu khi hover */
+}
+
+.btn:focus, .button:focus {
+    outline: none; /* Bỏ viền khi nhấn vào */
+}
+
