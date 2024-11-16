@@ -1,0 +1,68 @@
+﻿@model List<KoiViewModel>
+
+<head>
+    <link rel="stylesheet" href="~/css/koiList.css?v=1.1" />
+    <script src="~/js/koiList.js"></script>
+    <style>
+        body {
+            background-image: url('@Url.Content("~/images/background/background3.gif")'); /* Path to your background image */
+            background-size: cover; /* Ensures the image covers the whole page */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-attachment: fixed; /* Keeps the background in place while scrolling */
+        }
+    </style>
+</head>
+
+
+<div class="book-container">
+    @* Chia danh sách cá thành các trang với 8 cá mỗi trang *@
+    @{
+        var pageIndex = 1;
+        foreach (var page in Model.Chunk(12))
+        {
+            <div class="page" id="page-@pageIndex">
+                @foreach (var koi in page)
+                {
+                    <div class="koi-item" onclick="showKoiDetails('@koi.name', '@Url.Content(koi.ImageURL)', '@koi.rare', '@koi.price', '@koi.playerKoiId')">
+                        <img src="@Url.Content(koi.ImageURL)" alt="@koi.name" class="koi-img" />
+                        <p class="koi-name">@koi.name</p>
+                    </div>
+                }
+            </div>
+            pageIndex++;
+        }
+    }
+</div>
+
+<!-- Điều khiển phân trang -->
+<div class="pagination-controls">
+    <button onclick="prevPage()"> << </> </button>
+    <button onclick="nextPage()"> >> </button>
+</div>
+
+<!-- Hộp thoại hiển thị chi tiết cá -->
+<!-- Modal hiển thị chi tiết cá -->
+<div id="koiDetailsModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-img" src="" alt="Koi Image" />
+        <h2 id="modalName"></h2>
+        <p id="modalRare"></p>
+        <p id="modalPrice"></p>
+
+        <!-- Form gửi yêu cầu đến controller Sell -->
+        <form id="sellForm" asp-action="Sell" asp-controller="Trade" method="post">
+            <input type="hidden" name="playerKoiId" id="playerKoiId" />
+            <input type="hidden" name="price" id="price" />
+            <div class="modal-buttons">
+                <button type="button" class="btn-ok" onclick="closeModal()">OK</button>
+                <button type="submit" class="btn-sell">Bán</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<a href="@Url.Action("KoiGame", "Game")" class="back-button">Trở lại</a>
