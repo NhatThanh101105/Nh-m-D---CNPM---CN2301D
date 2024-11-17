@@ -21,5 +21,40 @@ namespace Koi_Game_Reposities.Class
         {
             return   _dbcontext.PlayerKoi.Where(p=>p.PlayerId == playerID).Select(p=>p.KoiId).ToList();
         }
+
+        public PlayerKoi getPlayerKoiById(int playerKoiId)
+        {
+            return _dbcontext.PlayerKoi.FirstOrDefault(pk => pk.PlayerKoiId == playerKoiId);
+        }
+        public void SaveFishToPlayer(PlayerKoi playerKoi)
+        {
+            _dbcontext.PlayerKoi.Add(playerKoi);
+            _dbcontext.SaveChanges();
+        }
+        public void RemoveFishFromPlayer(PlayerKoi playerKoi)
+        {
+            _dbcontext.PlayerKoi.Remove(playerKoi);
+            _dbcontext.SaveChanges();
+        }
+
+        public void updatePlayerKoi(PlayerKoi playerKoi)
+        {
+            _dbcontext.PlayerKoi.Update(playerKoi);
+            _dbcontext.SaveChanges();
+        }
+
+        public List<PlayerKoi> getAllKoiPlayer(int idplayer)
+        {
+            return _dbcontext.PlayerKoi 
+                .Include(pk => pk.Koi)   
+                .Where(pk => pk.PlayerId == idplayer)
+                .ToList();
+        }
+
+        public int getPlayerKoiId(int idplayer,int KoiId)
+        {
+            var playerKoi= _dbcontext.PlayerKoi.FirstOrDefault(pk=>pk.PlayerId==idplayer &&  pk.KoiId==KoiId);
+            return playerKoi.PlayerKoiId;
+        }
     }
 }

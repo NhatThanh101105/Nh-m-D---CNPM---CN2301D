@@ -14,10 +14,10 @@ public partial class Trade
     public int? KoiId { get; set; }
 
     public decimal? Price { get; set; }
-
+    public int? PlayerKoiId { get; set; }
     public virtual Player? Buyer { get; set; }
 
     public virtual KoiFish? Koi { get; set; }
-
+    public virtual PlayerKoi? PlayerKoi { get; set; }
     public virtual Player? Seller { get; set; }
 }

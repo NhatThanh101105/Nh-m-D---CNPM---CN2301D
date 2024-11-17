@@ -14,9 +14,9 @@ namespace Koi_Game_Reposities.Interfaces
 
         // laay 3 con ca de tang nguoi choi moiws
         Task<List<int>> GetThreeKois();
-        // luu ca vao bang PlayerKoi 
-        void SaveFishToPlayer(PlayerKoi playerKoi);
 
-        Task<string> GetKoiImageURLById(int koiId);
+        //string getImage(int idkoi);
+        // luu ca vao bang PlayerKoi 
+        //void SaveFishToPlayer(PlayerKoi playerKoi);
     }
 }

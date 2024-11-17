@@ -43,6 +43,29 @@ namespace Koi_Game_Reposities.Migrations
                     b.ToTable("Food", (string)null);
                 });
 
+            modelBuilder.Entity("Koi_Game_Reposities.Entities.GameStatus", b =>
+                {
+                    b.Property<int>("gameStatus")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("gameStatus"));
+
+                    b.Property<int>("PlayerPondId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PondId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("idPlayer")
+                        .HasColumnType("int");
+
+                    b.HasKey("gameStatus")
+                        .HasName("PK_GameStatus");
+
+                    b.ToTable("GameStatus", (string)null);
+                });
+
             modelBuilder.Entity("Koi_Game_Reposities.Entities.Inventory", b =>
                 {
                     b.Property<int>("InventoryId")
@@ -87,6 +110,9 @@ namespace Koi_Game_Reposities.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
+                    b.Property<string>("ImageURL")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("KoiName")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -126,6 +152,9 @@ namespace Koi_Game_Reposities.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<DateTime?>("SinhSan")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("UserName")
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
@@ -148,6 +177,11 @@ namespace Koi_Game_Reposities.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PlayerKoiId"));
 
+                    b.Property<bool>("IsOnTrade")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
                     b.Property<int?>("KoiId")
                         .HasColumnType("int");
 
@@ -164,6 +198,30 @@ namespace Koi_Game_Reposities.Migrations
                     b.ToTable("PlayerKoi", (string)null);
                 });
 
+            modelBuilder.Entity("Koi_Game_Reposities.Entities.PlayerPond", b =>
+                {
+                    b.Property<int>("PlayerPondId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PlayerPondId"));
+
+                    b.Property<int>("PlayerId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PondId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PlayerPondId")
+                        .HasName("PK_PlayerPond");
+
+                    b.HasIndex("PlayerId");
+
+                    b.HasIndex("PondId");
+
+                    b.ToTable("PlayerPond", (string)null);
+                });
+
             modelBuilder.Entity("Koi_Game_Reposities.Entities.Pond", b =>
                 {
                     b.Property<int>("PondId")
@@ -173,6 +231,9 @@ namespace Koi_Game_Reposities.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PondId"));
 
                     b.Property<int?>("Capacity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Level")
                         .HasColumnType("int");
 
                     b.Property<decimal?>("Price")
@@ -186,6 +247,35 @@ namespace Koi_Game_Reposities.Migrations
                         .HasName("PK__Pond__D18BF834C18AC6C5");
 
                     b.ToTable("Pond", (string)null);
+                });
+
+            modelBuilder.Entity("Koi_Game_Reposities.Entities.PondKoi", b =>
+                {
+                    b.Property<int>("PondKoiId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PondKoiId"));
+
+                    b.Property<int>("PlayerKoiId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PlayerPondId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PondId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PondKoiId")
+                        .HasName("PK_PondKoi");
+
+                    b.HasIndex("PlayerKoiId");
+
+                    b.HasIndex("PlayerPondId");
+
+                    b.HasIndex("PondId");
+
+                    b.ToTable("PondKoi", (string)null);
                 });
 
             modelBuilder.Entity("Koi_Game_Reposities.Entities.Shop", b =>
@@ -234,6 +324,9 @@ namespace Koi_Game_Reposities.Migrations
                     b.Property<int?>("KoiId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("PlayerKoiId")
+                        .HasColumnType("int");
+
                     b.Property<decimal?>("Price")
                         .HasColumnType("decimal(10, 2)");
 
@@ -246,6 +339,8 @@ namespace Koi_Game_Reposities.Migrations
                     b.HasIndex("BuyerId");
 
                     b.HasIndex("KoiId");
+
+                    b.HasIndex("PlayerKoiId");
 
                     b.HasIndex("SellerId");
 
@@ -304,6 +399,50 @@ namespace Koi_Game_Reposities.Migrations
                     b.Navigation("Player");
                 });
 
+            modelBuilder.Entity("Koi_Game_Reposities.Entities.PlayerPond", b =>
+                {
+                    b.HasOne("Koi_Game_Reposities.Entities.Player", "Player")
+                        .WithMany("PlayerPonds")
+                        .HasForeignKey("PlayerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Koi_Game_Reposities.Entities.Pond", "Pond")
+                        .WithMany("PlayerPonds")
+                        .HasForeignKey("PondId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Player");
+
+                    b.Navigation("Pond");
+                });
+
+            modelBuilder.Entity("Koi_Game_Reposities.Entities.PondKoi", b =>
+                {
+                    b.HasOne("Koi_Game_Reposities.Entities.PlayerKoi", "PlayerKoi")
+                        .WithMany("PondKois")
+                        .HasForeignKey("PlayerKoiId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_PondKoi_PlayerKoi");
+
+                    b.HasOne("Koi_Game_Reposities.Entities.PlayerPond", "PlayerPond")
+                        .WithMany("PondKois")
+                        .HasForeignKey("PlayerPondId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_PondKoi_PlayerPond");
+
+                    b.HasOne("Koi_Game_Reposities.Entities.Pond", null)
+                        .WithMany("PondKois")
+                        .HasForeignKey("PondId");
+
+                    b.Navigation("PlayerKoi");
+
+                    b.Navigation("PlayerPond");
+                });
+
             modelBuilder.Entity("Koi_Game_Reposities.Entities.Trade", b =>
                 {
                     b.HasOne("Koi_Game_Reposities.Entities.Player", "Buyer")
@@ -316,6 +455,11 @@ namespace Koi_Game_Reposities.Migrations
                         .HasForeignKey("KoiId")
                         .HasConstraintName("FK__Trade__KoiId__48CFD27E");
 
+                    b.HasOne("Koi_Game_Reposities.Entities.PlayerKoi", "PlayerKoi")
+                        .WithMany()
+                        .HasForeignKey("PlayerKoiId")
+                        .HasConstraintName("FK__Trade__PlayerKoiId");
+
                     b.HasOne("Koi_Game_Reposities.Entities.Player", "Seller")
                         .WithMany("TradeSellers")
                         .HasForeignKey("SellerId")
@@ -324,6 +468,8 @@ namespace Koi_Game_Reposities.Migrations
                     b.Navigation("Buyer");
 
                     b.Navigation("Koi");
+
+                    b.Navigation("PlayerKoi");
 
                     b.Navigation("Seller");
                 });
@@ -341,9 +487,28 @@ namespace Koi_Game_Reposities.Migrations
 
                     b.Navigation("PlayerKois");
 
+                    b.Navigation("PlayerPonds");
+
                     b.Navigation("TradeBuyers");
 
                     b.Navigation("TradeSellers");
+                });
+
+            modelBuilder.Entity("Koi_Game_Reposities.Entities.PlayerKoi", b =>
+                {
+                    b.Navigation("PondKois");
+                });
+
+            modelBuilder.Entity("Koi_Game_Reposities.Entities.PlayerPond", b =>
+                {
+                    b.Navigation("PondKois");
+                });
+
+            modelBuilder.Entity("Koi_Game_Reposities.Entities.Pond", b =>
+                {
+                    b.Navigation("PlayerPonds");
+
+                    b.Navigation("PondKois");
                 });
 #pragma warning restore 612, 618
         }

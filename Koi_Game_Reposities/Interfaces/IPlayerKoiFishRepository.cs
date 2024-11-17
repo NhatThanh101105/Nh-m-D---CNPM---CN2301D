@@ -9,6 +9,15 @@ namespace Koi_Game_Reposities.Interfaces
 {
     public  interface IPlayerKoiFishRepository
     {
-       List<int?> getKoisByIdPlayer(int playerID);
+        List<int?> getKoisByIdPlayer(int playerID);
+        void SaveFishToPlayer(PlayerKoi playerKoi);
+        void RemoveFishFromPlayer(PlayerKoi playerKoi);
+
+        void updatePlayerKoi(PlayerKoi playerKoi);
+
+        PlayerKoi getPlayerKoiById(int playerKoiId);
+        List<PlayerKoi> getAllKoiPlayer(int idplayer);
+
+        int getPlayerKoiId(int idplayer, int KoiId);
     }
 }
