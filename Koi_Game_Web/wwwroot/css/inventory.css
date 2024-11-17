@@ -1,6 +1,6 @@
 ﻿/* Cài đặt nền giống trang đăng nhập */
 body {
-    background-image: url('../images/background/backpack.jpg'); /* Đường dẫn tương đối */
+    background-image: url('../images/background/inventory.gif'); /* Đường dẫn tương đối */
     background-size: cover;
     background-position: center;
     color: #fff;

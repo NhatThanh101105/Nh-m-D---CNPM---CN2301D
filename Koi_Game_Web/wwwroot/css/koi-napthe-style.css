@@ -9,7 +9,7 @@ body {
     padding: 0;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .background-container {
@@ -18,23 +18,35 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    height: 100vh; 
-}}
+    flex-direction: column;
+    height: 100vh;
+}
+
+}
 
 .title {
-    font-size: 48px; /* Tăng kích thước chữ */
-    color: #FF6347; /* Đổi màu tiêu đề thành màu cam đỏ */
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 99, 71, 0.7); /* Thêm hiệu ứng bóng đổ đậm hơn */
-    margin-bottom: 10px;
+    font-size: 56px; 
+    color: #FFD700; 
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.8); 
+    position: absolute; 
+    top: 2%; 
+    left: 50%; 
+    transform: translateX(-50%);
     font-family: 'Arial', sans-serif;
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px; /* Tăng khoảng cách giữa các chữ cái */
-    position: absolute; /* Đặt vị trí của tiêu đề */
-    top: 10px; /* Đưa tiêu đề lên phía trên hơn (cách từ trên xuống 10px) */
-    left: 50%; /* Căn giữa theo chiều ngang */
-    transform: translateX(-50%); /* Căn giữa theo chiều ngang */
+    text-transform: uppercase; 
+    letter-spacing: 3px; 
+    animation: glow 2s infinite alternate; 
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.8);
+    }
+
+    100% {
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 0, 1);
+    }
 }
 
 .naptien-box {
@@ -116,19 +128,19 @@ body {
 }
 
 .back-btn {
-    font-size: 14px; 
-    color: #fff; 
-    text-decoration: none; 
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px; 
-    border: 1px solid #fff; 
-    border-radius: 5px; 
-    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s ease;
 }
 
     .back-btn:hover {
-        background-color: rgba(0, 0, 0, 0.7); 
+        background-color: rgba(0, 0, 0, 0.7);
     }
 
 
@@ -144,7 +156,7 @@ body {
     margin-top: 20px;
     padding: 10px; /* Giảm padding */
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 8px;
     width: 30%; /* Giảm kích thước của ô QR đi 70% */
     position: absolute;
@@ -152,6 +164,7 @@ body {
     right: 10px; /* Đưa ra phía bên phải */
     transform: translateY(-50%); /* Căn giữa theo chiều dọc */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
 }
 
     .qr-code-container h3 {
@@ -164,5 +177,5 @@ body {
     width: 40%; /* Giảm kích thước của mã QR */
     height: auto;
     border-radius: 4px;
+ 
 }
-

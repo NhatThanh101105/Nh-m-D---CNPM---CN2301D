@@ -1,22 +1,49 @@
 ﻿/* Căn chỉnh thông tin người chơi */
-/* Căn chỉnh thông tin người chơi */
 .player-info {
-    position: absolute; /* Set position to absolute */
-    top: 60px; /* Distance from the top */
-    left: 20px; /* Distance from the left */
-    margin-bottom: 20px;
-    text-align: left; /* Align text to the left */
+    position: absolute;
+    top: 100px; /* Cách mép trên 10px */
+    left: 20px; /* Cách mép trái 10px */
+    display: flex;
+    flex-direction: column; /* Hiển thị các khung theo cột */
+    gap: 5px; /* Khoảng cách giữa các khung */
 }
 
+.player-name-box, .player-coin-box {
+    display: flex;
+    align-items: center; /* Căn giữa icon và text theo chiều dọc */
+    padding: 5px 10px; /* Tạo khoảng cách bên trong khung */
+    border: 1px solid #ccc; /* Viền khung mỏng hơn */
+    border-radius: 21px; /* Bo góc nhỏ hơn */
+    background-color: rgba(255, 255, 255, 0.5); /* Màu nền nhạt */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Đổ bóng nhẹ */
+    width: fit-content; /* Tự động co dãn theo nội dung */
+    font-size: 0.9em; /* Giảm kích thước chữ */
+}
+
+.icon {
+    width: 50px; /* Giảm kích thước icon */
+    height: 50px;
+    margin-right: 5px; /* Khoảng cách nhỏ hơn giữa icon và text */
+}
+
+.icon-a {
+    width: 100px; /* Giảm kích thước icon */
+    height: 50px;
+    margin-right: 5px; /* Khoảng cách nhỏ hơn giữa icon và text */
+}
 .player-name {
-    font-weight: bold; /* Make the player name bold */
+    font-weight: 800;
+    font-size: 2em; /* Kích thước chữ nhỏ hơn */
 }
 
 .player-coin {
-    color: sandybrown; /* Gold color for coins */
-    font-size: 1.5em; /* Make coin text larger */
-    font-weight: bold; /* Make the coin text bold */
+    color: sandybrown;
+    font-size: 2em; /* Kích thước chữ nhỏ hơn */
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
+
 
 
 /* Sidebar styling */
@@ -114,7 +141,7 @@
 .pond-img {
     width: 100%;
     height: auto;
-    border-radius: 70%; /* Bo tròn cho hình ảnh hồ */
+    border-radius: 100%; /* Bo tròn cho hình ảnh hồ */
 }
 
 /* Định vị cá koi bên trong hồ */
@@ -137,15 +164,14 @@
     width: 50px;
     height: auto;
     text-align: center;
-    /* Đảm bảo ảnh xoay từ phần trên của ảnh (đầu cá) */
     transform-origin: center top; /* Ghim xoay tại phần trên cùng của ảnh */
+    transition: transform 15s ease; /* Hiệu ứng xoay mượt mà trong 0.3 giây */
 }
 
 .koi-img {
-    width: 50px; /* Kích thước của mỗi cá */
+    width: 70px; /* Kích thước của mỗi cá */
     height: auto;
-    /* Đảm bảo ảnh xoay từ phần trên của ảnh */
-    transform-origin:center top; /* Ghim xoay tại phần trên cùng của ảnh */
+    transform-origin: center top; /* Ghim xoay tại phần trên cùng của ảnh */
 }
 
 .empty-pond-message {

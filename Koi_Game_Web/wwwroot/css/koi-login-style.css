@@ -7,9 +7,9 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .background-container {
@@ -18,8 +18,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    height: 100vh; 
+    flex-direction: column;
+    height: 100vh;
 }
 
 .title {
@@ -144,4 +144,3 @@ body {
 .btn:focus, .button:focus {
     outline: none; /* Bỏ viền khi nhấn vào */
 }
-
