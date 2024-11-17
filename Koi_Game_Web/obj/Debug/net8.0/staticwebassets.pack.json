@@ -21,6 +21,14 @@
       "PackagePath": "staticwebassets\\css\\koi-game-style.css"
     },
     {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\koi-login-style.css",
+      "PackagePath": "staticwebassets\\css\\koi-login-style.css"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\koi-napthe-style.css",
+      "PackagePath": "staticwebassets\\css\\koi-napthe-style.css"
+    },
+    {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\koiList.css",
       "PackagePath": "staticwebassets\\css\\koiList.css"
     },
@@ -75,6 +83,10 @@
     {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background5.gif",
       "PackagePath": "staticwebassets\\images\\background\\background5.gif"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background8.gif",
+      "PackagePath": "staticwebassets\\images\\background\\background8.gif"
     },
     {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\backpack.jpg",
@@ -147,6 +159,10 @@
     {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\danhsach.png",
       "PackagePath": "staticwebassets\\images\\icon\\danhsach.png"
+    },
+    {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\meo.jpg",
+      "PackagePath": "staticwebassets\\images\\icon\\meo.jpg"
     },
     {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\player.png",

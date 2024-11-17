@@ -9,133 +9,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="~/css/koi-game-style.css" />
+    <link rel="stylesheet" href="~/css/koi-napthe-style.css" />
     <title>@ViewBag.Title</title>
-    <style>
-        body {
-            background-image: url('@Url.Content("~/images/background/background-koi.jpg")'); /* Đường dẫn tới hình ảnh nền của bạn */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
-            display: flex;
-            flex-direction: column; /* Sắp xếp theo chiều dọc */
-        }
-
-        .background-container {
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; /* Đặt theo chiều dọc */
-            height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
-        }
-
-        .title {
-            font-size: 60px; /* Kích thước chữ lớn */
-            color: #1E90FF; /* Màu xanh biển */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), /* Hiệu ứng viền */
-            0 0 25px rgba(30, 144, 255, 0.5), /* Hiệu ứng sóng nước */
-            0 0 5px rgba(30, 144, 255, 0.5); /* Hiệu ứng sóng nước */
-            margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
-            font-family: 'Arial', sans-serif; /* Font chữ */
-            font-weight: bold; /* Chữ đậm */
-            text-transform: uppercase; /* Chữ in hoa */
-            letter-spacing: 2px; /* Khoảng cách giữa các chữ cái */
-            animation: wave 2s infinite; /* Hiệu ứng sóng nước */
-        }
-
-        keyframes wave {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-5px); /* Đưa lên cao một chút */
-            }
-        }
-
-        .naptien-box {
-            background-color: rgba(255, 255, 255, 0.8); /* Màu nền ô nạp tiền */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 300px;
-            text-align: center;
-            color: #333; /* Màu chữ cho dễ nhìn hơn */
-            position: absolute; /* Đặt ở vị trí tuyệt đối */
-            left: 20px; /* Vị trí từ bên trái */
-            top: 50%; /* Căn giữa theo chiều dọc */
-            transform: translateY(-50%); /* Căn giữa hoàn toàn */
-            z-index: 2; /* Đặt lên trên các phần tử khác */
-        }
-
-        .naptien-box h2 {
-            color: #007bff; /* Màu chữ tiêu đề */
-        }
-
-        .form-group {
-            margin-bottom: 15px; /* Khoảng cách giữa các ô nhập */
-        }
-
-        .form-group label {
-            color: #333; /* Màu chữ cho nhãn */
-        }
-
-        .form-control {
-            color: #000; /* Màu chữ cho ô nhập */
-            width: 100%; /* Chiếm toàn bộ chiều rộng ô nhập */
-            padding: 10px; /* Padding cho ô nhập */
-            border: 1px solid #ccc; /* Đường viền */
-            border-radius: 5px; /* Bo tròn góc ô nhập */
-        }
-
-        .btn {
-            background-color: #007bff; /* Màu nền nút */
-            color: #fff; /* Màu chữ nút */
-            border: none; /* Bỏ viền */
-            padding: 10px 15px; /* Padding cho nút */
-            border-radius: 5px; /* Bo tròn góc nút */
-            cursor: pointer; /* Con trỏ chuột khi di chuột qua */
-            transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền khi hover */
-        }
-
-        .btn:hover {
-            background-color: #0056b3; /* Màu nền khi hover */
-        }
-
-        .alert {
-            margin-top: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center; /* Căn giữa thông báo */
-        }
-
-        .alert-danger {
-            background-color: rgba(255, 0, 0, 0.8); /* Nền đỏ */
-            color: #fff; /* Chữ trắng */
-        }
-
-        .alert-success {
-            background-color: rgba(0, 255, 0, 0.8); /* Nền xanh lá */
-            color: #fff; /* Chữ trắng */
-        }
-
-        /* CSS cho cá koi */
-        .koi {
-            position: absolute;
-            width: 50px; /* Kích thước cá koi */
-            height: auto;
-            z-index: 1; /* Đặt cá koi dưới ô nạp tiền */
-        }
-    </style>
+    <!-- Link đến FontAwesome nếu cần để sử dụng biểu tượng mũi tên -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
     <div class="background-container">
-        <h1 class="title">Koi Breeding Games</h1> <!-- Tiêu đề chính -->
+        <h1 class="title">DONATE</h1>
         <div class="naptien-box">
             <h2>Nạp Tiền</h2>
             <form asp-action="Naptien" asp-controller="Naptien" method="post">
@@ -173,47 +54,18 @@
                 }
             </form>
         </div>
+        <div class="qr-code-container">
+            <h3>Quét mã QR để nạp thẻ</h3>
+            <img src="~/images/qr_hoangquoc.jpg" alt="QR Code" class="qr-code">
+            <img src="~/images/ngthhaiii.jpg" alt="QR Code" class="qr-code">
+        </div>
 
-        <!-- Phần cá koi bơi lội -->
-        <div id="koiContainer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden;"></div>
-
-        <script>
-            // Tạo cá koi bơi lội
-            const koiImages = [
-                '@Url.Content("~/images/background/koi1.png")',
-                '@Url.Content("~/images/background/koi2.png")',
-                '@Url.Content("~/images/background/koi3.png")'
-            ]; // Đường dẫn tới hình ảnh cá koi
-            const koiContainer = document.getElementById('koiContainer');
-
-            function createKoi() {
-                const koi = document.createElement('img');
-                const randomIndex = Math.floor(Math.random() * koiImages.length);
-                koi.src = koiImages[randomIndex];
-                koi.classList.add('koi');
-                koi.style.top = Math.random() * 100 + 'vh'; // Vị trí dọc ngẫu nhiên
-                koi.style.left = '100%'; // Bắt đầu từ bên phải
-                koi.style.transform = 'translateY(-50%)'; // Căn giữa theo chiều dọc
-
-                koiContainer.appendChild(koi);
-
-                // Di chuyển cá koi
-                let moveInterval = setInterval(() => {
-                    const currentLeft = parseFloat(koi.style.left);
-                    if (currentLeft < -50) { // Nếu cá koi đi ra ngoài màn hình
-                        clearInterval(moveInterval);
-                        koi.remove(); // Xóa cá koi khi nó ra ngoài
-                    } else {
-                        koi.style.left = currentLeft - 1 + 'px'; // Di chuyển cá koi
-                    }
-                }, 30);
-
-                // Tạo cá koi mới sau mỗi 1 giây
-                setTimeout(createKoi, 1000);
-            }
-
-            createKoi(); // Bắt đầu tạo cá koi
-        </script>
+        <!-- Liên kết quay lại trang đăng nhập với biểu tượng mũi tên -->
+        <div class="back-link">
+            <a href="/Account/Login" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Đăng Nhập
+            </a>
+        </div>
     </div>
 </body>
 </html>

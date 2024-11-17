@@ -13,7 +13,7 @@
 
     <style>
         body {
-            background-image: url('@Url.Content("~/images/background/bgGame.jpg")'); /* Path to your background image */
+            background-image: url('@Url.Content("~/images/background/background8.gif")'); /* Path to your background image */
             background-size: cover; /* Ensures the image covers the whole page */
             background-position: center; /* Centers the background image */
             background-repeat: no-repeat; /* Prevents tiling */
@@ -83,16 +83,17 @@
     </div>
 
     <!-- Thông tin người chơi -->
-<div class="player-info">
-    <h2 class="player-name">
-        <img src="~/images/icon/player.png" alt="User Icon" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 5px;">
-            @Model.player.name
-    </h2>
-    <p class="player-coin">
-        <img src="~/images/icon/coin.png" alt="Coin Icon" style="width: 50px; height: 50px; vertical-align: middle; margin-right: 5px;">
-            @Model.player.coin
-    </p>
-</div>
+    <div class="player-info">
+        <div class="player-name-box">
+            <img src="~/images/icon/meo.jpg" alt="User Icon" class="icon-a">
+            <span class="player-name">@Model.player.name</span>
+        </div>
+        <div class="player-coin-box">
+            <img src="~/images/icon/coin.png" alt="Coin Icon" class="icon">
+            <span class="player-coin">@Model.player.coin</span>
+        </div>
+    </div>
+
 
 
     <!-- Hồ nước chính của người chơi -->

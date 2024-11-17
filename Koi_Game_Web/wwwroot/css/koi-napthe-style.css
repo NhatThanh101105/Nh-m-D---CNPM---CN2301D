@@ -1,0 +1,171 @@
+﻿/* ======== CHUNG ======== */
+body {
+    background-image: url('../images/background/napthe.gif'); /* Đường dẫn ảnh nền */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.background-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+}
+
+.title {
+    font-size: 48px; /* Tăng kích thước chữ */
+    color: #FF6347; /* Đổi màu tiêu đề thành màu cam đỏ */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 99, 71, 0.7); /* Thêm hiệu ứng bóng đổ đậm hơn */
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Tăng khoảng cách giữa các chữ cái */
+    position: absolute; /* Đặt vị trí của tiêu đề */
+    top: 10px; /* Đưa tiêu đề lên phía trên hơn (cách từ trên xuống 10px) */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translateX(-50%); /* Căn giữa theo chiều ngang */
+}
+
+.naptien-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 16px; /* Tăng padding */
+    border-radius: 8px; /* Bo góc nhỏ hơn */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 280px; /* Tăng chiều rộng của ô nạp tiền */
+    text-align: center;
+    color: #333;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+    .naptien-box h2 {
+        color: #007bff;
+        font-size: 18px; /* Tăng kích thước chữ tiêu đề */
+    }
+
+.form-group {
+    margin-bottom: 12px; /* Tăng khoảng cách giữa các ô nhập */
+}
+
+    .form-group label {
+        color: #333;
+        font-size: 14px; /* Tăng kích thước chữ của nhãn */
+    }
+
+.form-control {
+    color: #000;
+    width: 100%;
+    padding: 8px; /* Tăng padding trong ô nhập */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Tăng kích thước chữ trong ô nhập */
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px; /* Tăng padding của nút */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px; /* Tăng kích thước chữ trong nút */
+}
+
+    .btn:hover {
+        background-color: #0056b3;
+    }
+
+.alert {
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px; /* Tăng kích thước chữ trong alert */
+}
+
+.alert-danger {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: #fff;
+}
+
+.alert-success {
+    background-color: rgba(0, 255, 0, 0.8);
+    color: #fff;
+}
+
+/* CSS cho nút quay lại đăng nhập */
+.back-link {
+    position: absolute;
+    top: 10px; /* Cách từ trên xuống 10px */
+    left: 10px; /* Cách từ trái sang 10px */
+}
+
+.back-btn {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+    .back-btn:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+
+
+.koi {
+    position: absolute;
+    width: 35px; /* Giảm kích thước cá koi */
+    height: auto;
+    z-index: 1;
+}
+
+.qr-code-container {
+    margin-top: 20px;
+    padding: 10px; /* Giảm padding */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    width: 30%; /* Giảm kích thước của ô QR đi 70% */
+    position: absolute;
+    top: 50%; /* Căn giữa theo chiều dọc */
+    right: 10px; /* Đưa ra phía bên phải */
+    transform: translateY(-50%); /* Căn giữa theo chiều dọc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+}
+
+    .qr-code-container h3 {
+        font-size: 14px; /* Giảm kích thước chữ */
+        color: #007bff;
+        margin-bottom: 8px; /* Giảm khoảng cách giữa tiêu đề và mã QR */
+    }
+
+.qr-code {
+    width: 40%; /* Giảm kích thước của mã QR */
+    height: auto;
+    border-radius: 4px;
+ 
+}
