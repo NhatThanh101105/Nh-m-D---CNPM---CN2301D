@@ -1,118 +1,46 @@
-﻿<div class="koi-selection">
-    <form asp-action="NhanCa" asp-controller="NhanCa" method="post" id="koiSelectionForm">
-        <div class="koi-container">
-            <div class="koi-image" data-color="Đỏ" data-id="1" onclick="selectKoi(this)">
-                <img src="~/images/fish/koi-red.png" alt="Koi Đỏ" style="width:100px;height:auto;" />
-                <p>Koi Đỏ</p>
+﻿@{
+    ViewData["Title"] = "Chọn Cá Koi";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/tanthu-style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-message">
+        <p>Nhận Quà Tân Thủ</p>
+        <p>Chúc mừng bạn! Hãy bắt đầu hành trình nuôi cá của mình với 2 con cá đặc biệt miễn phí. Đây sẽ là những người bạn đồng hành đầu tiên trong hồ cá của bạn!</p>
+    </div>
+    <div class="koi-selection">
+        <form asp-action="NhanCa" asp-controller="NhanCa" method="post" id="koiSelectionForm">
+            <div class="koi-container">
+                <div class="koi-image" data-color="Đỏ" data-id="1" onclick="selectKoi(this)">
+                    <img src="@(Url.Content("~/images/fish/koi-red.png"))" alt="Koi Đỏ" style="width:100px;height:auto;" />
+                    <p>Koi Đỏ</p>
+                </div>
+                <div class="koi-image" data-color="Xanh" data-id="2" onclick="selectKoi(this)">
+                    <img src="@(Url.Content("~/images/fish/koi-blue.png"))" alt="Koi Xanh" style="width:100px;height:auto;" />
+                    <p>Koi Xanh</p>
+                </div>
+                <div class="koi-image" data-color="Vàng" data-id="3" onclick="selectKoi(this)">
+                    <img src="@(Url.Content("~/images/fish/koi-yellow.png"))" alt="Koi Vàng" style="width:100px;height:auto;" />
+                    <p>Koi Vàng</p>
+                </div>
             </div>
-            <div class="koi-image" data-color="Xanh" data-id="2" onclick="selectKoi(this)">
-                <img src="~/images/fish/koi-blue.png" alt="Koi Xanh" style="width:100px;height:auto;" />
-                <p>Koi Xanh</p>
+
+            <!-- Trường ẩn để lưu danh sách các ID cá đã chọn -->
+            <input type="hidden" name="idKois" id="selectedKoiIds" />
+
+            <div class="button-container">
+                <button type="submit" class="button">Xác Nhận</button>
             </div>
-            <div class="koi-image" data-color="Vàng" data-id="3" onclick="selectKoi(this)">
-                <img src="~/images/fish/koi-yellow.png" alt="Koi Vàng" style="width:100px;height:auto;" />
-                <p>Koi Vàng</p>
-            </div>
-        </div>
+        </form>
+    </div>
 
-        <!-- Trường ẩn để lưu danh sách các ID cá đã chọn -->
-        <input type="hidden" name="idKois" id="selectedKoiIds" />
-
-        <div class="button-container">
-            <button type="submit" class="button">Xác Nhận</button>
-        </div>
-    </form>
-</div>
-
-<style>
-    body, html {
-        height: 100%; /* Đảm bảo chiều cao đầy đủ cho body và html */
-        margin: 0; /* Bỏ margin mặc định */
-    }
-
-    .koi-selection {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Canh giữa theo chiều dọc */
-        align-items: center; /* Canh giữa theo chiều ngang */
-        height: 100vh; /* Đặt chiều cao bằng chiều cao của cửa sổ */
-    }
-
-    .koi-container {
-        display: flex; /* Sử dụng Flexbox để sắp xếp theo hàng ngang */
-        justify-content: center; /* Canh giữa các hình ảnh */
-        margin-bottom: 20px; /* Khoảng cách dưới cùng */
-    }
-
-    .koi-image {
-        display: inline-block;
-        margin: 10px; /* Khoảng cách giữa các hình ảnh */
-        cursor: pointer; /* Chỉ thị rằng có thể nhấp vào */
-        text-align: center; /* Canh giữa nội dung */
-        transition: transform 0.3s; /* Hiệu ứng chuyển động nhẹ khi chọn */
-    }
-
-        .koi-image.selected {
-            border: 2px solid #FFD700; /* Viền vàng cho cá đã chọn */
-            border-radius: 5px;
-            transform: scale(1.05); /* Phóng to nhẹ cá đã chọn */
-        }
-
-    .button-container {
-        display: flex; /* Sử dụng flexbox để căn giữa nút */
-        justify-content: center; /* Căn giữa theo chiều ngang */
-        margin-top: 20px; /* Khoảng cách từ trên xuống */
-    }
-
-    .button {
-        background-color: #FFD700; /* Màu nền vàng */
-        color: #000; /* Màu chữ đen */
-        border: 2px solid #1E90FF; /* Viền màu xanh */
-        border-radius: 10px; /* Bo tròn góc */
-        padding: 10px 20px; /* Padding cho nút */
-        font-size: 16px; /* Kích thước chữ */
-        font-weight: bold; /* Chữ đậm */
-        cursor: pointer; /* Con trỏ chuột khi di chuột qua */
-        transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển màu nền và chữ khi hover */
-    }
-
-        .button:hover {
-            background-color: #FFC300; /* Màu nền khi hover */
-            color: #fff; /* Màu chữ khi hover */
-        }
-</style>
-
-<!-- Thêm tệp JavaScript -->
-<script src="~/js/koi-selection.js"></script>
-
-<script>
-    // Khởi tạo danh sách ID cá đã chọn
-    let selectedKoiIds = [];
-
-    function selectKoi(element) {
-        const selectedId = element.getAttribute('data-id');
-
-        // Kiểm tra nếu ID cá đã có trong danh sách, nếu có thì xóa bỏ, nếu chưa có thì thêm vào
-        if (selectedKoiIds.includes(selectedId)) {
-            // Bỏ chọn cá và loại bỏ ID khỏi danh sách
-            selectedKoiIds = selectedKoiIds.filter(id => id !== selectedId);
-            element.classList.remove('selected');
-        } else {
-            // Thêm ID cá mới vào danh sách và đánh dấu đã chọn
-            selectedKoiIds.push(selectedId);
-            element.classList.add('selected');
-        }
-
-        // Cập nhật trường ẩn với danh sách các ID cá đã chọn
-        document.getElementById('selectedKoiIds').value = selectedKoiIds.join(",");
-    }
-
-    // Kiểm tra số lượng cá đã chọn trước khi gửi biểu mẫu
-    document.getElementById('koiSelectionForm').addEventListener('submit', function (event) {
-        if (selectedKoiIds.length !== 2) {
-            event.preventDefault(); // Ngăn biểu mẫu gửi đi
-            alert("Bạn phải chọn chính xác 2 con cá.");
-        }
-    });
-</script>
-
+    <script src="~/js/tanthu-script.js"></script>
+</body>
+</html>

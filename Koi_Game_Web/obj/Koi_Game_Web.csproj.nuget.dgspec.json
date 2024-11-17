@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\Koi_Game_Web.csproj": {}
+    "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\Koi_Game_Web.csproj": {}
   },
   "projects": {
-    "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Reposities\\Koi_Game_Reposities.csproj": {
+    "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Reposities\\Koi_Game_Reposities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Reposities\\Koi_Game_Reposities.csproj",
+        "projectUniqueName": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Reposities\\Koi_Game_Reposities.csproj",
         "projectName": "Koi_Game_Reposities",
-        "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Reposities\\Koi_Game_Reposities.csproj",
+        "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Reposities\\Koi_Game_Reposities.csproj",
         "packagesPath": "C:\\Users\\Hoang Quoc\\.nuget\\packages\\",
-        "outputPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Reposities\\obj\\",
+        "outputPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Reposities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,12 +54,6 @@
               "target": "Package",
               "version": "[8.0.10, )"
             },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -91,14 +85,14 @@
         }
       }
     },
-    "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Services\\Koi_Game_Services.csproj": {
+    "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Services\\Koi_Game_Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Services\\Koi_Game_Services.csproj",
+        "projectUniqueName": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Services\\Koi_Game_Services.csproj",
         "projectName": "Koi_Game_Services",
-        "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Services\\Koi_Game_Services.csproj",
+        "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Services\\Koi_Game_Services.csproj",
         "packagesPath": "C:\\Users\\Hoang Quoc\\.nuget\\packages\\",
-        "outputPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Services\\obj\\",
+        "outputPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -120,8 +114,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Reposities\\Koi_Game_Reposities.csproj": {
-                "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Reposities\\Koi_Game_Reposities.csproj"
+              "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Reposities\\Koi_Game_Reposities.csproj": {
+                "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Reposities\\Koi_Game_Reposities.csproj"
               }
             }
           }
@@ -140,14 +134,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.10, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -168,14 +154,14 @@
         }
       }
     },
-    "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\Koi_Game_Web.csproj": {
+    "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\Koi_Game_Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\Koi_Game_Web.csproj",
+        "projectUniqueName": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\Koi_Game_Web.csproj",
         "projectName": "Koi_Game_Web",
-        "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\Koi_Game_Web.csproj",
+        "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\Koi_Game_Web.csproj",
         "packagesPath": "C:\\Users\\Hoang Quoc\\.nuget\\packages\\",
-        "outputPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\obj\\",
+        "outputPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -197,8 +183,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Services\\Koi_Game_Services.csproj": {
-                "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Services\\Koi_Game_Services.csproj"
+              "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Services\\Koi_Game_Services.csproj": {
+                "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Services\\Koi_Game_Services.csproj"
               }
             }
           }
@@ -217,14 +203,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.10, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

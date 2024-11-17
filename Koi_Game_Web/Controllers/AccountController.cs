@@ -35,7 +35,7 @@ public class AccountController : Controller
                 HttpContext.Session.SetString("username", player.UserName);
                 //  HttpContext.Session.SetInt32("coin", (int)(player.Coin ?? 0));
                 HttpContext.Session.SetString("name", player.Name);
-                return RedirectToAction("Index", "Home"); // Điều hướng đến trang Home/Index khi đăng nhập thành công
+                return RedirectToAction("Status", "Status"); // Điều hướng đến trang Home/Index khi đăng nhập thành công
             }
             //ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không đúng.");
             ViewBag.ErrorMessage = "Tên người dùng hoặc mật khẩu không đúng.";
