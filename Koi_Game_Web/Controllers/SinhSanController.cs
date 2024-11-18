@@ -21,6 +21,7 @@ namespace Koi_Game_Web.Controllers
         [HttpGet]
         public IActionResult BreedKoi()
         {
+          
             var idplayer = HttpContext.Session.GetInt32("playerId");
             var playerPondId = HttpContext.Session.GetInt32("playerPondId");
             if (!idplayer.HasValue)
@@ -35,6 +36,8 @@ namespace Koi_Game_Web.Controllers
 
 
             var koiNotInPond = koiList.Where(k=>!koiInPond.Any(kip=>kip.PlayerKoiId==k.PlayerKoiId) && !k.IsOnTrade).ToList();
+
+
 
             var koiNotInPondViewModel = koiNotInPond.Select(k => new KoiViewModel
             {

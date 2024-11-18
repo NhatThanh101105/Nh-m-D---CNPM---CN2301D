@@ -49,7 +49,7 @@ builder.Services.AddScoped<ISinhsanService,SinhsanService>();
 builder.Services.AddScoped<ILogicSinhsanService,LogicSinhsanService>();
 builder.Services.AddScoped<IAddKoiToPlayerService,AddKoiToPlayerService>();
 builder.Services.AddScoped<ITradeService,TradeService>();
-
+builder.Services.AddScoped<IKoiService,KoiService>();
 // cau hinnhf session
 builder.Services.AddSession(options =>
 {

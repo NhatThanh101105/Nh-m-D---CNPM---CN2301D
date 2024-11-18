@@ -97,6 +97,8 @@
     max-width: 80%;
     text-align: center;
     position: relative;
+    flex-direction: column; /* Căn các phần tử theo chiều dọc */
+    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
 }
 
 .close-btn {
