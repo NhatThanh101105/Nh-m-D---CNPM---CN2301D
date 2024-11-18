@@ -2791,11 +2791,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\Koi_Game_Web.csproj",
+      "projectUniqueName": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\Koi_Game_Web.csproj",
       "projectName": "Koi_Game_Web",
-      "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\Koi_Game_Web.csproj",
+      "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\Koi_Game_Web.csproj",
       "packagesPath": "C:\\Users\\Hoang Quoc\\.nuget\\packages\\",
-      "outputPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\obj\\",
+      "outputPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2817,8 +2817,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Services\\Koi_Game_Services.csproj": {
-              "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Services\\Koi_Game_Services.csproj"
+            "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Services\\Koi_Game_Services.csproj": {
+              "projectPath": "D:\\HoangQuocFolders\\GITHUB\\HQ\\Koi_Game_Services\\Koi_Game_Services.csproj"
             }
           }
         }
