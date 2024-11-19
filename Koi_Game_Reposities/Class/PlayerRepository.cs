@@ -19,21 +19,21 @@ namespace Koi_Game_Reposities.Class
             _dbcontext = dbcontext;
         }
 
-        public async Task<List<Player>> GetAllPlayer()
-        {
-            return await _dbcontext.Players.ToListAsync();
-        }
+  //      public async Task<List<Player>> GetAllPlayer()
+    //    {
+      //      return await _dbcontext.Players.ToListAsync();
+        //}
         public void AddPlayer(Player player)
         {
             _dbcontext.Players.Add(player);
             _dbcontext.SaveChanges();
         }
 
-        public void DelPlayer(Player player)
-        {
-            _dbcontext.Players.Remove(player);
-            _dbcontext.SaveChanges();
-        }
+//        public void DelPlayer(Player player)
+  //      {
+    //        _dbcontext.Players.Remove(player);
+      //      _dbcontext.SaveChanges();
+        //}
 
         public async Task<Player> GetPlayer(int id)
         {
@@ -50,5 +50,6 @@ namespace Koi_Game_Reposities.Class
         {
             return _dbcontext.Players.FirstOrDefault(p => p.UserName==username);
         }
+
     }
 }

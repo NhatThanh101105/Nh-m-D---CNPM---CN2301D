@@ -1,0 +1,118 @@
+﻿body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/background/tanthu.gif'), linear-gradient(120deg, #a1c4fd, #c2e9fb); /* Kết hợp ảnh nền và gradient */
+    background-attachment: fixed; /* Cố định hình nền khi cuộn */
+    background-size: cover; /* Phủ toàn màn hình */
+    background-position: center; /* Căn giữa ảnh nền */
+    display: flex; /* Sử dụng Flexbox để phân bổ không gian */
+    flex-direction: column; /* Xếp các phần tử theo chiều dọc */
+}
+
+.welcome-message {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 20px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.4); /* Lớp nền mờ đằng sau chữ */
+    padding: 10px 20px; /* Khoảng cách bên trong để lớp nền không chạm vào chữ */
+    border-radius: 10px; /* Bo tròn góc nền */
+    flex-shrink: 0;
+}
+
+.koi-selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Canh giữa theo chiều dọc */
+    align-items: center; /* Canh giữa theo chiều ngang */
+    flex-grow: 1; /* Cho phép phần này chiếm phần còn lại của không gian */
+    padding: 20px; /* Khoảng cách xung quanh */
+    overflow-y: auto; /* Nếu có nhiều nội dung, cho phép cuộn */
+}
+
+.koi-container {
+    display: flex;
+    justify-content: center; /* Canh giữa các hình ảnh */
+    align-items: center; /* Canh giữa theo chiều dọc */
+    gap: 20px; /* Khoảng cách giữa các hình ảnh */
+    flex-wrap: nowrap; /* Không cho phép các hình ảnh gãy xuống dòng mới */
+    background: rgba(255, 255, 255, 0.8); /* Nền trắng trong suốt nhẹ */
+    padding: 20px; /* Khoảng cách bên trong */
+    border-radius: 15px; /* Bo tròn góc khung */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    margin: 0 auto; /* Căn giữa khung cá */
+    width: 90%; /* Giới hạn chiều rộng */
+    max-width: 1200px; /* Không quá rộng */
+}
+
+.koi-image {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Hiệu ứng chuyển động */
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #ffffff; /* Nền trắng mặc định */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    padding: 10px;
+}
+
+    .koi-image:hover {
+        transform: scale(1.1); /* Phóng to khi di chuột vào */
+        background-color: #f8f8f8; /* Đổi màu nền khi hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
+    }
+
+    .koi-image img {
+        width: 120px; /* Kích thước cố định */
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .koi-image p {
+        margin: 10px 0 0; /* Khoảng cách từ hình đến tên cá */
+        font-size: 14px; /* Kích thước chữ nhỏ gọn */
+        color: #333; /* Màu chữ tối hơn để dễ đọc */
+    }
+
+    .koi-image.selected {
+        border: 2px solid #FFD700; /* Viền vàng khi chọn */
+        transform: scale(1.05); /* Phóng to nhẹ khi chọn */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Đổ bóng mạnh hơn khi chọn */
+    }
+
+.button-container {
+    display: flex; /* Sử dụng flexbox để căn giữa nút */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    margin-top: 30px; /* Khoảng cách từ khung cá xuống nút */
+}
+
+.button {
+    background-color: #FFD700; /* Màu nền vàng */
+    color: #000; /* Màu chữ đen */
+    border: 2px solid #1E90FF; /* Viền màu xanh */
+    border-radius: 10px; /* Bo tròn góc */
+    padding: 12px 24px; /* Padding cho nút */
+    font-size: 16px; /* Kích thước chữ */
+    font-weight: bold; /* Chữ đậm */
+    cursor: pointer; /* Con trỏ chuột khi di chuột qua */
+    transition: transform 0.3s, background-color 0.3s, color 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng cho chuyển động và màu sắc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho nút */
+}
+
+    .button:hover {
+        background-color: #FFC300; /* Màu nền khi hover */
+        color: #fff; /* Màu chữ khi hover */
+        transform: scale(1.1); /* Phóng to nhẹ khi hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Đổ bóng mạnh hơn khi hover */
+    }
+
+    .button:active {
+        transform: scale(0.95); /* Thu nhỏ khi nhấn */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Giảm bóng khi nhấn */
+    }

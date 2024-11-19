@@ -24,7 +24,7 @@ namespace Koi_Game_Web.Controllers
                 if (_napTienService.napTien(model.Account, model.Amount, model.SerialNumber))
                 {
                     TempData["SuccessMessage"] = "nạp thành công";
-                    return RedirectToAction("Index","Home");
+                    return RedirectToAction("Naptien");
 
                 }
                 ViewBag.ErrorMessage = "nạp tiền thất bại";

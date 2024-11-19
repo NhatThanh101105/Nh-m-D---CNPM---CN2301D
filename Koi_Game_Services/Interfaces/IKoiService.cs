@@ -11,6 +11,7 @@ namespace Koi_Game_Services.Interfaces
     public interface IKoiService
     {
         Task<List<KoiFish>> GetAllKoiFishes();
-        Task<KoiFish> GetKoiFishById(int id);
+       // Task<KoiFish> GetKoiFishById(int id);
+     //   Task<string> getImage(int idkoi);
     }
 }

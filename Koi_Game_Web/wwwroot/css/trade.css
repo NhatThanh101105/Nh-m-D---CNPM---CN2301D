@@ -1,0 +1,359 @@
+﻿/* Đặt container chính ở giữa màn hình */
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 60vh;
+    padding: 20px;
+
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* Đặt bảng giao dịch có thể cuộn */
+.trade-list-container {
+    width: 80%; /* Điều chỉnh kích thước của bảng */
+    max-width: 1000px; /* Đảm bảo không quá rộng */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Màu trắng với độ trong suốt 80% */
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 1px;
+    flex-basis: 60%;
+}
+
+/* Cải thiện kiểu dáng cho tiêu đề */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Cài đặt cho bảng có thể cuộn */
+.scrollable-content {
+    max-height: 200px; /* Điều chỉnh chiều cao tối đa của bảng */
+    overflow-y: auto; /* Thêm thanh cuộn dọc nếu bảng quá dài */
+}
+
+/* Kiểu dáng cho bảng */
+.trade-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    height:20px;
+}
+
+    /* Kiểu dáng cho các tiêu đề của bảng */
+    .trade-table th {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 10px;
+        text-align: left;
+    }
+
+    /* Kiểu dáng cho các hàng trong bảng */
+    .trade-table td {
+        padding: 10px;
+        font-weight: 600;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+/* Kích thước ảnh cá */
+.trade-koi-img {
+    width: 50px; /* Điều chỉnh kích thước ảnh cá */
+    height: 50px;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 50%; /* Tạo kiểu ảnh tròn */
+}
+
+/* Kiểu dáng cho nút mua */
+.btn-buy {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-buy:hover {
+        background-color: #45a049;
+    }
+
+/* Kiểu dáng cho thông báo "Không có cá để bán" */
+.no-items {
+    color: #ff0000;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Kiểu dáng cho thông báo "Không có giao dịch nào" */
+.no-items {
+    color: #ff0000;
+    text-align: center;
+}
+
+
+/* Đặt container của bảng Koi đang bán ở bên phải */
+.koi-on-sale-container {
+    width: 35%; /* Chiếm một phần nhỏ hơn so với bảng giao dịch */
+    max-width: 400px; /* Đảm bảo không quá rộng */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 0px; /* Khoảng cách giữa bảng giao dịch và bảng Koi đang bán */
+    margin: 0;
+    flex-basis: 40%;
+}
+
+/* Cải thiện kiểu dáng cho tiêu đề */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Cài đặt cho bảng Koi đang bán có thể cuộn */
+.scrollable-content {
+    display: flex;
+    max-height: 200px; /* Điều chỉnh chiều cao tối đa của bảng */
+    overflow-x: auto; /* Thêm thanh cuộn dọc nếu bảng quá dài */
+}
+
+/* Kiểu dáng cho các mục trong bảng Koi đang bán */
+.koi-item {
+    width: 145px; /* Điều chỉnh kích thước mỗi mục */
+    height: 180px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex-shrink: 0; /* Ngăn vật phẩm bị thu hẹp khi có nhiều vật phẩm */
+}
+
+/* Kiểu dáng cho ảnh cá trong bảng Koi đang bán */
+.koi-img {
+    width: 50px; /* Điều chỉnh kích thước ảnh cá */
+    height: 50px;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 50%; /* Tạo kiểu ảnh tròn */
+    margin-bottom: 10px;
+}
+
+/* Kiểu dáng cho tên cá */
+.koi-name {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Kiểu dáng cho giá cá */
+.koi-price {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Kiểu dáng cho nút "Hủy bán" */
+.btn-remove {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-remove:hover {
+        background-color: #e53935;
+    }
+
+/* Kiểu dáng cho thông báo "Không có Koi nào đang bán" */
+.no-items {
+    color: black;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+
+/* Đặt container của bảng Koi của bạn ở dưới */
+.koi-not-on-sale-container {
+    width: 100%;
+    margin: 10px 2px 10px 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+/* Cải thiện kiểu dáng cho tiêu đề */
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Cài đặt cho bảng Koi của bạn có thể cuộn ngang */
+.scrollable-content {
+    display: flex;
+    max-height: 200px; /* Đặt các mục trong dạng dòng ngang */
+    overflow-x: auto; /* Thêm thanh cuộn ngang nếu bảng quá dài */
+    gap: 20px;
+}
+
+/* Kiểu dáng cho các mục trong bảng Koi của bạn */
+.koi-item-2 {
+    width: 145px; /* Điều chỉnh kích thước mỗi mục */
+    height: 180px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    flex-shrink: 0; /* Ngăn vật phẩm bị thu hẹp khi có nhiều vật phẩm */
+}
+
+/* Kiểu dáng cho ảnh cá trong bảng Koi của bạn */
+.koi-img-2 {
+    width: 50px; /* Điều chỉnh kích thước ảnh cá */
+    height: 50px;
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 50%; /* Tạo kiểu ảnh tròn */
+    margin-bottom: 10px;
+}
+
+/* Kiểu dáng cho tên cá */
+.koi-name-2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Kiểu dáng cho giá cá */
+.koi-price-2 {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Kiểu dáng cho nút "Bán" */
+.btn-add {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-add:hover {
+        background-color: #45a049;
+    }
+
+/* Kiểu dáng cho thông báo "Không có Koi nào chưa bán" */
+.no-items {
+    color: black;
+    font-weight:800;
+    text-align: center;
+ 
+}
+
+/* Đặt nút "Back" ở góc trái dưới */
+.back-button {
+    position: fixed;
+    bottom: 70px;
+    left: 20px;
+    background-color: #78909c;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+    .back-button:hover {
+        background-color: #546e7a;
+    }
+
+.trade-search-form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+    .trade-search-form:hover {
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .trade-search-form input[type="text"] {
+        padding: 12px;
+        font-size: 16px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin-right: 10px;
+        flex: 1;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+        .trade-search-form input[type="text"]:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.4);
+            outline: none;
+        }
+
+.trade-search-button {
+    padding: 12px 25px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+    .trade-search-button:hover {
+        background: linear-gradient(45deg, #0056b3, #003f7f);
+        transform: translateY(-2px);
+    }
+
+    .trade-search-button:active {
+        transform: translateY(1px);
+    }
+

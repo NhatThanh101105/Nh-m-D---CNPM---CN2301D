@@ -1,0 +1,95 @@
+﻿@model PondDetailViewModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn Cá Để Sinh Sản</title>
+    <link rel="stylesheet" href="~/css/koibreed.css?v=2.0"/>
+    <style>
+        body {
+            background-image: url('@Url.Content("~/images/background/background4.gif")'); /* Path to your background image */
+            background-size: cover; /* Ensures the image covers the whole page */
+            background-position: center; /* Centers the background image */
+            background-repeat: no-repeat; /* Prevents tiling */
+            background-attachment: fixed; /* Keeps the background in place while scrolling */
+        }
+
+        .tempdata-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            font-size: 18px;
+            border-radius: 8px;
+            z-index: 1000;
+            text-align: center;
+            max-width: 80%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+            .tempdata-message.Message {
+                background-color: rgba(0, 128, 0, 0.9);
+            }
+
+            .tempdata-message.ErrorMessage {
+                background-color: rgba(255, 0, 0, 0.9);
+            }
+    </style>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                const tempdataMessages = document.querySelectorAll('.tempdata-message');
+                tempdataMessages.forEach(function (message) {
+                    message.style.display = 'none';
+                });
+            }, 3000);
+        });
+        function toggleKoiSelection(checkbox) {
+            const selectedKoi = document.querySelectorAll('input[name="selectedKoiIds"]:checked');
+            if (selectedKoi.length > 2) {
+                checkbox.checked = false;
+                alert("Chỉ có thể chọn tối đa 2 con cá để sinh sản.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Chọn Cá Để Sinh Sản</h2>
+
+    <form asp-action="SinhSan" asp-controller="SinhSan" method="post">
+        <div class="koi-container">
+            <h3 style="text-align: center;"></h3>
+            @foreach (var playerKoi in Model.koiNotInPond)
+            {
+                <div class="koi-item">
+                    <img src="@Url.Content(playerKoi.ImageURL)" alt="@playerKoi.name" class="koi-img" />
+                    <p>@playerKoi.name</p>
+                    <label>
+                        <input type="checkbox" name="selectedKoiIds" value="@playerKoi.koiId" onchange="toggleKoiSelection(this)" /> Chọn
+                    </label>
+                </div>
+            }
+        </div>
+        <button type="submit" class="btn-breed">Sinh Sản</button>
+    </form>
+
+    @if (TempData["Message"] != null)
+    {
+        <div class="tempdata-message success">@TempData["Message"]</div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="tempdata-message success">@TempData["ErrorMessage"]</div>
+    }
+
+   <a href="@Url.Action("KoiGame", "Game")" class="back-button">Trở lại</a>
+
+</body>
+</html>

@@ -6,17 +6,28 @@ body {
     text-align: center;
     padding: 20px;
     margin: 0;
+    display: flex; /* Sử dụng flex để sắp xếp các phần tử */
+}
+
+/* Thanh chức năng bên trái */
+.sidebar {
+    width: 200px; /* Chiều rộng của thanh chức năng */
+    background-color: rgba(0, 0, 0, 0.7); /* Nền tối để nổi bật */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Khung chứa game */
 .game-container {
-    background-color: rgba(0, 0, 0, 0.5); /* Nền tối giúp làm nổi bật nội dung */
+    background-color: rgba(0, 0, 0, 0.7); /* Nền tối giúp làm nổi bật nội dung */
     border-radius: 15px;
     padding: 20px;
     width: 90%;
     max-width: 800px;
     margin: 40px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    flex: 1; /* Chiếm không gian còn lại */
 }
 
 /* Tiêu đề chính của game */
@@ -37,13 +48,14 @@ h1 {
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
     .button:hover {
         background-color: #FF6347; /* Hiệu ứng sáng hơn khi rê chuột */
         transform: scale(1.05);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Tăng bóng khi hover */
     }
 
 /* Khu vực chứa cá koi */
@@ -51,7 +63,7 @@ h1 {
     position: relative;
     width: 100%;
     height: 500px; /* Khu vực hiển thị cá koi */
-    overflow: hidden;
+    overflow: hidden; /* Giấu các cá bơi ra ngoài */
     background: url('https://example.com/water-texture.png') repeat; /* Thêm ảnh nền vân nước */
     border-radius: 10px;
 }
@@ -90,10 +102,39 @@ h1 {
     }
 
     50% {
-        transform: translateX(200px) translateY(30px) rotate(-10deg);
+        transform: translateX(150px) translateY(30px) rotate(-10deg); /* Giới hạn khoảng cách bơi */
     }
 
     100% {
         transform: translateX(0) translateY(0) rotate(10deg);
     }
 }
+
+/* Hiệu ứng cho hình ảnh cá koi */
+.koi-image {
+    transition: transform 0.3s; /* Hiệu ứng chuyển động khi chọn */
+}
+
+    .koi-image:hover {
+        transform: scale(1.1); /* Phóng to nhẹ hình ảnh khi hover */
+    }
+
+/* Thiết kế cho nút xác nhận */
+.confirm-button {
+    display: inline-block;
+    margin-top: 20px; /* Khoảng cách từ khu vực cá tới nút */
+    padding: 10px 20px;
+    background-color: #28a745; /* Màu xanh lá cây */
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+    .confirm-button:hover {
+        background-color: #218838; /* Màu xanh đậm khi hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Tăng bóng khi hover */
+    }

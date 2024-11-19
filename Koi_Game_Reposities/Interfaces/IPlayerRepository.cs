@@ -10,11 +10,11 @@ namespace Koi_Game_Reposities.Interfaces
 {
     public interface IPlayerRepository
     {
-        Task<List<Player>> GetAllPlayer();
+       // Task<List<Player>> GetAllPlayer();
         Task<Player> GetPlayer(int id);
         void AddPlayer (Player player);
         void UpdatePlayer (Player player);
-        void DelPlayer (Player player);
+       // void DelPlayer (Player player);
 
         
 
@@ -23,6 +23,8 @@ namespace Koi_Game_Reposities.Interfaces
 
         // get nguoi choi theo ten dang nhap de su dung chuc nang dang nhap 
         Player GetPlayerByUsername (string username);
+        
+
     }
     
 }

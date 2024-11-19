@@ -1,0 +1,97 @@
+﻿h2, h3 {
+    text-align: center;
+    color:aliceblue;
+    font-weight:800;
+}
+
+.koi-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents items from wrapping */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    max-width: 62%;
+    /* Keeps the container within the viewport */
+    height:350px;
+
+    margin: 20px auto;
+}
+
+.koi-item {
+    display: inline-block; /* Aligns items in a row */
+    text-align: center;
+    width: 200px; /* Set a consistent width for each item */
+    height:200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 70px;
+
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 15px; /* Adds space between items */
+    transition: transform 0.3s;
+}
+
+    .koi-item:hover {
+        transform: scale(1.05);
+    }
+
+.koi-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    font-weight:800;
+}
+
+.btn-breed {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-breed {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 80px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+    .btn-breed:hover {
+    
+        transform: scale(1.05);
+    }
+
+.back-button {
+    position: fixed;
+    bottom: 70px;
+    left: 20px;
+    background-color: #78909c;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+    .back-button:hover {
+        background-color: #546e7a;
+    }
+

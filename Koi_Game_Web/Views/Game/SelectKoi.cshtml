@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Chọn Cá Koi";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/tanthu-style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-message">
+        <p>Nhận Quà Tân Thủ</p>
+        <p>Chúc mừng bạn! Hãy bắt đầu hành trình nuôi cá của mình với 2 con cá đặc biệt miễn phí. Đây sẽ là những người bạn đồng hành đầu tiên trong hồ cá của bạn!</p>
+    </div>
+    <div class="koi-selection">
+        <form asp-action="NhanCa" asp-controller="NhanCa" method="post" id="koiSelectionForm">
+            <div class="koi-container">
+                <div class="koi-image" data-color="Đỏ" data-id="1" onclick="selectKoi(this)">
+                    <img src="@(Url.Content("~/images/fish/koi-red.png"))" alt="Koi Đỏ" style="width:100px;height:auto;" />
+                    <p>Koi Đỏ</p>
+                </div>
+                <div class="koi-image" data-color="Xanh" data-id="2" onclick="selectKoi(this)">
+                    <img src="@(Url.Content("~/images/fish/koi-blue.png"))" alt="Koi Xanh" style="width:100px;height:auto;" />
+                    <p>Koi Xanh</p>
+                </div>
+                <div class="koi-image" data-color="Vàng" data-id="3" onclick="selectKoi(this)">
+                    <img src="@(Url.Content("~/images/fish/koi-yellow.png"))" alt="Koi Vàng" style="width:100px;height:auto;" />
+                    <p>Koi Vàng</p>
+                </div>
+            </div>
+
+            <!-- Trường ẩn để lưu danh sách các ID cá đã chọn -->
+            <input type="hidden" name="idKois" id="selectedKoiIds" />
+
+            <div class="button-container">
+                <button type="submit" class="button">Xác Nhận</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="~/js/tanthu-script.js"></script>
+</body>
+</html>

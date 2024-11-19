@@ -1,33 +1,71 @@
 ﻿@model Koi_Game_Web.Models.NaptheViewModel
 
-<form asp-action="Naptien" asp-controller="Naptien" method="post">
-    <div class="form-group">
-        <label for="account">Tài Khoản</label>
-        <input type="text" name="Account" id="account" class="form-control" placeholder="Nhập tài khoản" required>
+@{
+    ViewBag.Title = "Nạp Tiền";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/koi-napthe-style.css" />
+    <title>@ViewBag.Title</title>
+    <!-- Link đến FontAwesome nếu cần để sử dụng biểu tượng mũi tên -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="background-container">
+        <h1 class="title">DONATE</h1>
+        <div class="naptien-box">
+            <h2>Nạp Tiền</h2>
+            <form asp-action="Naptien" asp-controller="Naptien" method="post">
+                <div class="form-group">
+                    <label for="account">Tài Khoản</label>
+                    <input type="text" asp-for="Account" class="form-control" placeholder="Nhập tài khoản" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="serialNumber">Số Seri</label>
+                    <input type="text" asp-for="SerialNumber" class="form-control" placeholder="Nhập số seri" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="amount">Mệnh Giá</label>
+                    <select asp-for="Amount" class="form-control" required>
+                        <option value="20000">20.000đ</option>
+                        <option value="50000">50.000đ</option>
+                        <option value="100000">100.000đ</option>
+                        <option value="200000">200.000đ</option>
+                        <option value="500000">500.000đ</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Nạp Tiền</button>
+
+                @if (ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+                }
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+                }
+            </form>
+        </div>
+        <div class="qr-code-container">
+            <h3>Quét mã QR để nạp thẻ</h3>
+            <img src="~/images/qr_hoangquoc.jpg" alt="QR Code" class="qr-code">
+            <img src="~/images/ngthhaiii.jpg" alt="QR Code" class="qr-code">
+        </div>
+
+        <!-- Liên kết quay lại trang đăng nhập với biểu tượng mũi tên -->
+        <div class="back-link">
+            <a href="/Account/Login" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Đăng Nhập
+            </a>
+        </div>
     </div>
-
-    <div class="form-group">
-        <label for="serialNumber">Số Seri</label>
-        <input type="text" name="SerialNumber" id="serialNumber" class="form-control" placeholder="Nhập số seri" required>
-    </div>
-
-    <div class="form-group">
-        <label for="amount">Mệnh Giá</label>
-        <select name="Amount" id="amount" class="form-control" required>
-            <option value="20000">20.000đ</option>
-            <option value="50000">50.000đ</option>
-        </select>
-    </div>
-
-    <button type="submit" class="btn">Nạp Tiền</button>
-
-    @if (ViewBag.ErrorMessage != null)
-    {
-        <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
-    }
-
-    @if (TempData["SuccessMessage"] != null)
-    {
-        <div class="alert alert-success">@TempData["SuccessMessage"]</div>
-    }
-</form>
+</body>
+</html>

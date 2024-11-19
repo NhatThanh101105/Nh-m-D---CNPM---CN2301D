@@ -1,0 +1,253 @@
+﻿/* Căn chỉnh thông tin người chơi */
+.player-info {
+    position: absolute;
+    top: 100px; /* Cách mép trên 10px */
+    left: 20px; /* Cách mép trái 10px */
+    display: flex;
+    flex-direction: column; /* Hiển thị các khung theo cột */
+    gap: 5px; /* Khoảng cách giữa các khung */
+}
+
+.player-name-box, .player-coin-box {
+    display: flex;
+    align-items: center; /* Căn giữa icon và text theo chiều dọc */
+    padding: 5px 10px; /* Tạo khoảng cách bên trong khung */
+    border: 1px solid #ccc; /* Viền khung mỏng hơn */
+    border-radius: 21px; /* Bo góc nhỏ hơn */
+    background-color: rgba(255, 255, 255, 0.5); /* Màu nền nhạt */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); /* Đổ bóng nhẹ */
+    width: fit-content; /* Tự động co dãn theo nội dung */
+    font-size: 0.9em; /* Giảm kích thước chữ */
+}
+
+.icon {
+    width: 50px; /* Giảm kích thước icon */
+    height: 50px;
+    margin-right: 5px; /* Khoảng cách nhỏ hơn giữa icon và text */
+}
+
+.icon-a {
+    width: 100px; /* Giảm kích thước icon */
+    height: 50px;
+    margin-right: 5px; /* Khoảng cách nhỏ hơn giữa icon và text */
+}
+.player-name {
+    font-weight: 800;
+    font-size: 2em; /* Kích thước chữ nhỏ hơn */
+}
+
+.player-coin {
+    color: sandybrown;
+    font-size: 2em; /* Kích thước chữ nhỏ hơn */
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+
+
+
+/* Sidebar styling */
+/* Sidebar styling */
+/* Sidebar */
+/* Sidebar */
+.sidebar {
+    height: 350px;
+    width: 20px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.9s;
+    z-index: 1000;
+    border-radius: 0 10px 10px 0;
+}
+
+    .sidebar:hover {
+        width: 230px;
+    }
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    color: black;
+    font-weight:800;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-10px);
+}
+
+.sidebar:hover .sidebar-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Icon */
+.sidebar-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Mượt mà khi phóng to */
+}
+
+/* Phóng to icon khi di chuột vào item */
+.sidebar-item:hover .sidebar-icon {
+    transform: scale(1.2);
+}
+
+.main-content {
+    margin-left: 40px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.sidebar:hover ~ .main-content {
+    margin-left: 200px;
+}
+
+
+
+
+
+
+
+/* Hồ chính */
+.main-pond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.pond-container {
+    position: relative;
+    width: 700px; /* Đảm bảo chiều rộng của hồ */
+    height: 700px; /* Đảm bảo chiều cao của hồ */
+    border-radius: 50%; /* Bo tròn để giống hồ */
+    overflow: hidden; /* Giới hạn để cá không vượt quá viền */
+}
+
+.pond-img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%; /* Bo tròn cho hình ảnh hồ */
+}
+
+/* Định vị cá koi bên trong hồ */
+/* Định vị cá koi bên trong hồ */
+.koi-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    pointer-events: none; /* Để con cá không bị nhấn hoặc kéo ngoài ý muốn */
+}
+
+.koi-item {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    text-align: center;
+    transform-origin: center top; /* Ghim xoay tại phần trên cùng của ảnh */
+    transition: transform 0.15s ease; /* Hiệu ứng xoay mượt mà trong 0.3 giây */
+    
+}
+
+.koi-img {
+    width: 45px; /* Kích thước của mỗi cá */
+    height: auto;
+    transform-origin: center top; /* Ghim xoay tại phần trên cùng của ảnh */
+}
+
+.empty-pond-message {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+/*nut túi đồ*/
+.btn-inventory {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: lightsteelblue ; /* Green background */
+    color:darkred; /* White text */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute; /* Absolute positioning */
+    top: 60px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+}
+    .btn-inventory img {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+
+.btn-inventory:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+/*nút đăng xuất*/
+.btn-logout {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px;
+    background-color: red; /* White background for contrast */
+    color: black; /* Black text */
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #e74c3c; /* Red border */
+    border-radius: 5px;
+    position: absolute;
+    right: 20px; /* Position to the far right */
+    top: 740px; /* Adjust top as needed */
+}
+
+    .btn-logout:hover {
+        background-color: #e74c3c; /* Red background on hover */
+        color: white; /* White text on hover */
+    }
+
+
+.tempdata-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 8px;
+    z-index: 1000; /* Đặt giá trị cao để đè lên các phần tử khác */
+    text-align: center;
+    max-width: 80%; /* Để thông báo không quá lớn */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+    /* Màu sắc khác nhau cho thành công và thất bại */
+    .tempdata-message.success {
+        background-color: rgba(0, 128, 0, 0.9); /* Màu xanh lá cho thông báo thành công */
+    }
+
+    .tempdata-message.fail {
+        background-color: rgba(255, 0, 0, 0.9); /* Màu đỏ cho thông báo thất bại */
+    }

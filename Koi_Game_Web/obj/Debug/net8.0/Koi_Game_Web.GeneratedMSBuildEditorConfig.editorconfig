@@ -22,6 +22,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Account/NewPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxOZXdQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Account/QuenMatKhau.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxRdWVuTWF0S2hhdS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,12 +38,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uYXRlXE5hcHRpZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/BreedView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxCcmVlZFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/home_game.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxob21lX2dhbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/Inventory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbnZlbnRvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/KoiInGame.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxLb2lJbkdhbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/KoiListView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxLb2lMaXN0Vmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/SelectKoi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxTZWxlY3RLb2kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/TradeView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxUcmFkZVZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/ViewPond.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxWaWV3UG9uZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/KoiGame/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29pR2FtZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/KoiGame/KoiGame.cshtml]

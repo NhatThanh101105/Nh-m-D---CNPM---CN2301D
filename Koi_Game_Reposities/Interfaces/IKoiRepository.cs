@@ -11,6 +11,6 @@ namespace Koi_Game_Reposities.Interfaces
     {
         Task<List<KoiFish>> GetAllKoiFishs();
         Task<KoiFish> GetKoiFishById(int id);
-
+        
     }
 }
