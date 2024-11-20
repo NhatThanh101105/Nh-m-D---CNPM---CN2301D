@@ -27,10 +27,7 @@ namespace Koi_Game_Services.Class.nhanca_newplayer
             _playerPondService = playerPondService;
         }
 
-        public async Task<List<int>> getThreeKois()
-        {
-            return await _koiRepository.GetThreeKois();
-        }
+  
         public void NhanCa(int idPlayer, List<int> idkois)
         {
 

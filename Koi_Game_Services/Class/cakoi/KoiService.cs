@@ -21,14 +21,5 @@ namespace Koi_Game_Services.Class.cakoi
             return await _koiRepository.GetAllKoiFishs();
         }
 
-        public async Task<KoiFish> GetKoiFishById(int id)
-        {
-            return await _koiRepository.GetKoiFishById(id);
-        }
-        public async Task<string> getImage(int idkoi)
-        {
-            var koi=await _koiRepository.GetKoiFishById(idkoi);
-            return koi.ImageURL;
-        }
     }
 }

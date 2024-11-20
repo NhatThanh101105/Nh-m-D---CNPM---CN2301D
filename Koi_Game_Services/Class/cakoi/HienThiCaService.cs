@@ -20,11 +20,7 @@ namespace Koi_Game_Services.Class.cakoi
             _pondKoiRepository = pondKoiRepository;
          //   _koiRepository = koiRepository;
         }
-        public List<int?> getKoiByIdPlayer(int idPlayer)
-        {
-            return _playerKoiFishRepository.getKoisByIdPlayer(idPlayer);
-        }
-        
+
         public List<PlayerKoi> GetKoiInPond(int idplayer,int playerPondId)
         {
             return _pondKoiRepository.GetKoiInPond(idplayer, playerPondId);

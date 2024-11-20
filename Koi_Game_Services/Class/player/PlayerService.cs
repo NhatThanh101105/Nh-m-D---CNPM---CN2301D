@@ -21,35 +21,7 @@ namespace Koi_Game_Services.Class.player
             _playerRepository = playerRepository;
         }
 
-        public void AddPlayer(PlayerDTO playerDTO)
-        {
-            var player = new Player
-            {
-                Name = playerDTO.Name,
-                UserName = playerDTO.UserName,
-                Password = playerDTO.Password,
-                Coin = 0
-            };
-            _playerRepository.AddPlayer(player);
-        }
 
-        public void DeletePlayer(PlayerDTO playerDTO)
-        {
-            var player = new Player
-            {
-                PlayerId = playerDTO.Id,
-                Name = playerDTO.Name,
-                UserName = playerDTO.UserName,
-                Password = playerDTO.Password,
-                Coin = playerDTO.Coin
-            };
-            _playerRepository.DelPlayer(player);
-        }
-
-        public async Task<List<Player>> GetAllPlayers()
-        {
-            return await _playerRepository.GetAllPlayer();
-        }
 
         public async Task<Player> GetPlayer(int id)
         {

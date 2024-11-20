@@ -16,10 +16,10 @@ namespace Koi_Game_Services.Class.player
         {
             _playerPondRepository = playerPondRepository;
         }
-        public List<PlayerPond> getPlayerPond(int idplayer)
-        {
-            return _playerPondRepository.getPlayerPond(idplayer);
-        }
+       // public List<PlayerPond> getPlayerPond(int idplayer)
+        //{
+        //    return _playerPondRepository.getPlayerPond(idplayer);
+        //}
         public int getPlayerPondId(int idplayer, int pondId)
         {
             return _playerPondRepository.getPlayerPondId(idplayer, pondId);
