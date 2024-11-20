@@ -51,7 +51,7 @@
 /* Sidebar */
 /* Sidebar */
 .sidebar {
-    height: 259px;
+    height: 350px;
     width: 20px;
     position: fixed;
     top: 50%;
@@ -95,8 +95,8 @@
 
 /* Icon */
 .sidebar-icon {
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     margin-right: 10px;
     transition: transform 0.3s ease; /* Mượt mà khi phóng to */
 }
@@ -165,11 +165,12 @@
     height: auto;
     text-align: center;
     transform-origin: center top; /* Ghim xoay tại phần trên cùng của ảnh */
-    transition: transform 15s ease; /* Hiệu ứng xoay mượt mà trong 0.3 giây */
+    transition: transform 0.15s ease; /* Hiệu ứng xoay mượt mà trong 0.3 giây */
+    
 }
 
 .koi-img {
-    width: 70px; /* Kích thước của mỗi cá */
+    width: 45px; /* Kích thước của mỗi cá */
     height: auto;
     transform-origin: center top; /* Ghim xoay tại phần trên cùng của ảnh */
 }

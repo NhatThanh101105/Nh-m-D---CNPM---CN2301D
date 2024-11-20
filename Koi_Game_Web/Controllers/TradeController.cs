@@ -15,7 +15,9 @@ namespace Koi_Game_Web.Controllers
             _tradeService = tradeService;
             _hienThiCaService = hienThiCaService;
         }
-        public IActionResult Trade()
+
+        [HttpGet]
+        public IActionResult Trade(string search)
         {
             var idplayer = HttpContext.Session.GetInt32("playerId");
             var playerPondId = HttpContext.Session.GetInt32("playerPondId");
@@ -40,9 +42,26 @@ namespace Koi_Game_Web.Controllers
                 .ToList();
             Console.WriteLine($"Số lượng Koi đang bán: {koiOnSale?.Count()}");
             Console.WriteLine($"Số lượng giao dịch: {TradeList?.Count()}");
-            if (koiOnSale != null && TradeList != null)
+
+            Console.WriteLine($"Search term: {search}");
+            Console.WriteLine($"TradeList count before filter: {TradeList?.Count()}");
+
+            if (!string.IsNullOrEmpty(search))
             {
-                var koiOnSaleViewModel = koiOnSale.Select(trade => new koiOnSaleViewModel
+                // Chuẩn hóa chuỗi tìm kiếm: loại bỏ khoảng trắng, chuyển về chữ thường
+                var normalizedSearch = System.Text.RegularExpressions.Regex.Replace(search.Trim().ToLower(), @"\s+", "");
+
+                // Lọc danh sách giao dịch
+                TradeList = TradeList
+                    .Where(t => t.PlayerKoi.Koi?.KoiName != null &&
+                                System.Text.RegularExpressions.Regex.Replace(t.PlayerKoi.Koi.KoiName.Trim().ToLower(), @"\s+", "").Contains(normalizedSearch))
+                    .ToList();
+            }
+
+
+
+
+            var koiOnSaleViewModel = koiOnSale.Select(trade => new koiOnSaleViewModel
                 {
                     tradeId = trade.TradeId,
                     koi = new KoiViewModel
@@ -97,9 +116,9 @@ namespace Koi_Game_Web.Controllers
                     TradeItems = tradeListViewModel ?? new List<TradeItemViewModel>() // Danh sách rỗng nếu không có dữ liệu
                 };
                 return View("~/Views/Game/TradeView.cshtml", model);
-            }
 
-            return View("~/Views/Game/TradeView.cshtml");
+
+            
         }
         [HttpPost]
         public IActionResult Sell(int playerKoiId, decimal price)

@@ -36,20 +36,21 @@ builder.Services.AddScoped<IGameStatusRepository, GameStatusRepository>();
 builder.Services.AddScoped<ITradeRepository, TradeRepository>();
 
 // dang ki login, player serivce
-builder.Services.AddScoped<IPlayerService, PlayerService>();
-builder.Services.AddScoped<ILoginService, LoginService>();
-builder.Services.AddScoped<INapTienService, NapTienService>();
-builder.Services.AddScoped<IXuLiNhanCaLanDau, XuLiNhanCaLanDau>();
-builder.Services.AddScoped<IInventoryService, InventoryService>();
-builder.Services.AddScoped<IHienThiCaService,HienThiCaService>();
-builder.Services.AddScoped<IPlayerPondService, PlayerPondService>();
-builder.Services.AddScoped<IPondKoiService,PondKoiService>();
-builder.Services.AddScoped<IGameStatusService,GameStatusService>();
-builder.Services.AddScoped<ISinhsanService,SinhsanService>();
-builder.Services.AddScoped<ILogicSinhsanService,LogicSinhsanService>();
-builder.Services.AddScoped<IAddKoiToPlayerService,AddKoiToPlayerService>();
-builder.Services.AddScoped<ITradeService,TradeService>();
-
+builder.Services.AddScoped<IPlayerService, PlayerService>();//
+builder.Services.AddScoped<ILoginService, LoginService>();//
+builder.Services.AddScoped<INapTienService, NapTienService>();//
+builder.Services.AddScoped<IXuLiNhanCaLanDau, XuLiNhanCaLanDau>();//
+builder.Services.AddScoped<IInventoryService, InventoryService>();//
+builder.Services.AddScoped<IHienThiCaService,HienThiCaService>();//
+builder.Services.AddScoped<IPlayerPondService, PlayerPondService>();//
+builder.Services.AddScoped<IPondKoiService,PondKoiService>();//
+builder.Services.AddScoped<IGameStatusService,GameStatusService>();//
+builder.Services.AddScoped<ISinhsanService,SinhsanService>();//
+builder.Services.AddScoped<ILogicSinhsanService,LogicSinhsanService>();//
+builder.Services.AddScoped<IAddKoiToPlayerService,AddKoiToPlayerService>();//
+builder.Services.AddScoped<ITradeService,TradeService>();//
+builder.Services.AddScoped<IKoiService,KoiService>();//
+builder.Services.AddScoped<IAdminService, AdminService>();
 // cau hinnhf session
 builder.Services.AddSession(options =>
 {

@@ -25,28 +25,18 @@ body {
 }
 
 .title {
-    font-size: 56px; 
-    color: #FFD700; 
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.8); 
-    position: absolute; 
-    top: 2%; 
-    left: 50%; 
-    transform: translateX(-50%);
+    font-size: 48px; /* Tăng kích thước chữ */
+    color: #FF6347; /* Đổi màu tiêu đề thành màu cam đỏ */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), 0 0 10px rgba(255, 99, 71, 0.7); /* Thêm hiệu ứng bóng đổ đậm hơn */
+    margin-bottom: 10px;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
-    text-transform: uppercase; 
-    letter-spacing: 3px; 
-    animation: glow 2s infinite alternate; 
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 215, 0, 0.8);
-    }
-
-    100% {
-        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 0, 1);
-    }
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Tăng khoảng cách giữa các chữ cái */
+    position: absolute; /* Đặt vị trí của tiêu đề */
+    top: 10px; /* Đưa tiêu đề lên phía trên hơn (cách từ trên xuống 10px) */
+    left: 50%; /* Căn giữa theo chiều ngang */
+    transform: translateX(-50%); /* Căn giữa theo chiều ngang */
 }
 
 .naptien-box {

@@ -60,20 +60,32 @@
             <!-- Danh sách giao dịch (Khung giữa) -->
             <div class="trade-list-container">
                 <h3 class="section-title">Danh sách giao dịch:</h3>
+                <form method="get" action="@Url.Action("Trade", "Trade")" class="search-form trade-search-form">
+                    <input type="text" name="search" placeholder="Nhập tên cá cần tìm" value="@ViewContext.HttpContext.Request.Query["search"]" />
+                    <button type="submit" class="btn btn-search trade-search-button">Tìm kiếm</button>
+                </form>
+
+
+
+
+
+                <table class="trade-table">
+                    <thead>
+                        <tr>
+                            <th>Koi</th>
+                            <th>Người bán</th>
+                            <th>Tên Koi</th>
+                            <th>Giá</th>
+                            <th>Độ hiếm</th>
+                            <th>Mua</th>
+                        </tr>
+                    </thead>
+                </table>
                 @if (Model.TradeItems != null && Model.TradeItems.Any())
                 {
+               
                     <div class="scrollable-content">
                         <table class="trade-table">
-                            <thead>
-                                <tr>
-                                    <th>Koi</th>
-                                    <th>Người bán</th>
-                                    <th>Tên Koi</th>
-                                    <th>Giá</th>
-                                    <th>Độ hiếm</th>
-                                    <th>Mua</th>
-                                </tr>
-                            </thead>
                             <tbody>
                                 @foreach (var trade in Model.TradeItems)
                                 {
@@ -91,6 +103,8 @@
                                                     <input type="hidden" name="koiId" value="@trade.koi.koiId" />
                                                     <button type="submit" class="btn btn-buy">Mua</button>
                                                 </form>
+                                           
+
                                             }
                                             else
                                             {

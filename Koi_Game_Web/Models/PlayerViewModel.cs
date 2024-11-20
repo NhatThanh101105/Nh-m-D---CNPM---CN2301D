@@ -7,5 +7,6 @@
         public string username { get; set; }
         public decimal? coin { get; set; }
         public string name { get; set; }
+        public int countKoi { get; set; }
     }
 }

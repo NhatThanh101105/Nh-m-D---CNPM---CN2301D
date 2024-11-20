@@ -76,6 +76,10 @@
             <img src="~/images/icon/danhsach.png" alt="Logout Icon" class="sidebar-icon">
             Cá của bạn
         </a>
+        <a href="@Url.Action("Koi", "Koi")" class="sidebar-item">
+            <img src="~/images/icon/koi.png" alt="Logout Icon" class="sidebar-icon">
+            Thông tin cá
+        </a>
         <a href="@Url.Action("Logout", "Account")" class="sidebar-item">
             <img src="~/images/logout.jpg" alt="Logout Icon" class="sidebar-icon">
             Đăng xuất
@@ -100,13 +104,13 @@
     <div class="main-pond">
         <h3></h3>
         <div class="pond-container">
+    
             <div class="pond-item">
                 @* Thay showKoiList() bằng liên kết đến ViewPond *@
                 <a href="@Url.Action("ViewPond", "Pond", new { pondId = Model.PondDetail.pondId })">
                     <!-- Hiển thị ảnh của hồ dựa trên pondId -->
                     <img src="@Model.PondDetail.PondImageUrl" alt="Pond Image" class="pond-img" />
                 </a>
-
                 <!-- Hiển thị danh sách cá trong hồ (nếu có) -->
                 @if (Model.PondDetail.koilist.Any())
                 {
@@ -124,7 +128,9 @@
                     <p class="empty-pond-message">This pond is empty.</p>
                 }
             </div>
+        
         </div>
+     
     </div>
     @if (TempData["Success"] != null)
     {
