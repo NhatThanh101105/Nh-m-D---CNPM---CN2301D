@@ -42,11 +42,7 @@ namespace Koi_Game_Reposities.Class
 
         }
 
-        public List<KeyValuePair<int?,string?>> getAllItems(int idplayer)
-        {
-            return _dbcontext.Inventories.Where(i=>i.PlayerId == idplayer)
-                .Select(i=>new KeyValuePair<int?,string?>(i.ItemId,i.ItemType)).ToList();
-        }
+
 
         public void removeItems(int idplayer, int itemId, string name, int quantity)
         {
@@ -66,13 +62,7 @@ namespace Koi_Game_Reposities.Class
                 _dbcontext.SaveChanges() ;
             }
         }
-        public List<int?> getSl(int idplayer)
-        {
-            return _dbcontext.Inventories
-                .Where(i=>i.PlayerId==idplayer)
-                .Select(i=>i.Quantity)
-                .ToList();
-        }
+      
 
         public List<Inventory> getItemByTypeName(int idplayer, string typeName) 
         {

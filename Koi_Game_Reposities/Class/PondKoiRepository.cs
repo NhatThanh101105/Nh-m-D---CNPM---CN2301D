@@ -49,13 +49,13 @@ namespace Koi_Game_Reposities.Class
             return true;
         }
 
-        public List<int> getKoiPlayer(int playerID)
-        {
-            return _dbcontext.PlayerKoi
-                .Where(pk=>pk.PlayerId == playerID && !_dbcontext.PondKois.Any(p=>p.PlayerKoiId==pk.PlayerKoiId))
-                .Select(pk=>pk.KoiId.Value)
-                .ToList();
-        }
+//        public List<int> getKoiPlayer(int playerID)
+  //      {
+    //        return _dbcontext.PlayerKoi
+      //          .Where(pk=>pk.PlayerId == playerID && !_dbcontext.PondKois.Any(p=>p.PlayerKoiId==pk.PlayerKoiId))
+        //        .Select(pk=>pk.KoiId.Value)
+          //      .ToList();
+        //}
         public async Task<bool> removeKoiFromPond(int playerKoiId, int playerPondid, int idplayer)
         {
             
@@ -76,15 +76,15 @@ namespace Koi_Game_Reposities.Class
             return true;
 
         }
-        public List<int> getKoiInPond(int idplayer,int PondId)
-        {
+ //       public List<int> getKoiInPond(int idplayer,int PondId)
+   //     {
             //doan nay tí chinhgr sửa
-            return _dbcontext.PondKois
-                .Where(pk=>pk.PlayerPondId==PondId&&pk.PlayerKoi.PlayerId==idplayer)
-                .Select(pk=>pk.PlayerKoi.KoiId ?? 0)
-                .Where(koiId=>koiId!= 0)
-                .ToList();
-        }
+     //       return _dbcontext.PondKois
+       //         .Where(pk=>pk.PlayerPondId==PondId&&pk.PlayerKoi.PlayerId==idplayer)
+      //          .Select(pk=>pk.PlayerKoi.KoiId ?? 0)
+      //          .Where(koiId=>koiId!= 0)
+          //      .ToList();
+        //}
 
 
 

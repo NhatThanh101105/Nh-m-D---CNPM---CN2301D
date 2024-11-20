@@ -9,11 +9,9 @@ namespace Koi_Game_Reposities.Interfaces
 {
    public interface IInventoryRepository
     {
-        List<KeyValuePair<int?, string?>> getAllItems(int idplayer);
-        List<int?> getSl(int idplayer);
+     
         void addNewItems(int idplayer, int itemId, string name, int quantity);
         void removeItems(int idplayer, int itemId, string name, int quantity);
-
         List<Inventory> getItemByTypeName(int idplayer,string typeName);
     }
 }

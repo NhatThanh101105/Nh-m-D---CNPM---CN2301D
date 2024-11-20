@@ -19,9 +19,9 @@ public partial class Player
 
     public DateTime? SinhSan { get; set; }
 
-    public virtual ICollection<Inventory> Inventories { get; set; } = new List<Inventory>();
+    public virtual ICollection<Inventory> Inventories { get; set; } = new List<Inventory>();//
 
-    public virtual ICollection<PlayerKoi> PlayerKois { get; set; } = new List<PlayerKoi>();
+    public virtual ICollection<PlayerKoi> PlayerKois { get; set; } = new List<PlayerKoi>();//
 
     public virtual ICollection<Trade> TradeBuyers { get; set; } = new List<Trade>();
 
