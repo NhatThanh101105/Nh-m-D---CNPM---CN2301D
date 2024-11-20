@@ -21,10 +21,6 @@ namespace Koi_Game_Services.Class.pond
             return await _pondKoiRepository.addKoiToPond(playerKoiId,playerPondId,idplayer);
         }
 
-        public List<int> getKoiPlayer(int playerId)
-        {
-            return _pondKoiRepository.getKoiPlayer(playerId);
-        }
         public async Task<bool> removeKoiFromPond(int playerKoiId,int playerPondId, int  idplayer)
         {
             return await _pondKoiRepository.removeKoiFromPond(playerKoiId ,playerPondId,idplayer);

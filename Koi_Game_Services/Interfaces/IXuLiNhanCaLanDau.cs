@@ -10,7 +10,7 @@ namespace Koi_Game_Services.Interfaces
 
     public interface IXuLiNhanCaLanDau
     { 
-        Task<List<int>> getThreeKois();
+   
         void NhanCa(int idPlayer, List<int> idkois);
        Task< bool> kiemtraNewPlayer(int idPlayer);
     }

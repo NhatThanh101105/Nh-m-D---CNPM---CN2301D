@@ -16,10 +16,10 @@ namespace Koi_Game_Reposities.Class
             _dbcontext = dbcontext;
         }
 
-        public List<PlayerPond> getPlayerPond(int idplayer)
-        {
-            return _dbcontext.PlayerPonds.Where(pp=>pp.PlayerId== idplayer).ToList();
-        }
+  //      public List<PlayerPond> getPlayerPond(int idplayer)
+    //    {
+      //      return _dbcontext.PlayerPonds.Where(pp=>pp.PlayerId== idplayer).ToList();
+        //}
         public int getPlayerPondId(int idplayer,int pondId)
         {
             var playerpond= _dbcontext.PlayerPonds.FirstOrDefault(pp=>pp.PlayerId == idplayer&& pp.PondId==pondId);

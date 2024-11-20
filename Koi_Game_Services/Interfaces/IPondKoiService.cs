@@ -8,7 +8,7 @@ namespace Koi_Game_Services.Interfaces
 {
     public interface IPondKoiService
     {
-        List<int> getKoiPlayer(int playerId);
+       // List<int> getKoiPlayer(int playerId);
         Task<bool> addKoiToPond(int playerKoiId,int playerPondId,int idplayer);
         Task<bool> removeKoiFromPond(int playerKoiId, int playerPondId, int idplayer);
 

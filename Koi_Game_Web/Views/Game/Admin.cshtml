@@ -1,0 +1,34 @@
+﻿@model AdminViewModel
+
+<h1>Danh sách người chơi</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Tên</th>
+            <th>Tên người dùng</th>
+            <th>Số xu</th>
+            <th>Số lượng cá</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var player in Model.player)
+        {
+            <tr>
+               
+                <td>@player.name</td>
+                <td>@player.username</td>
+                <td>@player.coin</td>
+                <td>@player.countKoi</td>
+                <td>
+                    <form asp-controller="Admin" asp-action="Admin_Del" method="post">
+                        <input type="hidden" name="idplayer" value="@player.id" />
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa người chơi này?');">
+                            Xóa
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="@Url.Action("Login", "Account")" class="back-button">Trở lại</a>

@@ -21,15 +21,6 @@ namespace Koi_Game_Services.Class.inventory
             _inventoryRepository.addNewItems(idplayer, itemId, name, quantity);
         }
 
-        public List<KeyValuePair<int?,string?>> getAllItems(int idplayer)
-        {
-            return _inventoryRepository.getAllItems(idplayer);
-        }
-        public List<int?> getSl(int idplayer)
-        {
-            return _inventoryRepository.getSl(idplayer);
-        }
-
         public void removeItem(int idplayer, int itemId, string name, int quantity)
         {
             _inventoryRepository.removeItems(idplayer, itemId, name, quantity);

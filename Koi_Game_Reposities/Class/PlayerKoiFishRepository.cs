@@ -17,11 +17,7 @@ namespace Koi_Game_Reposities.Class
         {
             _dbcontext = dbcontext;
         }
-        public  List<int?> getKoisByIdPlayer(int playerID)
-        {
-            return   _dbcontext.PlayerKoi.Where(p=>p.PlayerId == playerID).Select(p=>p.KoiId).ToList();
-        }
-
+ 
         public PlayerKoi getPlayerKoiById(int playerKoiId)
         {
             return _dbcontext.PlayerKoi.FirstOrDefault(pk => pk.PlayerKoiId == playerKoiId);
@@ -51,10 +47,5 @@ namespace Koi_Game_Reposities.Class
                 .ToList();
         }
 
-        public int getPlayerKoiId(int idplayer,int KoiId)
-        {
-            var playerKoi= _dbcontext.PlayerKoi.FirstOrDefault(pk=>pk.PlayerId==idplayer &&  pk.KoiId==KoiId);
-            return playerKoi.PlayerKoiId;
-        }
     }
 }
