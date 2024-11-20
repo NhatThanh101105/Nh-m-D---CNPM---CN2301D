@@ -1,0 +1,91 @@
+﻿body {
+    opacity: 0;
+    background: linear-gradient(to bottom right, #e6e9f0, #eef1f5);
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Căn chỉnh container */
+.container {
+    margin-top: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+    .table th, .table td {
+        vertical-align: middle;
+    }
+    .table-hover tbody tr:hover {
+        background-color: #d8e3e7;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+.table tr.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.table tr.warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.table tr.danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+
+
+.back-button {
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+    .back-button:hover {
+        background-color: #495057;
+        transform: translateY(-3px);
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+
+.btn-danger {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+    .btn-danger:hover {
+        background-color: #c0392b;
+        transform: scale(1.1);
+    }
+
+

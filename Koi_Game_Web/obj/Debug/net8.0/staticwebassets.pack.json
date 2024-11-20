@@ -1,503 +1,507 @@
 {
   "Files": [
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Koi_Game_Web.bundle.scp.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Koi_Game_Web.bundle.scp.css",
       "PackagePath": "staticwebassets\\Koi_Game_Web.bundle.scp.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\KoiInGame.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\KoiInGame.css",
       "PackagePath": "staticwebassets\\css\\KoiInGame.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\danhsachKoi.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\admin-style.css",
+      "PackagePath": "staticwebassets\\css\\admin-style.css"
+    },
+    {
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\danhsachKoi.css",
       "PackagePath": "staticwebassets\\css\\danhsachKoi.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\game.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\game.css",
       "PackagePath": "staticwebassets\\css\\game.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\inventory.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\inventory.css",
       "PackagePath": "staticwebassets\\css\\inventory.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\koi-game-style.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\koi-game-style.css",
       "PackagePath": "staticwebassets\\css\\koi-game-style.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\koi-login-style.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\koi-login-style.css",
       "PackagePath": "staticwebassets\\css\\koi-login-style.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\koi-napthe-style.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\koi-napthe-style.css",
       "PackagePath": "staticwebassets\\css\\koi-napthe-style.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\koiList.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\koiList.css",
       "PackagePath": "staticwebassets\\css\\koiList.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\koibreed.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\koibreed.css",
       "PackagePath": "staticwebassets\\css\\koibreed.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\site.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\tanthu-style.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\tanthu-style.css",
       "PackagePath": "staticwebassets\\css\\tanthu-style.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\trade.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\css\\trade.css",
       "PackagePath": "staticwebassets\\css\\trade.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\favicon.ico",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\9koi.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\9koi.png",
       "PackagePath": "staticwebassets\\images\\background\\9koi.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background-koi-trangchu.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background-koi-trangchu.jpg",
       "PackagePath": "staticwebassets\\images\\background\\background-koi-trangchu.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background-koi.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background-koi.jpg",
       "PackagePath": "staticwebassets\\images\\background\\background-koi.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background.gif",
       "PackagePath": "staticwebassets\\images\\background\\background.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background1.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background1.gif",
       "PackagePath": "staticwebassets\\images\\background\\background1.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background10.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background10.gif",
       "PackagePath": "staticwebassets\\images\\background\\background10.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background2.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background2.gif",
       "PackagePath": "staticwebassets\\images\\background\\background2.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background3.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background3.gif",
       "PackagePath": "staticwebassets\\images\\background\\background3.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background4.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background4.gif",
       "PackagePath": "staticwebassets\\images\\background\\background4.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background5.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background5.gif",
       "PackagePath": "staticwebassets\\images\\background\\background5.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background7.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background7.gif",
       "PackagePath": "staticwebassets\\images\\background\\background7.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background8.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background8.gif",
       "PackagePath": "staticwebassets\\images\\background\\background8.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\background9.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\background9.gif",
       "PackagePath": "staticwebassets\\images\\background\\background9.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\backpack.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\backpack.jpg",
       "PackagePath": "staticwebassets\\images\\background\\backpack.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\bgGame.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\bgGame.jpg",
       "PackagePath": "staticwebassets\\images\\background\\bgGame.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\inventory.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\inventory.gif",
       "PackagePath": "staticwebassets\\images\\background\\inventory.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\koi1.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\koi1.png",
       "PackagePath": "staticwebassets\\images\\background\\koi1.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\koi2.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\koi2.png",
       "PackagePath": "staticwebassets\\images\\background\\koi2.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\koi3.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\koi3.png",
       "PackagePath": "staticwebassets\\images\\background\\koi3.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\napthe.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\napthe.gif",
       "PackagePath": "staticwebassets\\images\\background\\napthe.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\background\\tanthu.gif",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\background\\tanthu.gif",
       "PackagePath": "staticwebassets\\images\\background\\tanthu.gif"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-black.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-black.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-black.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-blue.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-blue.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-blue.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-green.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-green.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-green.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-orange.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-orange.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-orange.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-purple.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-purple.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-purple.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-rainbow.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-rainbow.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-rainbow.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-red.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-red.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-red.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-white.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-white.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-white.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-yellow.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\fish\\koi-yellow.png",
       "PackagePath": "staticwebassets\\images\\fish\\koi-yellow.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\back.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\icon\\back.png",
       "PackagePath": "staticwebassets\\images\\icon\\back.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\breed.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\icon\\breed.png",
       "PackagePath": "staticwebassets\\images\\icon\\breed.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\coin.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\icon\\coin.png",
       "PackagePath": "staticwebassets\\images\\icon\\coin.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\danhsach.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\icon\\danhsach.png",
       "PackagePath": "staticwebassets\\images\\icon\\danhsach.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\koi.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\icon\\koi.png",
       "PackagePath": "staticwebassets\\images\\icon\\koi.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\meo.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\icon\\meo.jpg",
       "PackagePath": "staticwebassets\\images\\icon\\meo.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\player.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\icon\\player.png",
       "PackagePath": "staticwebassets\\images\\icon\\player.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\icon\\trade.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\icon\\trade.png",
       "PackagePath": "staticwebassets\\images\\icon\\trade.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\inventory\\tuido.png",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\inventory\\tuido.png",
       "PackagePath": "staticwebassets\\images\\inventory\\tuido.png"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\logout.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\logout.jpg",
       "PackagePath": "staticwebassets\\images\\logout.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\ngthhaiii.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\ngthhaiii.jpg",
       "PackagePath": "staticwebassets\\images\\ngthhaiii.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\pond\\pond1.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\pond\\pond1.jpg",
       "PackagePath": "staticwebassets\\images\\pond\\pond1.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\pond\\pond5.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\pond\\pond5.jpg",
       "PackagePath": "staticwebassets\\images\\pond\\pond5.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\pond\\pond7.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\pond\\pond7.jpg",
       "PackagePath": "staticwebassets\\images\\pond\\pond7.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\images\\qr_hoangquoc.jpg",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\images\\qr_hoangquoc.jpg",
       "PackagePath": "staticwebassets\\images\\qr_hoangquoc.jpg"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\breedkoi.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\js\\breedkoi.js",
       "PackagePath": "staticwebassets\\js\\breedkoi.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\game.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\js\\game.js",
       "PackagePath": "staticwebassets\\js\\game.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\koi-game-script.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\js\\koi-game-script.js",
       "PackagePath": "staticwebassets\\js\\koi-game-script.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\koi-selection.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\js\\koi-selection.js",
       "PackagePath": "staticwebassets\\js\\koi-selection.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\koi.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\js\\koi.js",
       "PackagePath": "staticwebassets\\js\\koi.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\koiList.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\js\\koiList.js",
       "PackagePath": "staticwebassets\\js\\koiList.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\site.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\tanthu-script.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\js\\tanthu-script.js",
       "PackagePath": "staticwebassets\\js\\tanthu-script.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\js\\view-pond.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\js\\view-pond.js",
       "PackagePath": "staticwebassets\\js\\view-pond.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\HoangQuocFolders\\GITHUB\\HaiTh\\Koi_Game_Web\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
