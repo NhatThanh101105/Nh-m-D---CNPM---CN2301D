@@ -35,6 +35,11 @@ public class AccountController : Controller
                 HttpContext.Session.SetString("username", player.UserName);
                 //  HttpContext.Session.SetInt32("coin", (int)(player.Coin ?? 0));
                 HttpContext.Session.SetString("name", player.Name);
+
+                if (player.UserName == "admin")
+                {
+                    return RedirectToAction("Admin", "Admin");
+                }
                 return RedirectToAction("Status", "Status"); // Điều hướng đến trang Home/Index khi đăng nhập thành công
             }
             //ModelState.AddModelError("", "Tên người dùng hoặc mật khẩu không đúng.");
@@ -53,6 +58,8 @@ public class AccountController : Controller
     [HttpPost]
     public IActionResult Register(RegisterViewModel model)
     {
+  
+
         if (ModelState.IsValid)
         {
 

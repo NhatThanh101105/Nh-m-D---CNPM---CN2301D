@@ -5,6 +5,7 @@ using Koi_Game_Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,17 +19,30 @@ namespace Koi_Game_Services.Class.dangnhap
             _playerRepository = playerRepository;
         }
 
-
+        private string HashPassword(string password)
+        {
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                byte[] bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                StringBuilder builder = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    builder.Append(b.ToString("x2"));
+                }
+                return builder.ToString(); // Chuỗi băm dài 64 ký tự
+            }
+        }
         // chuc nang dang nhap
         public Player Login(string username, string password)
         {
             var player = _playerRepository.GetPlayerByUsername(username);
             if (player != null)
             {
-                password = password.Trim();
-                if (string.Equals(player.Password.Trim(), password, StringComparison.Ordinal))
+                string hashedPassword = HashPassword(password.Trim());
+                // password = password.Trim();
+                if (string.Equals(player.Password.Trim(), hashedPassword, StringComparison.Ordinal))
                 {
-                    return player;
+                    return player; // Đăng nhập thành công
                 }
             }
             return null;
@@ -51,12 +65,14 @@ namespace Koi_Game_Services.Class.dangnhap
             {
                 return false;
             }
+            string hashedPassword = HashPassword(password);
+
 
             // add player
             var player = new Player
             {
                 UserName = username,
-                Password = password,
+                Password = hashedPassword,
                 Name = name,
                 Coin = 0
             };
@@ -64,13 +80,23 @@ namespace Koi_Game_Services.Class.dangnhap
             return true;
 
         }
-        public bool QuenMatKhau(string username, string otp, string newpass, string confirmpass) 
+        public bool QuenMatKhau(string username, string otp, string newpass, string confirmpass)
         {
+            // Kiểm tra OTP
             if (otp != "12345678") return false;
-            var player= _playerRepository.GetPlayerByUsername(username);
-            if(player== null) { return false; }
-            if(newpass!=confirmpass) { return false; }
-            player.Password= confirmpass;
+
+            // Lấy thông tin người dùng
+            var player = _playerRepository.GetPlayerByUsername(username);
+            if (player == null) return false;
+
+            // Kiểm tra xác nhận mật khẩu
+            if (newpass != confirmpass) return false;
+
+           
+            string hashedPassword = HashPassword(confirmpass);
+
+            // Cập nhật mật khẩu
+            player.Password = hashedPassword;
             _playerRepository.UpdatePlayer(player);
             return true;
         }

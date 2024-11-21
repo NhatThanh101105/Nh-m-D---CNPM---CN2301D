@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "FXXmho50FtICSY2xnCOzxGo1Pa7CF0biV8yJeLyqB4k=",
+  "Hash": "nhAST55wP6zfDYD7Jr/rwB05DI9ZuPkzEBqPnVOKsGQ=",
   "Source": "Koi_Game_Web",
   "BasePath": "_content/Koi_Game_Web",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Koi_Game_Web.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\admin-style.css",
+      "SourceId": "Koi_Game_Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\",
+      "BasePath": "_content/Koi_Game_Web",
+      "RelativePath": "css/admin-style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\admin-style.css"
     },
     {
       "Identity": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\danhsachKoi.css",

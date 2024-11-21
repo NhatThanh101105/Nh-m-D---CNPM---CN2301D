@@ -50,6 +50,7 @@ builder.Services.AddScoped<ILogicSinhsanService,LogicSinhsanService>();//
 builder.Services.AddScoped<IAddKoiToPlayerService,AddKoiToPlayerService>();//
 builder.Services.AddScoped<ITradeService,TradeService>();//
 builder.Services.AddScoped<IKoiService,KoiService>();//
+builder.Services.AddScoped<IAdminService, AdminService>();
 // cau hinnhf session
 builder.Services.AddSession(options =>
 {

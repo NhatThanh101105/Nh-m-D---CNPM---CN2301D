@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\KoiInGame.css"
     },
     {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\admin-style.css",
+      "PackagePath": "staticwebassets\\css\\admin-style.css"
+    },
+    {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\danhsachKoi.css",
       "PackagePath": "staticwebassets\\css\\danhsachKoi.css"
     },

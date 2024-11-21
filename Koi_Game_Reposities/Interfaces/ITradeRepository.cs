@@ -12,7 +12,7 @@ namespace Koi_Game_Reposities.Interfaces
         void newTrade(Trade trade);
         void deleteTrade(int TradeId);
         List<Trade> getAllTrade(int idplayer);
-        Trade getTradeById(int TradeId);
+        Trade getTradeById(int TradeId);        
         List< Trade> getKoiOnSale(int idplayer); 
     }
 }

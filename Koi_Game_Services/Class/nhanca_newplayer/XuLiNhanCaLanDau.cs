@@ -12,15 +12,15 @@ namespace Koi_Game_Services.Class.nhanca_newplayer
 {
     public class XuLiNhanCaLanDau : IXuLiNhanCaLanDau
     {
-        private readonly IKoiRepository _koiRepository;
+      //  private readonly IKoiRepository _koiRepository;
         private readonly IPlayerRepository _playerRepository;
         private readonly IInventoryService _inventoryService;
         private readonly IPlayerKoiFishRepository _playerKoiFishRepository;
         private readonly IPlayerPondService _playerPondService;
 
-        public XuLiNhanCaLanDau(IKoiRepository koiRepository, IPlayerRepository playerRepository, IInventoryService inventoryService, IPlayerKoiFishRepository playerKoiFishRepository, IPlayerPondService playerPondService)
+        public XuLiNhanCaLanDau( IPlayerRepository playerRepository, IInventoryService inventoryService, IPlayerKoiFishRepository playerKoiFishRepository, IPlayerPondService playerPondService)
         {
-            _koiRepository = koiRepository;
+           // _koiRepository = koiRepository;
             _playerRepository = playerRepository;
             _inventoryService = inventoryService;
             _playerKoiFishRepository = playerKoiFishRepository;
