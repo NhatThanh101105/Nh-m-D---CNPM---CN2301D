@@ -9,107 +9,107 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Koi_Game_Web
 build_property.RootNamespace = Koi_Game_Web
-build_property.ProjectDir = D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Web\
+build_property.ProjectDir = D:\CNPM\Project\Koi_Game_Web\Koi_Game_Web\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\HoangQuocFolders\GITHUB\HaiTh\Koi_Game_Web
+build_property.MSBuildProjectDirectory = D:\CNPM\Project\Koi_Game_Web\Koi_Game_Web
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Account/Login.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Account/NewPassword.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Account/NewPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxOZXdQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Account/QuenMatKhau.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Account/QuenMatKhau.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxRdWVuTWF0S2hhdS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Account/Register.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Donate/Naptien.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Donate/Naptien.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uYXRlXE5hcHRpZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Game/Admin.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Game/BreedView.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/BreedView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxCcmVlZFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Game/home_game.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/home_game.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxob21lX2dhbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Game/Index.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Game/Inventory.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/Inventory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxJbnZlbnRvcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Game/KoiInGame.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/KoiInGame.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxLb2lJbkdhbWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Game/KoiListView.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/KoiListView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxLb2lMaXN0Vmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Game/SelectKoi.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/SelectKoi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxTZWxlY3RLb2kuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Game/TradeView.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/TradeView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxUcmFkZVZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Game/ViewPond.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Game/ViewPond.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2FtZVxWaWV3UG9uZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Home/Index.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Home/Privacy.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/KoiGame/Index.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/KoiGame/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29pR2FtZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/KoiGame/KoiGame.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/KoiGame/KoiGame.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29pR2FtZVxLb2lHYW1lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Shared/Error.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/_ViewImports.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/_ViewStart.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/HoangQuocFolders/GITHUB/HaiTh/Koi_Game_Web/Views/Shared/_Layout.cshtml]
+[D:/CNPM/Project/Koi_Game_Web/Koi_Game_Web/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-z8dewgmtbo

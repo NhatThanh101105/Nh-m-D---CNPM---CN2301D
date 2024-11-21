@@ -58,6 +58,8 @@ public class AccountController : Controller
     [HttpPost]
     public IActionResult Register(RegisterViewModel model)
     {
+  
+
         if (ModelState.IsValid)
         {
 

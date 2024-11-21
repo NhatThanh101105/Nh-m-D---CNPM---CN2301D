@@ -40,11 +40,12 @@ h1 {
     .table th, .table td {
         vertical-align: middle;
     }
-    .table-hover tbody tr:hover {
-        background-color: #d8e3e7;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+
+.table-hover tbody tr:hover {
+    background-color: #d8e3e7;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
 .table tr.success {
     background-color: #d4edda;
@@ -87,5 +88,3 @@ h1 {
         background-color: #c0392b;
         transform: scale(1.1);
     }
-
-

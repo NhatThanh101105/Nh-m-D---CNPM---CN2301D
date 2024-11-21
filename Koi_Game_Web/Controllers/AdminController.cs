@@ -42,6 +42,7 @@ namespace Koi_Game_Web.Controllers
             bool del= _adminService.DelPlayer(idplayer);
             if (del)
             {
+                TempData["success"] = "Xóa thành công";
                 return RedirectToAction("Admin", "Admin");
             }
 
