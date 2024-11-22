@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\pond\" />
+    <Folder Include="wwwroot\audio\" />
   </ItemGroup>
 
 </Project>

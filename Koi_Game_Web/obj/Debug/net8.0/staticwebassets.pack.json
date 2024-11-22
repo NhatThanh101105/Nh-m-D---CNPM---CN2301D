@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Koi_Game_Web.bundle.scp.css"
     },
     {
+      "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\audio\\y2mate.com - French meme song.mp3",
+      "PackagePath": "staticwebassets\\audio\\y2mate.com - French meme song.mp3"
+    },
+    {
       "Id": "D:\\CNPM\\Project\\Koi_Game_Web\\Koi_Game_Web\\wwwroot\\css\\KoiInGame.css",
       "PackagePath": "staticwebassets\\css\\KoiInGame.css"
     },

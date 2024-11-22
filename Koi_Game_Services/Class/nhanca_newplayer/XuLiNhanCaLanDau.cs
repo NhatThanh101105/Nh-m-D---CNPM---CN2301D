@@ -56,8 +56,12 @@ namespace Koi_Game_Services.Class.nhanca_newplayer
 
 
                 //doan nay neuw laf nguoi choi moiw thif cho nhan them 1 cai hof macj dinhj
-                _inventoryService.addItem(idPlayer, 1,"ho",1);
-                _playerPondService.addPondToPlayer(idPlayer,1);
+                _inventoryService.addItem(idPlayer, 1, "ho", 1);// 
+                _playerPondService.addPondToPlayer(idPlayer, 1);//
+               // _inventoryService.addItem(idPlayer, 2, "ho", 1);// 
+                //_playerPondService.addPondToPlayer(idPlayer, 2);//
+                //_inventoryService.addItem(idPlayer, 3,"ho",1);// 
+                //_playerPondService.addPondToPlayer(idPlayer,3);//
                 return true;
             }
             return false;

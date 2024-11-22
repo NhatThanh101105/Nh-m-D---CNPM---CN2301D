@@ -42,9 +42,9 @@ namespace Koi_Game_Web.Controllers
 
             if (idplayer.HasValue && !string.IsNullOrEmpty(username))
             {
-                int playerPondId= _playerPondService.getPlayerPondId(idplayer.Value,pondId);
-  //              Console.WriteLine(playerPondId);
-                if (playerPondId > 0)
+                var playerPondId= _playerPondService.getPlayerPondId(idplayer.Value,pondId);
+                Console.WriteLine(playerPondId);
+                if (playerPondId !=null)
                 {
                     HttpContext.Session.SetInt32("playerPondId", playerPondId);
                     HttpContext.Session.SetInt32("pondId", pondId);
